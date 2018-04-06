@@ -25,6 +25,9 @@ a:hover {
 	background-color: #ccff66;
 	padding: 10px;
 }
+aside {
+	background-color: #ccc;
+}
 footer {
 	position: fixed;
 	background-color: #ccff66;
