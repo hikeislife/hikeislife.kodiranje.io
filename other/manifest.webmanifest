@@ -1,0 +1,11 @@
+{
+  "dir": "rtl",
+  "lang": "sr",
+  "name": "Kodiranje",
+  "short_name": "Kodiranje",
+  "start_url": ".",
+  "display": "browser",
+  "background_color": "#fff",
+  "description": "tutorijali za kodere.",
+  "orientation": "portrait-primary"
+}
