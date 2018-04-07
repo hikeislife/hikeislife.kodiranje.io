@@ -4,8 +4,14 @@
   "name": "Kodiranje",
   "short_name": "Kodiranje",
   "start_url": ".",
-  "display": "browser",
+  "display": "fullscreen",
   "background_color": "#fff",
+  "theme_color": "#fff",
   "description": "tutorijali za kodere.",
-  "orientation": "portrait-primary"
+  "orientation": "portrait-primary",
+  "icons": [{
+    "src": "cog512.png",
+    "sizes": "512x512",
+    "type": "image/png"
+  },
 }
