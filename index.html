@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="sr">
 <head>
-	<link rel="stylesheet" href="style.css" />
+	<link rel="stylesheet" media="all" href="styles/style.css">
+	<link rel="stylesheet" media="screen and (min-width:640px)" href="styles/dt-style.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cutive+Mono" />
 	<link rel="manifest" href="other/manifest.webmanifest">
 	<link rel="icon" sizes="192x192" href="other/cog192.png">
@@ -18,9 +19,9 @@
 <header>
 	<div id="header-top">
 
-	<svg id="logo" preserveAspectRatio="none">
+	<svg id="logo" preserveAspectRatio="none" style="height: 70px;width: 100vw;">
 
-	<g id="bcg">
+	<g id="bcg" style="stroke: #b1b1b1;fill: none;stroke-width: 1;stroke-dasharray: 1, 10;">
 		<path d="M5 5 5000 5" />
 		<path d="M5 15 5000 15" />
 		<path d="M5 25 5000 25" />
@@ -32,11 +33,11 @@
 		<path d="M5 85 5000 85" />
 	</g>
 		
-	<g id="logo-text">
+	<g id="logo-text" style="font-size: 48;">
 		<text x="40" y="48">kodiranje_</text>
 	</g>
 
-	<g id="rounded-square">
+	<g id="rounded-square" style="fill:none;stroke:#1A1A1A;stroke-width:2;width: 35;height: 35;">
 		<defs>
     	<filter id="f1" >
       	<feOffset result="offOut" in="SourceGraphic" dx="1" dy="1" />
@@ -48,15 +49,17 @@
 		<rect x="37" y="17" rx="5" ry="5" width="35" height="35" filter="url(#f1)" />
 	</g>
 
-	<g id="fake-selection">
+	<g id="fake-selection" style="fill: #e5e5e5;">
 		<circle cx="32.5" cy="12.5" r="3"/>
 		<circle cx="75.5" cy="12.5" r="3"/>
 		<circle cx="32.5" cy="55.25" r="3"/>
 		<circle cx="75.5" cy="55.25" r="3"/>
+		<g style="stroke:#e5e5e5;stroke-width:0.5;">
 		<line class="logo-sel" x1="32.5" y1="15.75" x2="32.5" y2="52" />
 		<line class="logo-sel" x1="75.5" y1="15.75" x2="75.5" y2="52"/>
 		<line class="logo-sel" x1="35.75" y1="12.5" x2="72.15" y2="12.5"/>
 		<line class="logo-sel" x1="35.75" y1="55.5" x2="72.15" y2="55.5"/>
+		</g>
 	</g>
 	
 	<g id="cog">
@@ -73,7 +76,7 @@
 
 	</svg></div>
 	
-	<div id="mobile-cog"><img src="cog.png" class="logo-cog" alt="mob-menu" width="20" height="20" /></div>
+	<div id="mobile-cog"><img src="other/cog48.png" class="logo-cog" alt="mob-menu" width="20" height="20" /></div>
 
 	<div id="header-bottom"><a href="#">html &amp CSS</a> | <a href="#">git</a></div>
 </header>
@@ -112,8 +115,12 @@
 	<p>test</p>
 	<p>test</p>
 	<p>test</p>
+	<p>test</p>
+	<p>test</p>
+	<p>test</p>
+	<p>test</p>
 </main>
-<nav>test2</nav>
+<nav id="side-nav" style="display: none;">test2</nav>
 <footer>test</footer>
 	<script type="text/javascript" src="topmenu.js" async></script>
 </body>

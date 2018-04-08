@@ -33,78 +33,28 @@ nav {
 	background-color: #ccc;
 }
 footer {
-	/*--position: fixed;
-	bottom: 0;--*/
 	background-color: #ccff66;
 	width: 100%;
 }
-												   /*-- for phones and portrait tablets --*/
-@media only screen and (max-width: 660px) {
-	nav {
-		display: none;
-	}
-	#header-bottom {
-		padding-left: 50px;
-	}
-	/*--div#header-top {
-		height: 90px;
-	}
-	#logo {
-		height: 90px;
-		width: 100%;
-	}
-	#logo-text {
-		font-size: 58px;
-	}--*/
-	#cog {
-		display: none;
-	}
-	#mobile-cog {
-		position: fixed;
-		top: 15px;
-		left: 15px;
-		z-index: 9999;
-		width: 20px;
-		height: 20px;
-	}
-}
-																/*-- for larger devices --*/
-@media only screen and (min-width: 660px) {
-	#mobile-cog {
-		display: none;
-	}
-}
 
-
+nav {
+	display: none;
+}
+#header-bottom {
+	padding-left: 50px;
+}
+#cog {
+	display: none;
+}
+#mobile-cog {
+	position: fixed;
+	top: 15px;
+	left: 15px;
+	z-index: 9999;
+	width: 20px;
+	height: 20px;
+}
                                                                   /*-- css for svg logo --*/
-#logo {
-	height: 70px;
-	width: 100vw;
-}
-#logo-text {
-	font-size: 48px;
-}
-
-#bcg {
-	stroke: #b1b1b1;
-	fill: none;
-	stroke-width: 1;
-	stroke-dasharray: 1, 10;
-}
-#fake-selection {
-	fill: #e5e5e5;
-}
-.logo-sel {
-	stroke:#e5e5e5;
-	stroke-width:0.5;
-}
-#rounded-square {
-	fill:none;
-	stroke:#1A1A1A;
-	stroke-width:2;
-	width: 35;
-	height: 35;
-}
 .logo-cog {
 	position: absolute;
     top: 50%;
@@ -119,4 +69,8 @@ footer {
 @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
 @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
 @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+}
+
+@media only screen and (min-width: 640px) {
+
 }

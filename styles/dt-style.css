@@ -1,0 +1,12 @@
+#mobile-cog {
+	display: none !important;
+}
+#side-nav[style] {
+	display: inline !important;
+}
+#header-bottom {
+	padding-left: 10px;
+}
+#cog {
+	display: inline !important;
+}
