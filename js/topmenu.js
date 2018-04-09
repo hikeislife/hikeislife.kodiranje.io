@@ -1,3 +1,4 @@
+// fixes top bar to the top of the page once scrolled pass logo
 var topMenu = document.getElementById("header-bottom");
 var smallDevice = window.innerWidth;
 
