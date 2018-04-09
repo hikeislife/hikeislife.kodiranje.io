@@ -1,10 +1,17 @@
 * {
 	font-family: "Cutive Mono", monospace;
 	margin: 0px;
+	box-sizing: border-box;
+	
+}
+body {
+	overflow-x: hidden;
 }
 div#header-top {
 	padding: 0px;
 	height: 70px;
+	background-color: white;
+	overflow: hidden;
 }
 a {
 	text-decoration: none;
@@ -17,28 +24,55 @@ a:visited {
 a:hover {
 	font-weight: bold;
 }
+main {
+	display: inline;
+}
+#side-nav {
+	padding: 5px !important;
+	z-index: 999;
+}
 #header-bottom {
 	background-color: #ccff66;
 	padding: 10px;
 	width: 100vw;
+	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3), 0 1px 2px 0 rgba(0, 0, 0, 0.3) !important;
+	overflow: visible;
+}
+#content {
+	background-color: rgba(204, 255, 102, 0.5);
+	border-radius: 4px;
+	font-size: 12px;
+	padding: 10px;
+	margin: 15px;
+	margin-top: 12px;
 	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3), 0 1px 2px 0 rgba(0, 0, 0, 0.3);
 }
+
 .fixed-top {
 	position: fixed;
-	overflow:hidden;
+	overflow: hidden;
 	top: 0;
 }
 
+[class*="col-"] {
+    float: left;
+}
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+[class*="col-"] {
+    width: 100%;
+}
 nav {
-	background-color: #ccc;
+	display: none;
 }
 footer {
 	background-color: #ccff66;
 	width: 100%;
-}
-
-nav {
-	display: none;
+	padding: 5px;
+	text-align: center;
 }
 #header-bottom {
 	padding-left: 50px;
@@ -53,6 +87,7 @@ nav {
 	z-index: 9999;
 	width: 20px;
 	height: 20px;
+	overflow: hidden;
 }
                                                                   /*-- css for svg logo --*/
 .logo-cog {
@@ -71,6 +106,6 @@ nav {
 @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
 }
 
-@media only screen and (min-width: 640px) {
+@media only screen and (max-width: 640px) {
 
 }

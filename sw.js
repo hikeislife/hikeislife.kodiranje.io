@@ -4,13 +4,18 @@ self.addEventListener('install', function(event) {
       return cache.addAll([
         '../../hikeislife.kodiranje.io',
         '../../hikeislife.kodiranje.io/index.html',
+
         '../../hikeislife.kodiranje.io/styles/style.css',
         '../../hikeislife.kodiranje.io/styles/dt-style.css',
+
         '../../hikeislife.kodiranje.io/other/',
         '../../hikeislife.kodiranje.io/other/cog192.png',
         '../../hikeislife.kodiranje.io/other/cog512.png',
         '../../hikeislife.kodiranje.io/other/cog48.png',
-        '/sw-test/gallery/snowTroopers.jpg'
+
+        '../../hikeislife.kodiranje.io/app.js',
+        '../../hikeislife.kodiranje.io/sw.js',
+        '../../hikeislife.kodiranje.io/cog.png'
       ]);
     })
   );
@@ -34,7 +39,7 @@ self.addEventListener('fetch', function(event) {
         });
         return response;
       }).catch(function () {
-        return caches.match('/sw-test/gallery/myLittleVader.jpg');
+        return caches.match('/other/cog512.png');
       });
     }
   }));
