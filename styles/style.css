@@ -28,9 +28,8 @@ main {
 	display: inline;
 }
 #side-nav {
-	background-color: #f5f5f5;
-	margin-top: 2px;
 	padding: 5px !important;
+	z-index: 999;
 }
 #header-bottom {
 	background-color: #ccff66;
@@ -40,24 +39,23 @@ main {
 	overflow: visible;
 }
 #content {
-	background-color: rgba(204, 255, 102, 0.25);
-	border-radius: 2px;
-	padding: 5px;
-	margin: 10px;
-	margin-top: 7px;
+	background-color: rgba(204, 255, 102, 0.5);
+	border-radius: 4px;
+	font-size: 12px;
+	padding: 10px;
+	margin: 15px;
+	margin-top: 12px;
 	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3), 0 1px 2px 0 rgba(0, 0, 0, 0.3);
 }
 
 .fixed-top {
 	position: fixed;
-	overflow:hidden;
+	overflow: hidden;
 	top: 0;
 }
 
 [class*="col-"] {
     float: left;
-    /*--padding: 10px;--*/
-    /*--border: 1px solid red;--*/
 }
 .row::after {
     content: "";
@@ -73,6 +71,7 @@ nav {
 footer {
 	background-color: #ccff66;
 	width: 100%;
+	padding: 5px;
 	text-align: center;
 }
 #header-bottom {
@@ -107,6 +106,6 @@ footer {
 @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
 }
 
-@media only screen and (min-width: 640px) {
+@media only screen and (max-width: 640px) {
 
 }
