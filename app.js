@@ -1,6 +1,5 @@
-
 if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('../../hikeislife.kodiranje.io/js/sw/sw.js')
+  navigator.serviceWorker.register('sw.js')
   .then(function(reg) {
     // registration worked
     if(reg.installing) {
@@ -17,7 +16,6 @@ if ('serviceWorker' in navigator) {
     console.log('Registration failed with ' + error);
   });
 }
-
 
 // fixes top bar to the top of the page once scrolled pass logo
 var topMenu = document.getElementById("header-bottom");
@@ -43,7 +41,7 @@ var mobMenu = document.getElementById("mobile-cog"),
 	mobMenu.addEventListener("click", loadMenu);
 
 	function loadMenu() {
-
+		
 		if (menuStatus.style.display.match("inline")) {
 
 			menuStatus.style.display = "none";
@@ -62,7 +60,6 @@ var mobMenu = document.getElementById("mobile-cog"),
 			}
 			menuList[0].style.borderRadius = "2px 2px 0 0";
 			menuList[menuLength-1].style.borderRadius = "0 0 2px 2px";
-
 		}
 	
 }
