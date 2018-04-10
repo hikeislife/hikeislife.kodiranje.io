@@ -1,6 +1,8 @@
+//cashes important assets on first visit for easier load on later visits
+
 self.addEventListener('install', function(event) {
   event.waitUntil(
-    caches.open('v1').then(function(cache) {
+    caches.open('kodiranje').then(function(cache) {
       return cache.addAll([
         '../../hikeislife.kodiranje.io',
         '../../hikeislife.kodiranje.io/index.html',
@@ -34,7 +36,7 @@ self.addEventListener('fetch', function(event) {
         // and serve second one
         let responseClone = response.clone();
         
-        caches.open('v1').then(function (cache) {
+        caches.open('kodiranje').then(function (cache) {
           cache.put(event.request, responseClone);
         });
         return response;
