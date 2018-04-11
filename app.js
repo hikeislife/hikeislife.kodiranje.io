@@ -33,7 +33,7 @@ function loadMenu() {
 		menuStatus.style.display = "block";
 		menuStatus.style.top = "5px";
 		menuStatus.style.position = "fixed";
-		for (var i = 0; i < menuLength; i ++) {
+		for (let i = 0; i < menuLength; i ++) {
 			menuList[i].style.boxShadow ="0 1px 0px 0 rgba(0, 0, 0, 0.3), 0 0px 2px 0 rgba(0, 0, 0, 0.3)";
 			menuList[i].style.padding = "5px";
 			menuList[i].style.backgroundColor = "#e5e5e5";
@@ -61,6 +61,6 @@ function bindMenu() {
 
 // adds copy/date to the footer
 window.onload = function copid() {
-	var d = new Date().getFullYear();
+	let d = new Date().getFullYear();
 	document.querySelector('footer').innerHTML = "&copy; ČĎŠ " + d;
 }
