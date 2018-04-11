@@ -4,20 +4,20 @@ self.addEventListener('install', function(event) {
   event.waitUntil(
     caches.open('v1').then(function(cache) {
       return cache.addAll([
-        '/',
-        '/index.html',
+        '../../hikeislife.kodiranje.io',
+        '../../hikeislife.kodiranje.io/index.html',
 
-        '/styles/style.css',
-        '/styles/dt-style.css',
+        '../../hikeislife.kodiranje.io/styles/style.css',
+        '../../hikeislife.kodiranje.io/styles/dt-style.css',
 
-        '/other/',
-        '/other/cog192.png',
-        '/other/cog512.png',
-        '/other/cog48.png',
+        '../../hikeislife.kodiranje.io/other/',
+        '../../hikeislife.kodiranje.io/other/cog192.png',
+        '../../hikeislife.kodiranje.io/other/cog512.png',
+        '../../hikeislife.kodiranje.io/other/cog48.png',
 
-        '/app.js',
-        '/sw.js',
-        '/cog.png'
+        '../../hikeislife.kodiranje.io/app.js',
+        '../../hikeislife.kodiranje.io/sw.js',
+        '../../hikeislife.kodiranje.io/cog.png'
       ]);
     })
   );
