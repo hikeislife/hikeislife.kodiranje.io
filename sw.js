@@ -2,7 +2,7 @@ self.addEventListener('install', function(event) {
   event.waitUntil(
     caches.open('kodiranje').then(function(cache) {
       return cache.addAll([
-        '../../hikeislife.kodiranje.io/manifest.webmanifest',
+        '../../hikeislife.kodiranje.io/other/manifest.webmanifest',
 
         '../../hikeislife.kodiranje.io',
         '../../hikeislife.kodiranje.io/index.html',
