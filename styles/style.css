@@ -45,7 +45,7 @@
 	nav ul li:nth-last-of-type(1) {
 		border-radius: 0 0 2px 2px;
 	}
-	#header-bottom[style] {
+	nav#header-bottom[style] {
 		padding-left: 10px !important;
 	}
 
@@ -82,7 +82,8 @@ main {
 #side-nav {
 	padding: 5px !important;
 }
-#header-bottom {
+nav#header-bottom {
+	display: block;
 	background-color: #ccff66;
 	padding: 10px;
 	width: 100vw;
@@ -98,10 +99,14 @@ main {
 	margin-top: 12px;
 	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3), 0 1px 2px 0 rgba(0, 0, 0, 0.3);
 }
-.fixed-top { /* class that is added through js */
+/* classes that are added through js */
+.fixed-top { 
 	position: fixed;
 	overflow: hidden;
 	top: 0;
+}
+.menu-hover {
+	font-weight: bold;
 }
 [class*="col-"] {
     float: left;
