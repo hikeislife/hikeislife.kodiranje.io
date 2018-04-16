@@ -90,6 +90,7 @@ nav#header-bottom {
 	overflow: visible;
 }
 #content {
+	background-color: white;
 	border-radius: 4px;
 	font-size: 18px;
 	padding: 10px;
