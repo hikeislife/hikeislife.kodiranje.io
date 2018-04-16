@@ -76,6 +76,7 @@ a:visited {
 
 main {
 	display: inline;
+	background-color: rgba(204, 255, 102, 0.5);
 }
 #side-nav {
 	padding: 5px !important;
@@ -89,7 +90,6 @@ nav#header-bottom {
 	overflow: visible;
 }
 #content {
-	background-color: rgba(204, 255, 102, 0.5);
 	border-radius: 4px;
 	font-size: 18px;
 	padding: 10px;
