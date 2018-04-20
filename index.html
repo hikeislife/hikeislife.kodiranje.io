@@ -8,6 +8,12 @@
 	<meta name="theme-color" content="#ccff66">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+	<meta http-equiv="cache-control" content="no-cache, must-revalidate, post-check=0, pre-check=0" />
+	<meta http-equiv="cache-control" content="max-age=0" />
+	<meta http-equiv="expires" content="0" />
+	<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+	<meta http-equiv="pragma" content="no-cache" />
+
 	<title>Kodiranje</title>
 	<link rel="stylesheet" media="all" href="styles/style.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cutive+Mono" />
@@ -19,6 +25,7 @@
 <header>
 	<div id="header-top">
 		<svg id="logo" preserveAspectRatio="none" style="height: 70px;width: 100vw;">
+			<desc>logo sajta</desc>
 		<g id="bcg" style="stroke: #b1b1b1;fill: none;stroke-width: 1;stroke-dasharray: 1, 10;">
 		<path d="M5 5 5000 5" />
 		<path d="M5 15 5000 15" />
@@ -30,7 +37,7 @@
 		<path d="M5 75 5000 75" />
 		<path d="M5 85 5000 85" />
 		</g>
-		<a href="localindex.html"><g id="logo-text" style="font-size: 48;">
+		<a href="index.html"><g id="logo-text" style="font-size: 48;">
 		<text x="40" y="48">kodiranje_</text>
 		</g></a>
 		<g id="rounded-square" style="fill:none;stroke:#1A1A1A;stroke-width:2;width:35;height:35;">
@@ -76,14 +83,14 @@
 	</div>
 <!-- ok to change from this point onwards -->
 
-	<nav id="header-bottom" class="col-12" style="padding-left: 50px;">
+	<nav id="header-bottom" style="padding-left: 50px;">
 		<span id="topNavHtmlCss" class="top-nav">html &amp; CSS</span> | 
 		<span id="topNavCmdGit" class="top-nav">git</span>
 	</nav>
 
 </header>
 
-<nav class="col-3" id="side-nav" style="display:none;">
+<nav id="side-nav" style="display:none;">
 	<ul id="side-menu">
 		<li><a href="#">link1</a></li>
 		<li><a href="#">link2</a></li>
@@ -93,13 +100,14 @@
 	</ul>
 </nav>
 
-<div id="content" class="col-9">
+<div id="content">
 	<main>
 		<div id="placeholder">
 			<!-- htmbox-->
-			<div class="main-page-box col-12" id="htmlcssbox">
-				<div class="main-page-box-left col-6">
-					<svg version="1.1" class="col-12" id="htmlcss" viewBox="0 220 566.482 294.499">
+			<div class="main-page-box" id="htmlcssbox">
+				<div class="main-page-boxes">
+					<svg version="1.1" id="htmlcss" viewBox="0 220 566.482 294.499">
+						<desc>html i css logo</desc>
 						<!--css-->
 						<polygon id="cssstit" fill="#264DE4" points="129.679,511.999 23.632,482.561 0,217.5 259.675,217.5 236.018,482.519 "/>
 						<polygon id="cssodsjaj" fill="#2965F1" points="215.765,465.643 235.981,239.173 129.837,239.173 129.837,489.466 "/>
@@ -117,13 +125,14 @@
 					</svg>
 
 				</div>
-				<div class="main-page-box-right col-6">¸<h1>Nauči html i css</h1></div>
+				<div class="main-page-boxes"><h1>Nauči html i css</h1></div>
 			</div>
 			<!-- gitbox -->
-			<div class="main-page-box col-12" id="gitbox">
-				<div class="main-page-box-right col-6"><h1>Nauči git</h1></div>
-				<div class="main-page-box-left col-6">
-					<svg version="1.1" class="col-12" id="githublogo" viewBox="23.472 873.111 567.573 553.563">
+			<div class="main-page-box" id="gitbox">
+				<div class="main-page-boxes"><h1>Nauči git</h1></div>
+				<div class="main-page-boxes">
+					<svg version="1.1" id="githublogo" viewBox="23.472 873.111 567.573 553.563">
+						<desc>git logo</desc>
 						<g>
 						<path fill="#191717" d="M307.259,873.111c-156.709,0-283.787,127.05-283.787,283.785c0,125.389,81.313,231.76,194.072,269.29 c14.181,2.625,19.39-6.158,19.39-13.657c0-6.765-0.262-29.122-0.386-52.833c-78.95,17.166-95.608-33.482-95.608-33.482 c-12.91-32.804-31.51-41.525-31.51-41.525c-25.751-17.611,1.941-17.254,1.941-17.254c28.495,2,43.502,29.252,43.502,29.252 c25.31,43.378,66.388,30.841,82.584,23.588c2.546-18.339,9.898-30.866,18.017-37.952c-63.034-7.17-129.299-31.511-129.299-140.248 c0-30.981,11.088-56.298,29.243-76.172c-2.946-7.149-12.662-36.012,2.749-75.104c0,0,23.832-7.622,78.06,29.094 c22.639-6.289,46.916-9.442,71.032-9.553c24.115,0.11,48.41,3.263,71.091,9.553c54.171-36.716,77.962-29.094,77.962-29.094 c15.447,39.092,5.736,67.954,2.79,75.104c18.192,19.874,29.206,45.19,29.206,76.172c0,109.003-66.387,132.998-129.583,140.027 c10.181,8.802,19.248,26.077,19.248,52.547c0,37.973-0.329,68.538-0.329,77.881c0,7.555,5.112,16.401,19.494,13.621 c112.693-37.569,193.906-143.913,193.906-269.254C591.044,1000.16,463.986,873.111,307.259,873.111z"/>
 						<path fill="#191717" d="M130.958,1280.569c-0.624,1.413-2.845,1.836-4.864,0.863c-2.061-0.928-3.212-2.846-2.547-4.259 c0.61-1.451,2.832-1.854,4.888-0.892C130.495,1277.207,131.669,1279.155,130.958,1280.569L130.958,1280.569z"/>
@@ -140,7 +149,8 @@
 		</div>
 	</main>
 </div>
-<footer class="col-12">&copy; ČĎŠ 2018</footer>
+
+<footer>&copy; ČĎŠ 2018</footer>
 
 	<script type="text/javascript" src="app.js" async></script>
 </body>
