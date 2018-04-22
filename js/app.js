@@ -33,21 +33,22 @@ function bindMenu() {
     topMenu.className = "";
   }
 }
+
 //adding mobile menu to the cog click
-var mobMenu = document.getElementById("mobile-cog"),
-	menuStatus = document.getElementById("side-nav"),
-	menuU = document.getElementById("side-menu"),
-	menuList = menuU.getElementsByTagName("li"),
-	menuLength = menuList.length;
+const mobMenu = document.getElementById("mobile-cog");
+	
 
 	mobMenu.addEventListener("click", loadMenu);
 
 	function loadMenu() {
+		const menuStatus = document.getElementById("side-nav"),
+			  menuU = document.getElementById("side-menu"),
+			  menuList = menuU.getElementsByTagName("li"),
+			  menuLength = menuList.length;
 
 		if (menuStatus.style.display.match("inline")) {
 
 			menuStatus.style.display = "none";
-			
 		}
 		else {
 			menuStatus.style.display = "inline";
@@ -59,6 +60,7 @@ var mobMenu = document.getElementById("mobile-cog"),
 				menuList[i].style.padding = "5px";
 				menuList[i].style.backgroundColor = "#e5e5e5";
 				menuList[i].style.listStyleType = "none";
+				menuList[i].style.width = "200px";
 			}
 			menuList[0].style.borderRadius = "2px 2px 0 0";
 			menuList[menuLength-1].style.borderRadius = "0 0 2px 2px";
