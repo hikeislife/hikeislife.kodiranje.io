@@ -1,9 +1,11 @@
+/* setting up the colors that will be used troughout the site */
 :root {
-	--mg: #ccff66;
-	--lg: rgba(204, 255, 102, 0.2);
-	--sg: #f5f5f5;
+	--mg: #ccff66; /* main green */
+	--lg: rgba(204, 255, 102, 0.2); /* light green for background */
+	--sg: #f5f5f5; /* soft gray for side nav background */
 	--menugray: #e5e5e5;
 }
+/* general css */
 * {
 	font-family: "Cutive Mono", monospace;
 	margin: 0px;
@@ -17,6 +19,11 @@ body {
 	overflow-x: hidden;
 	background-color: var(--lg);
 }
+a, a:visited {
+	text-decoration: none;
+	color: black;
+}
+/* logo and top nav container for mobile */
 header {
 	grid-column: 1 / 3;
 }
@@ -36,23 +43,43 @@ nav#header-bottom {
 	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3), 0 1px 2px 0 rgba(0, 0, 0, 0.3) !important;
 	overflow: visible;
 }
+#mobile-cog {
+	position: fixed;
+	top: 15px;
+	left: 15px;
+	z-index: 9999;
+	width: 20px;
+	height: 20px;
+	overflow: hidden;
+}
+                                                                  /* css for svg logo */
+.logo-cog {
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin:-10px 0 0 -10px;
+	-webkit-animation:spin 10s linear infinite;
+    -moz-animation:spin 10s linear infinite;
+    animation:spin 10s linear infinite;
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
 /* class added through js */
 .fixed-top { 
 	position: fixed;
 	overflow: hidden;
 	top: 0;
 }
-a {
-	text-decoration: none;
-	color: black;
-}
-a:visited {
-	color: black;
-	text-decoration: none;
-}
+
+/* mobile menu nav - rest of the styling is within the app.js */
 #side-nav {
 	width: 200px;
 }
+/* front page main content, mobile */
 #placeholder {
 	border-radius: 4px;
 	background-color: white;
@@ -89,43 +116,27 @@ div.main-page-box:nth-child(even) > div.main-page-boxes:nth-child(odd) {
 div.main-page-box:nth-child(even) > div.main-page-boxes:nth-child(even) {
 	grid-row: 1/2;
 }
-
 #content {
-	
 	padding: 10px;
 	margin-top: 2px;
 	grid-column: 1 / 3;
 }
 
-.menu-hover {
-	font-weight: bold;
-}
-
-
-
 @media only screen and (min-width: 640px) {
-
-	#side-nav {
-		grid-column: 1 / 2;
-		grid-row: 2 / 3;
-	}
-	#content {
-		grid-column: 2 / 3 !important;
-		grid-row: 2 / 3;
-	}
-	.main-page-boxes {
-		grid-column: 2/3 !important;
-		grid-row: 1/2 !important;
-	}
-	.main-page-boxes:nth-child(odd) {
-		grid-column: 1/2 !important;
-		grid-row: 1/2 !important;
-	}
+	/* header for desktop */
 	#mobile-cog {
 		display: none;
 	}
 	#cog {
 		display: inline;
+	}
+	nav#header-bottom[style] {
+		padding-left: 10px !important;
+	}
+	/* desktop version side navigation */
+	#side-nav {
+		grid-column: 1 / 2;
+		grid-row: 2 / 3;
 	}
 	#side-nav[style] {
 		display: inline !important;
@@ -148,8 +159,18 @@ div.main-page-box:nth-child(even) > div.main-page-boxes:nth-child(even) {
 	nav ul li:nth-last-of-type(1) {
 		border-radius: 0 0 2px 2px;
 	}
-	nav#header-bottom[style] {
-		padding-left: 10px !important;
+	/* desktop front page main content */
+	#content {
+		grid-column: 2 / 3 !important;
+		grid-row: 2 / 3;
+	}
+	.main-page-boxes {
+		grid-column: 2/3 !important;
+		grid-row: 1/2 !important;
+	}
+	.main-page-boxes:nth-child(odd) {
+		grid-column: 1/2 !important;
+		grid-row: 1/2 !important;
 	}
 }
 footer {
@@ -157,30 +178,5 @@ footer {
 	grid-column: 1 / 3;
 	padding: 5px;
 	text-align: center;
-}
-#mobile-cog {
-	position: fixed;
-	top: 15px;
-	left: 15px;
-	z-index: 9999;
-	width: 20px;
-	height: 20px;
-	overflow: hidden;
-}
-                                                                  /* css for svg logo */
-.logo-cog {
-	position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 20px;
-    height: 20px;
-    margin:-10px 0 0 -10px;
-	-webkit-animation:spin 10s linear infinite;
-    -moz-animation:spin 10s linear infinite;
-    animation:spin 10s linear infinite;
-}
-@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
-@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
-@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
 }
 

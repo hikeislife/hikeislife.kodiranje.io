@@ -1,4 +1,4 @@
-
+// service worker installation 
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('../../hikeislife.kodiranje.io/js/sw/sw.js')
   .then(function(reg) {
@@ -18,13 +18,9 @@ if ('serviceWorker' in navigator) {
   });
 }
 
-
 // fixes top bar to the top of the page once scrolled pass logo
-var topMenu = document.getElementById("header-bottom");
-var smallDevice = window.innerWidth;
-
 window.onscroll = function() {bindMenu()};
-
+const topMenu = document.getElementById("header-bottom");
 function bindMenu() {
   if (document.body.scrollTop >= 70 || document.documentElement.scrollTop >= 70) {
     topMenu.className = "fixed-top";
@@ -36,9 +32,8 @@ function bindMenu() {
 
 //adding mobile menu to the cog click
 const mobMenu = document.getElementById("mobile-cog");
-	
 
-	mobMenu.addEventListener("click", loadMenu);
+	mobMenu.addEventListener("click", loadMenu(e));
 
 	function loadMenu() {
 		const menuStatus = document.getElementById("side-nav"),
@@ -47,7 +42,6 @@ const mobMenu = document.getElementById("mobile-cog");
 			  menuLength = menuList.length;
 
 		if (menuStatus.style.display.match("inline")) {
-
 			menuStatus.style.display = "none";
 		}
 		else {
@@ -60,11 +54,14 @@ const mobMenu = document.getElementById("mobile-cog");
 				menuList[i].style.padding = "5px";
 				menuList[i].style.backgroundColor = "#e5e5e5";
 				menuList[i].style.listStyleType = "none";
-				menuList[i].style.width = "200px";
 			}
 			menuList[0].style.borderRadius = "2px 2px 0 0";
 			menuList[menuLength-1].style.borderRadius = "0 0 2px 2px";
 
 		}
+
+	}
+
 	
-}
+	
+	
