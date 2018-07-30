@@ -1,14 +1,14 @@
 [
 	{ 
-		"area": "html and css",
-		"items": ["Uvod u html", "item1", "item2", "item3"]
+		"id": "mp",
+		"items": ["brauzeri_i_editori"],
+		"view": ["Softver"]
 	},
 	{ 
-		"area": "cmd and git",
-		"items": ["Uvod u git", "item1", "item2", "item3"]
-	},
-	{ 
-		"area": "javascript",
-		"items": ["Uvod u js", "item1", "item2", "item3"]
+		"id": "hc",
+		"items": ["uvod_u_HTML_i_CSS", "struktura_HTML_stranice", "prvi_sajt"],
+	},{ 
+		"id": "cmd",
+		"items": [],
 	}
 ]
