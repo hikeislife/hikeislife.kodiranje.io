@@ -155,10 +155,10 @@ function setActive(frag) {
 function textAreaSizer() {
 
  var test = document.getElementsByClassName("code_snippet");
- console.log(test);
+ //console.log(test);
  for (let i = 0; i < test.length; i ++) {
   let scroll = test[i].scrollHeight;
   test[i].style.height = test[i].scrollHeight + 'px';
-  console.log(scroll);
+  //console.log(scroll);
   }
 }
