@@ -1,6 +1,6 @@
 // registers service worker
 if ('serviceWorker' in navigator) { // browser support check
-  navigator.serviceWorker.register('sw.js', {scope: '/js'})
+  navigator.serviceWorker.register('sw.js')
   .then(function(reg) {
     // run if registration worked
     if(reg.installing) {
