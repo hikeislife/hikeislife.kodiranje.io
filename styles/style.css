@@ -33,6 +33,9 @@ p {
 header {
  grid-column: 1 / 3;
 }
+img:not([alt]) {
+	filter: grayscale(100%);
+}
 div#header-top {
  padding: 0px;
  height: 70px;
@@ -49,7 +52,32 @@ nav#header-bottom {
  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3), 0 1px 2px 0 rgba(0, 0, 0, 0.3) !important;
  overflow: visible;
 }
+#ransom1 {
+  font-size:4em;
+  line-height: normal;
+  word-spacing:0.3em;
+}  
 
+#ransom1 div {
+  display:inline-block;
+}
+
+#ransom1 .rw {
+  white-space: pre;
+  display:inline;
+}
+
+#ransom1 .rr {
+  -ms-transform: rotate(1.5deg);
+  -webkit-transform: rotate(1.5deg);
+  transform: rotate(1.5deg);
+}
+
+#ransom1 .rl {
+  -ms-transform: rotate(-1.5deg);
+  -webkit-transform: rotate(-1.5deg);
+  transform: rotate(-1.5deg);
+}  
 #mobile-cog {
  position: fixed;
  top: 15px;
@@ -128,6 +156,7 @@ figcaption {
  position: fixed;
  overflow: hidden;
  top: 0;
+ z-index: 1;
 }
 /* mobile menu nav - rest of the styling is within the app.js */
 #side-nav {
@@ -189,13 +218,19 @@ textarea {
  outline: none;
  word-break: break-word;
  display: block;
+ z-index: 0;
 }
 main ul li {
 	text-align: justify;
+  padding: 10px;
 }
 @namespace svgns url(http://www.w3.org/2000/svg);
 svgns|a text {
  cursor: pointer;
+ background-color: white;
+}
+a.nocolor {
+  background-color: transparent;
 }
 /* front page main content, mobile */
 #placeholder {
@@ -252,7 +287,7 @@ div.main-page-box:nth-child(even) > div.main-page-boxes:nth-child(even) {
  }
  nav#header-bottom[style] {
   padding-left: 10px !important;
-  z-index: 1;
+  z-index: 10 !important;
  }
  /* desktop version side navigation */
  xmp {

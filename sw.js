@@ -8,12 +8,14 @@ self.addEventListener('install', function(event) {
         '../../hikeislife.kodiranje.io/index.html',
 
         '../../hikeislife.kodiranje.io/styles/style.css',
-        '../../hikeislife.kodiranje.io/styles/dt-style.css',
+        //'../../hikeislife.kodiranje.io/styles/dt-style.css',
 
         //'../../hikeislife.kodiranje.io/other/',
         '../../hikeislife.kodiranje.io/other/cog192.png',
         '../../hikeislife.kodiranje.io/other/cog512.png',
         '../../hikeislife.kodiranje.io/other/cog48.png',
+
+        'hikeislife.kodiranje.io/js/content.json',
 
         '../../hikeislife.kodiranje.io/app.js',
         '../../hikeislife.kodiranje.io/sw.js',
