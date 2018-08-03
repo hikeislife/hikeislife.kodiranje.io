@@ -1,5 +1,5 @@
 // registers service worker
-/*if ('serviceWorker' in navigator) { // browser support check
+if ('serviceWorker' in navigator) { // browser support check
   navigator.serviceWorker.register('sw.js')
   .then(function(reg) {
     // run if registration worked
@@ -15,7 +15,7 @@
     // run if registration failed
     console.log('Registration failed with ' + error);
   });
-}*/
+}
 
 // adding mobile menu to the cog click
 const mobMenu = document.querySelector("#mobile-cog").addEventListener("click", loadMenu);
