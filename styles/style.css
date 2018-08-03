@@ -59,7 +59,9 @@ nav#header-bottom {
   line-height: normal;
   word-spacing:0.3em;
 }  
-
+summary {
+  outline: none;
+}
 #ransom1 div {
   display:inline-block;
 }
@@ -263,6 +265,7 @@ hr {
 }
 main ul li {
 	text-align: justify;
+  padding: 5px;
 }
 ul.gap_li li {
   padding: 7px;
