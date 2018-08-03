@@ -1,5 +1,5 @@
 // registers service worker
-if ('serviceWorker' in navigator) { // browser support check
+/*if ('serviceWorker' in navigator) { // browser support check
   navigator.serviceWorker.register('sw.js')
   .then(function(reg) {
     // run if registration worked
@@ -15,7 +15,7 @@ if ('serviceWorker' in navigator) { // browser support check
     // run if registration failed
     console.log('Registration failed with ' + error);
   });
-}
+}*/
 
 // adding mobile menu to the cog click
 const mobMenu = document.querySelector("#mobile-cog").addEventListener("click", loadMenu);
@@ -115,7 +115,7 @@ function loadMain(page) {
 window.addEventListener("hashchange", pageInit);
 
 function loadSideNav(sideNavId) {                   // links                                                    items
- const sideNav = [["mp", ["#recnik", "#brauzeri_i_editori", "#ada", "#turing", "#timbl", "#brendan_eich"], ["Re\u010Dnik", "Softver", "Ada Lovlejs", "Alan Turing", "TimBL", "Brendan Ejh",]],
+ const sideNav = [["mp", ["#recnik", "#brauzeri_i_editori", "#ada", "#turing", "#timbl", "#brendan_eich"], ["Rečnik", "Softver", "Ada Lovlejs", "Alan Turing", "TimBL", "Brendan Ejh",]],
                   ["hc", ["#uvod_u_HTML_i_CSS", "#struktura_HTML_stranice", "#prvi_sajt", "#linkovi", "#uvod_u_CSS", "#predah", "#boje", "#uvod_u_slike"], ["Uvod", "HTML struktura", "Prvi Sajt", "Linkovi", "Uvod u CSS", "Predah", "Boje", "Uvod u slike"]],
                   ["gc", ["#uvod_u_cmd"], ["Uvod u cmd"]]];
  for (let i = 1; i < sideNav.length; i ++) {
