@@ -117,7 +117,7 @@ window.addEventListener("hashchange", pageInit);
 function loadSideNav(sideNavId) {                   // links                                                    items
  const sideNav = [["mp", ["#brauzeri_i_editori", "#ada", "#turing", "#timbl", "#brendan_eich"], ["Softver", "Ada Lovlejs", "Alan Turing", "TimBL", "Brendan Ejh",]],
                   ["hc", ["#uvod_u_HTML_i_CSS", "#struktura_HTML_stranice", "#prvi_sajt", "#linkovi", "#uvod_u_CSS", "#predah", "#boje", "#uvod_u_slike"], ["Uvod", "HTML struktura", "Prvi Sajt", "Linkovi", "Uvod u CSS", "Predah", "Boje", "Uvod u slike"]],
-                  ["gc", ["#uvod_u_cmd"], ["uskoro..."]]];
+                  ["gc", ["#uvod_u_cmd"], ["Uvod u cmd"]]];
  for (let i = 1; i < sideNav.length; i ++) {
   document.getElementById(sideNav[i][0]).removeAttribute("class");
  }
