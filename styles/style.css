@@ -206,14 +206,14 @@ figure {
 figcaption {
  font-size: 20px;
 }
-#disqus_thread {
+/*#disqus_thread {
  border: 2px solid var(--dg);
  border-radius: 4px;
  margin-top: 10px;
  padding: 20px;
  background-image: url(dot.png);
  display: none;
-}
+}*/
                                  /* css for svg logo */
 .logo-cog {
  position: absolute;
@@ -385,9 +385,9 @@ div.main-page-box:nth-child(even) > div.main-page-boxes:nth-child(even) {
  th {
   font-size: 16px;
  }
- #disqus_thread {
+ /*#disqus_thread {
   display: block;
- }
+ }*/
  #side-nav {
   grid-column: 1 / 2;
   grid-row: 2 / 3;

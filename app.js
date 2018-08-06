@@ -1,5 +1,5 @@
 // registers service worker
-if ('serviceWorker' in navigator) { // browser support check
+/*if ('serviceWorker' in navigator) { // browser support check
   navigator.serviceWorker.register('sw.js')
   .then(function(reg) {
     // run if registration worked
@@ -15,7 +15,7 @@ if ('serviceWorker' in navigator) { // browser support check
     // run if registration failed
     console.log('Registration failed with ' + error);
   });
-}
+}*/
 
 // adding mobile menu to the cog click
 const mobMenu = document.querySelector("#mobile-cog").addEventListener("click", loadMenu);
@@ -23,7 +23,6 @@ const mobMenu = document.querySelector("#mobile-cog").addEventListener("click", 
 window.onmouseup = function() {
   const hide = document.querySelector("#side-nav");
   hide.style.display = "none";
-  window.scrollTo(0, 0);
 }
 function loadMenu() {
  let menuStatus = document.getElementById("side-nav"),
@@ -79,9 +78,9 @@ function conParser(xhrt){
 if (!location.hash) {
  location.hash = "#home";
 }
-var frag;
+
 function pageInit() {
- frag = location.hash.substr(1); // address bar 
+ const frag = location.hash.substr(1); // address bar 
  initContent(frag, contents);
  //getXMP(contents);
 }
@@ -116,7 +115,6 @@ function loadSideNav(sideNavId) {                   // links                    
  for (let i = 1; i < sideNav.length; i ++) {
   document.getElementById(sideNav[i][0]).removeAttribute("class");
  }
-
  let pos = document.getElementById("side-nav");
  var sideMenu = '<ul id="side-menu">';
  for (e in sideNav) {
@@ -128,36 +126,12 @@ function loadSideNav(sideNavId) {                   // links                    
    }
   }
  }
-
  pos.innerHTML = sideMenu + '</ul>'
  let leftright = document.getElementsByClassName("leftright");
  if(sideNavId != "mp") {
   document.getElementById(sideNavId).setAttribute("class", "selected");
   for(var i = 0; i < 2; i++) {
-   leftright[i].style.display = "inline";
-   document.getElementById("disqus_thread").style.display ="block";
-   var disqus_config = function () {
-    this.page.url = window.location.href;  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = frag; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-
- var reset = function (frag, newUrl) {
-     DISQUS.reset({
-         reload: true,
-         config: function () {
-             this.page.identifier = frag;
-             this.page.url = window.location.href;
-         }
-     });
- };
-
-};
-
-(function() { // DON'T EDIT BELOW THIS LINE
-var d = document, s = d.createElement('script');
-s.src = 'https://kodiranje.disqus.com/embed.js';
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
-})();
+   leftright[i].style.display = "inline"
   }
  }
  else {
@@ -193,12 +167,12 @@ function leftRight(links) {
     forlink.setAttribute("href", links[ind+1]);
     forlink.innerHTML = "sl.";
   }
- levo.onclick = function() {
-  window.scrollTo(0, 0);
- } 
- desno.onclick = function() {
-  window.scrollTo(0, 0);
- }
+   levo.onclick = function() {
+    window.scrollTo(0, 0);
+   } 
+   desno.onclick = function() {
+    window.scrollTo(0, 0);
+   }
 }
 
 function setActive(frag) {
@@ -225,4 +199,3 @@ function textAreaSizer() {
   //console.log(scroll);
   }
 }
-
