@@ -23,6 +23,7 @@ const mobMenu = document.querySelector("#mobile-cog").addEventListener("click", 
 window.onmouseup = function() {
   const hide = document.querySelector("#side-nav");
   hide.style.display = "none";
+  window.scrollTo(0, 0);
 }
 function loadMenu() {
  let menuStatus = document.getElementById("side-nav"),
@@ -78,9 +79,9 @@ function conParser(xhrt){
 if (!location.hash) {
  location.hash = "#home";
 }
-
+var frag;
 function pageInit() {
- const frag = location.hash.substr(1); // address bar 
+ frag = location.hash.substr(1); // address bar 
  initContent(frag, contents);
  //getXMP(contents);
 }
@@ -131,7 +132,20 @@ function loadSideNav(sideNavId) {                   // links                    
  if(sideNavId != "mp") {
   document.getElementById(sideNavId).setAttribute("class", "selected");
   for(var i = 0; i < 2; i++) {
-   leftright[i].style.display = "inline"
+   leftright[i].style.display = "inline";
+   document.getElementById("disqus_thread").style.display ="block";
+   var disqus_config = function () {
+    this.page.url = location.href;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = frag; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+console.log(location.href);
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://kodiranje.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
   }
  }
  else {
@@ -148,26 +162,31 @@ function leftRight(links) {
   let current = location.hash;
   let ind = links.indexOf(current)
   if (ind == 0) {
-    left.style.display = "none";
+    levo.style.display = "none";
   }
   else {
-    left.innerHTML = "";
+    levo.innerHTML = "";
     let backlink = document.createElement("a");
-    left.appendChild(backlink);
+    levo.appendChild(backlink);
     backlink.setAttribute("href", links[ind-1]);
     backlink.innerHTML = "pr.";
   }
   if (ind == (links.length -1)) {
-    right.style.display = "none";
+    desno.style.display = "none";
   }
   else {
-    right.innerHTML = "";
+    desno.innerHTML = "";
     let forlink = document.createElement("a");
-    right.appendChild(forlink);
+    desno.appendChild(forlink);
     forlink.setAttribute("href", links[ind+1]);
     forlink.innerHTML = "sl.";
   }
-
+ levo.onclick = function() {
+  window.scrollTo(0, 0);
+ } 
+ desno.onclick = function() {
+  window.scrollTo(0, 0);
+ }
 }
 
 function setActive(frag) {
@@ -194,3 +213,4 @@ function textAreaSizer() {
   //console.log(scroll);
   }
 }
+

@@ -59,7 +59,7 @@ nav#header-bottom {
   font-size:4em;
   line-height: normal;
   word-spacing:0.3em;
-}  
+}
 summary {
   outline: none;
 }
@@ -164,7 +164,7 @@ summary {
 }
 .cmd table th {
   background-color: rgb(176, 209, 243);
-  font-size: 16px;
+  font-size: 3vw;
 }
 .cmd table td {
   color: white;
@@ -205,6 +205,14 @@ figure {
 }
 figcaption {
  font-size: 20px;
+}
+#disqus_thread {
+ border: 2px solid var(--dg);
+ border-radius: 4px;
+ margin-top: 10px;
+ padding: 20px;
+ background-image: url(dot.png);
+ display: none;
 }
                                  /* css for svg logo */
 .logo-cog {
@@ -253,17 +261,6 @@ dfn {
 }
 .code_snippet {
 }
-/*xmp {
- font-size: .7em;
- padding: .5em	;
- border: 2px solid #bbb;
- border-radius: 4px;
- margin: 20px;
- background-image: url("dot.png");
- background-color: #eee;
- width: 70vw;
- word-break: break-word;
-}*/
 code {
  margin-right: 20px;
 	position: relative;
@@ -385,9 +382,12 @@ div.main-page-box:nth-child(even) > div.main-page-boxes:nth-child(even) {
   z-index: 10 !important;
  }
  /* desktop version side navigation */
- /*xmp {
- 	width: 70vw;
- }*/
+ th {
+  font-size: 16px;
+ }
+ #disqus_thread {
+  display: block;
+ }
  #side-nav {
   grid-column: 1 / 2;
   grid-row: 2 / 3;
