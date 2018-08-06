@@ -63,6 +63,37 @@ nav#header-bottom {
 summary {
   outline: none;
 }
+.leftright {
+  width: 50%;
+  height: 30px;
+  border: 3px solid black;
+  border-radius: 15px;
+  font-weight: bolder;
+  background-color: var(--dg);
+  margin: 30px;
+  align-items: center;
+  position: fixed;
+  font-size: 20px;
+  bottom: 50px;
+
+}
+#left {
+  width: 50px;
+  float: left;
+  text-align: center;
+}
+.leftright a {
+  background-color: transparent;
+  color: black;
+}
+#right {
+  width: 50px;
+  right: 10px;
+  position: fixed;
+  bottom: 50px;
+  text-align: center;
+
+}
 #ransom1 div {
   display:inline-block;
 }

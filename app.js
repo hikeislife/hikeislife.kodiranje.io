@@ -107,7 +107,7 @@ function loadMain(page) {
 window.addEventListener("hashchange", pageInit);
 
 function loadSideNav(sideNavId) {                   // links                                                    items
- const sideNav = [["mp", ["#recnik", "#brauzeri_i_editori", "#ada", "#turing", "#timbl", "#brendan_eich"], ["Rečnik", "Softver", "Ada Lovlejs", "Alan Turing", "TimBL", "Brendan Ajk",]],
+ const sideNav = [["mp", ["#recnik", "#brauzeri_i_editori", "#ada", "#turing", ["#vitalik_buterin"], "#timbl", "#brendan_eich"], ["Rečnik", "Softver", "Ada Lovlejs", "Alan Turing", ["Vitalik Buterin"], "TimBL", "Brendan Ajk",]],
                   ["hc", ["#uvod_u_HTML_i_CSS", "#struktura_HTML_stranice", "#prvi_sajt", "#linkovi", "#uvod_u_CSS", "#predah", "#boje", "#uvod_u_slike"], ["Uvod", "HTML struktura", "Prvi Sajt", "Linkovi", "Uvod u CSS", "Predah", "Boje", "Uvod u slike"]],
                   ["gc", ["#uvod_u_cmd", "#cd_md_rd"], ["Uvod u cmd", "CD, MD, RD"]],
                   //["js", ["#uvod_u_js"], ["Uvod u JS"]]
@@ -127,9 +127,47 @@ function loadSideNav(sideNavId) {                   // links                    
   }
  }
  pos.innerHTML = sideMenu + '</ul>'
+ let leftright = document.getElementsByClassName("leftright");
  if(sideNavId != "mp") {
   document.getElementById(sideNavId).setAttribute("class", "selected");
+  for(var i = 0; i < 2; i++) {
+   leftright[i].style.display = "inline"
+  }
  }
+ else {
+  for(var i = 0; i < 2; i++) {
+    leftright[i].style.display = "none";
+  }
+ }
+ leftRight(links);
+}
+
+function leftRight(links) {
+  let levo = document.getElementById("left");
+  let desno = document.getElementById("right");
+  let current = location.hash;
+  let ind = links.indexOf(current)
+  if (ind == 0) {
+    left.style.display = "none";
+  }
+  else {
+    left.innerHTML = "";
+    let backlink = document.createElement("a");
+    left.appendChild(backlink);
+    backlink.setAttribute("href", links[ind-1]);
+    backlink.innerHTML = "pr.";
+  }
+  if (ind == (links.length -1)) {
+    right.style.display = "none";
+  }
+  else {
+    right.innerHTML = "";
+    let forlink = document.createElement("a");
+    right.appendChild(forlink);
+    forlink.setAttribute("href", links[ind+1]);
+    forlink.innerHTML = "sl.";
+  }
+
 }
 
 function setActive(frag) {
