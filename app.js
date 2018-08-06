@@ -116,6 +116,7 @@ function loadSideNav(sideNavId) {                   // links                    
  for (let i = 1; i < sideNav.length; i ++) {
   document.getElementById(sideNav[i][0]).removeAttribute("class");
  }
+
  let pos = document.getElementById("side-nav");
  var sideMenu = '<ul id="side-menu">';
  for (e in sideNav) {
@@ -127,6 +128,7 @@ function loadSideNav(sideNavId) {                   // links                    
    }
   }
  }
+
  pos.innerHTML = sideMenu + '</ul>'
  let leftright = document.getElementsByClassName("leftright");
  if(sideNavId != "mp") {
@@ -137,7 +139,17 @@ function loadSideNav(sideNavId) {                   // links                    
    var disqus_config = function () {
     this.page.url = window.location.href;  // Replace PAGE_URL with your page's canonical URL variable
     this.page.identifier = frag; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-console.log(location.href);
+
+ var reset = function (frag, newUrl) {
+     DISQUS.reset({
+         reload: true,
+         config: function () {
+             this.page.identifier = frag;
+             this.page.url = window.location.href;
+         }
+     });
+ };
+
 };
 
 (function() { // DON'T EDIT BELOW THIS LINE
