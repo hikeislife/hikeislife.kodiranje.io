@@ -280,11 +280,17 @@ function loadSideNav(sideNavId) {
                           "#cd_md_rd",
                           "#uvod_u_git",
                           "#git_instalacija",
+                          "#git_inicijacija",
+                          "#dodavanje_i_komit",
+                          "#pregled_loga",
                           ], [      //items
                                  "Uvod u cmd",
                                  "CD, MD, RD",
                                  "Uvod u Git",
                                  "Instalacija, Podešavanja",
+                                 "Inicijacija Repo-a",
+                                 "Dodavanje i Komit",
+                                 "Preledanje loga",
                                  ]],
                   ["js", [         // links
                          "#uvod_u_js",
