@@ -290,7 +290,7 @@ function loadSideNav(sideNavId) {
                                  "Instalacija, Podešavanja",
                                  "Inicijacija Repo-a",
                                  "Dodavanje i Komit",
-                                 "Preledanje loga",
+                                 "Pregledanje loga",
                                  ]],
                   ["js", [         // links
                          "#uvod_u_js",
