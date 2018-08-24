@@ -20,6 +20,12 @@
  --mpie: 160px;
  --mhalfpie: 80px;
  --mpieplus: 166px;
+  /* git colors */
+ --gityellow: #808000;
+ --gitpurple: #800080;
+ --gitgreen: #008000;
+ --gitwhite: #c6c6c6;
+ --gitred: #800000;
 }
 
 /* general css */
@@ -122,6 +128,9 @@ blockquote::before {
 blockquote::after {
  content: "\201d";
  font-size: 24px;
+}
+.highlight {
+ background-color: var(--lg);
 }
 footer {
  background-color: var(--mg);
@@ -288,6 +297,39 @@ dfn {
  border-color: black transparent transparent transparent;
 }
 
+/* table */
+table {
+ width: 20%;
+ border-collapse: collapse;
+ box-sizing: border-box;
+}
+th {
+ text-align: center;
+ box-sizing: border-box;
+}
+td {
+  word-break: break-all; 
+  font-size: 2vw;
+}
+/*tr td {
+  display: contents;
+}
+tr td div {
+ display: inline-block;
+ width: 16%;
+ border: 1px solid;
+}*/
+
+.thouter {
+ margin: 10px 0;
+}
+
+tr td {
+ border: 1px solid black;
+}
+
+
+
 /* tools */
 button {
  margin: 10px;
@@ -389,6 +431,7 @@ button:active {
 }
 .cmdwindow {
  color: #bdbdbd;
+ word-break: break-all;
  background-color: black;
  padding: 5px;
  border: thin solid white;
@@ -396,6 +439,22 @@ button:active {
  font-size: 16px;
  text-align: left;
  font-weight: bold;
+}
+.gityellow {
+ color: var(--gityellow);
+ font-family: "Lucida Console", Monaco, monospace;
+}
+.gitgreen {
+ color: var(--gitgreen);
+ font-family: "Lucida Console", Monaco, monospace;
+}
+.gitred {
+ color: var(--gitred);
+ font-family: "Lucida Console", Monaco, monospace;
+}
+.gitwhite {
+ color: var(--gitwhite);
+ font-family: "Lucida Console", Monaco, monospace;
 }
 .cmd table {
  border-collapse: collapse;
@@ -661,6 +720,13 @@ div.main-page-box:nth-child(even) > div.main-page-boxes:nth-child(even) {
  nav ul li:nth-last-of-type(1) {
   border-radius: 0 0 2px 2px;
  }
+ table {
+  width: 100%
+ }
+ td {
+  word-break: break-all; 
+  font-size: 14px;
+}
 
  /* desktop front page main content */
  #content {

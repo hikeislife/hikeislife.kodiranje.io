@@ -283,6 +283,9 @@ function loadSideNav(sideNavId) {
                           "#git_inicijacija",
                           "#dodavanje_i_komit",
                           "#pregled_loga",
+                          "#git_hash",
+                          "#git_status",
+                          "#git_diff",
                           ], [      //items
                                  "Uvod u cmd",
                                  "CD, MD, RD",
@@ -291,6 +294,9 @@ function loadSideNav(sideNavId) {
                                  "Inicijacija Repo-a",
                                  "Dodavanje i Komit",
                                  "Pregledanje loga",
+                                 "Hašovanje",
+                                 "Status",
+                                 "Pregled izmena",
                                  ]],
                   ["js", [         // links
                          "#uvod_u_js",
