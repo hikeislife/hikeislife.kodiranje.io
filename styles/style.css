@@ -235,6 +235,7 @@ span.selected {
  position: fixed;
  font-size: 20px;
  bottom: 50px;
+ display: none;
 }
 #right {
  width: 50px;

@@ -286,6 +286,8 @@ function loadSideNav(sideNavId) {
                           "#git_hash",
                           "#git_status",
                           "#git_diff",
+                          "#git_brisanje",
+                          "#git_preimenovanje",
                           ], [      //items
                                  "Uvod u cmd",
                                  "CD, MD, RD",
@@ -297,6 +299,8 @@ function loadSideNav(sideNavId) {
                                  "Hašovanje",
                                  "Status",
                                  "Pregled izmena",
+                                 "Brisanje Fajlova",
+                                 "Promena Naziva",
                                  ]],
                   ["js", [         // links
                          "#uvod_u_js",
