@@ -7,13 +7,9 @@
  <meta name="author" content="ČĎŠ" />
  <meta name="theme-color" content="#ccff66">
  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
- <meta name="application-name" content="Kodiranje" />
- <meta name="msapplication-tooltip" content="Kodiranje" />
- <meta name="msapplication-starturl" content="/" />
- <meta name="msapplication-task" content="name=Kodiranje on github;action-uri=https://github.com/;icon-uri=other/cog192.png" />
  <title>Kodiranje</title>
  <link rel="stylesheet" media="all" href="styles/style.css">
- <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Cutive+Mono" />
+ <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cutive+Mono" />
  <link rel="manifest" href="other/manifest.webmanifest">
  <link rel="icon" sizes="192x192" href="other/cog192.png">
 </head>
@@ -35,7 +31,7 @@
   <path d="M5 85 5000 85" />
   </g>
 
-  <a xlink:href="#home" start><g id="logo-text">
+  <a href="#home" rel="start chapter"><g id="logo-text">
   <text x="40" y="48">kodiranje_</text>
   </g></a>
 
@@ -96,10 +92,14 @@
  <!--ul id="side-menu"-->
   <a href="#recnik"><li>Rečnik</li></a>
   <a href="#brauzeri_i_editori"><li>Softver</li></a>
+  <a href="#HTML_u_JSON_izbegavanje_karaktera"><li>HTML u JSON</li></a>
   <a href="#ada"><li>Ada Lovlejs</li></a>
   <a href="#turing"><li>Alan Turing</li></a>
   <a href="#brendan_eich"><li>Brendan Ajk</li></a>
+  <a href="#vitalik_buterin"><li>Vitalik Buterin</li></a>
+  <a href="#grace_hopper"><li>Grejs Hoper</li></a>
   <a href="#timbl"><li>TimBL</li></a>
+  <a href="#hedy_lamarr"><li>Hedi Lamar</li></a>
   
  <!--/ul-->
 </nav>
@@ -196,9 +196,9 @@
      <div>
       <code id="front-page">
        <textarea class="code_snippet html">
-        if (a+b == c+d) {
-         alert("singularnost dosegnuta");
-        }
+ if (a+b == c+d) {
+  alert("singularnost dosegnuta");
+ }
        </textarea>
       </code></div>
     </div>
@@ -206,14 +206,14 @@
   </div>
 
   <div>
-   <div id="left" class="leftright"></div>
-   <div id="right" class="leftright"></div>
+   <div id="left" class="leftright" style="display: none;"></div>
+   <div id="right" class="leftright" style="display: none;"></div>
   </div>
  </main>
 </div>
 
 <footer><div id="copydate">&copy; ČĎŠ 2018</div></footer>
  
- <script type="text/javascript" src="app.js" async></script>
+ <script src="app.js" async></script>
 </body>
 </html>

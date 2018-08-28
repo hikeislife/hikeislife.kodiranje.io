@@ -196,6 +196,10 @@ function leftRightNav(links) {
   let desno = document.getElementById("right");
   let current = location.hash;
   let ind = links.indexOf(current)
+  if (current == "#home") {
+    levo.style.display = "none";
+    desno.style.display = "none";
+  }
   if (ind == 0) {
     levo.style.display = "none";
   }
@@ -234,6 +238,9 @@ function loadSideNav(sideNavId) {
                          "#brendan_eich",
                          "#vitalik_buterin",
                          "#grace_hopper",
+                         "#maja_pantic",
+                         "#mika_alas",
+                         "#rajko_tomovic",
                          "#timbl",
                          "#hedy_lamarr",
                          ], [      //items
@@ -245,6 +252,9 @@ function loadSideNav(sideNavId) {
                                  "Brendan Ajk",
                                  "Vitalik Buterin",
                                  "Grejs Hoper",
+                                 "Maja Pantić",
+                                 "Mihailo Petrović Alas",
+                                 "Rajko Tomović",
                                  "TimBL",
                                  "Hedi Lamar",
                                  ]],
@@ -326,14 +336,13 @@ function loadSideNav(sideNavId) {
  }
 
  let leftright = document.getElementsByClassName("leftright");
- 
  if(sideNavId != "mp") {
   document.getElementById(sideNavId).setAttribute("class", "selected");
   for(var i = 0; i < 2; i++) {
    leftright[i].style.display = "inline"
   }
  }
- else {
+ else if (sideNavId == "mp") {
   for(var i = 0; i < 2; i++) {
     leftright[i].style.display = "none";
   }
