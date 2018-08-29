@@ -240,6 +240,7 @@ function loadSideNav(sideNavId) {
                          "#grace_hopper",
                          "#maja_pantic",
                          "#mika_alas",
+                         "#ryan_dahl",
                          "#rajko_tomovic",
                          "#timbl",
                          "#hedy_lamarr",
@@ -254,6 +255,7 @@ function loadSideNav(sideNavId) {
                                  "Grejs Hoper",
                                  "Maja Pantić",
                                  "Mihailo Petrović Alas",
+                                 "Rajan Dal",
                                  "Rajko Tomović",
                                  "TimBL",
                                  "Hedi Lamar",
@@ -312,7 +314,7 @@ function loadSideNav(sideNavId) {
                                  "Brisanje Fajlova",
                                  "Promena Naziva",
                                  ]],
-                  ["js", [         // links
+                /*  ["js", [         // links
                          "#uvod_u_js",
                          "#js_varijable_i_konstante",
                          "#js_funkcije",
@@ -320,7 +322,7 @@ function loadSideNav(sideNavId) {
                                  "Uvod u JS",
                                  "Varijable i konstante",
                                  "Funkcije",
-                                 ]]
+                                 ]]*/
                   ];
 
 // clears up previously selected top nav item
