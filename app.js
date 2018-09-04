@@ -273,6 +273,8 @@ function loadSideNav(sideNavId) {
                           "#boje",
                           "#klase_i_id-ijevi",
                           "#divovi_i_spanovi",
+                          "#html_liste",
+                          "#css_liste",
                           "#meta",
                           ], [      //items
                                  "Uvod",
@@ -287,6 +289,8 @@ function loadSideNav(sideNavId) {
                                  "Boje",
                                  "Klase i Id-ijevi",
                                  "Divovi i Spanovi",
+                                 "Liste",
+                                 "Stilizacija Lista",
                                  "Meta tagovi",
                                  ]],
                   ["gc", [         // links
