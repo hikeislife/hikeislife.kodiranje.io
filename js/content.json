@@ -4,7 +4,7 @@
   "pagetitle": "title",
   "pagedesc": "this is page description",
   "tag": "test",
-  "content": "U izradi"
+  "content": "kôd za provod"
  },
  {
   "id": "js",
@@ -165,7 +165,7 @@
   "pagetitle": "CSS | Liste",
   "pagedesc": "this is page description",
   "tag": "css_liste",
-  "content": "U izradi"
+  "content": "<article>\r\n <section>\r\n  <h1>Kako stilizovati liste u web dizajnu<\/h1>\r\n  <p>\u00F4<\/p>\r\n  <h2>Podrazumevani CSS &lt;ul&gt; taga<\/h2>\r\n  <code>\r\n   <textarea class=\"code_snippet css\">\r\n    ul {\r\n     display: block;\r\n     list-style-type: disc;\r\n     margin: 1em 0;\r\n     padding-left: 40px;\r\n    }\r\n   <\/textarea>\r\n  <\/code>\r\n  <h3>padding CSS svojstvo<\/h3>\r\n  <p><\/p>\r\n  <h3>list-style-type CSS svojstvo<\/h3>\r\n  <p><\/p>\r\n  <h2>Podrazumevani CSS &lt;ol&gt; taga<\/h2>\r\n  <code>\r\n   <textarea class=\"code_snippet css\">\r\n    ol {\r\n     display: block;\r\n     list-style-type: decimal;\r\n     margin: 1em 0;\r\n     padding-left: 40px;\r\n    }\r\n   <\/textarea>\r\n  <\/code>\r\n  <p>\u00F4<\/p>\r\n  <h2>Podrazumevani CSS &lt;li&gt; taga<\/h2>\r\n  <code>\r\n   <textarea class=\"code_snippet css\">\r\n    li {\r\n     display: list-item;\r\n    }\r\n   <\/textarea>\r\n  <\/code>\r\n  <p><\/p>\r\n  <h3><\/h3>\r\n  <h2>Podrazumevani CSS &lt;dl&gt; taga<\/h2>\r\n  <code>\r\n   <textarea class=\"code_snippet css\">\r\n    dl {\r\n     display: block;\r\n     margin: 1em 0;\r\n    }\r\n   <\/textarea>\r\n  <\/code>\r\n  <p><\/p>\r\n  <h2>Podrazumevani CSS &lt;dt&gt; taga<\/h2>\r\n  <code>\r\n   <textarea class=\"code_snippet css\">\r\n    dt {\r\n     display: block;\r\n    }\r\n   <\/textarea>\r\n  <\/code>\r\n  <p><\/p>\r\n  <h2>Podrazumevani CSS &lt;dd&gt; taga<\/h2>\r\n  <code>\r\n   <textarea class=\"code_snippet css\">\r\n    dd {\r\n     display: block;\r\n     margin-left: 40px;\r\n    }\r\n   <\/textarea>\r\n  <\/code>\r\n  <p><\/p>\r\n <\/section>\r\n<\/article>"
  },
  {
   "id": "hc",
