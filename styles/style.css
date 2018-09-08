@@ -118,16 +118,20 @@ blockquote cite {
 }
 blockquote cite::before {
   content:"~ ";
+  font-size: 30px;
+  color: var(--dg);
 }
 blockquote::before {
  content: "\201c";
- font-size: 24px;
+ font-size: 30px;
+ color: var(--dg);
  /*position: absolute;
  left: 5px;*/
 }
 blockquote::after {
  content: "\201d";
- font-size: 24px;
+ font-size: 30px;
+ color: var(--dg);
 }
 .highlight {
  background-color: var(--lg);
@@ -561,7 +565,7 @@ svgns|a text {
  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3), 0 1px 2px 0 rgba(0, 0, 0, 0.3);
  font-size: 1em;
  display: grid;
- padding: 50px;
+ padding: 10px;
  text-align: justify;
 }
 .main-page-box {
@@ -678,9 +682,9 @@ div.main-page-box:nth-child(even) > div.main-page-boxes:nth-child(even) {
   display: none;
  }
  .cmd table th {
- background-color: rgb(176, 209, 243);
- font-size: 16px;
-}
+  background-color: rgb(176, 209, 243);
+  font-size: 16px;
+ }
  #cog {
   display: inline;
  }
@@ -727,9 +731,18 @@ div.main-page-box:nth-child(even) > div.main-page-boxes:nth-child(even) {
  td {
   word-break: break-all; 
   font-size: 14px;
-}
+ }
 
  /* desktop front page main content */
+ #placeholder {
+  padding: 20px;
+ }
+ #placeholder div {
+  padding: 20px 70px;
+ }
+ #placeholder p {
+  padding: 20px 70px;
+ }
  #content {
   grid-column: 2 / 3 !important;
   grid-row: 2 / 3;
