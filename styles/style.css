@@ -30,7 +30,7 @@
 
 /* general css */
 * {
- font-family: "Cutive Mono", monospace, sans-serif;/*"Source Code Pro";/*"Prestige Elite Std", monospace;/*"Cutive Mono", monospace;*/
+ font-family: 'Roboto Mono', monospace;/*"Source Code Pro";/*"Prestige Elite Std", monospace;/*"Cutive Mono", monospace;*/
  line-height: 125%;
  margin: 0px;
  -webkit-box-sizing: border-box;
@@ -737,11 +737,31 @@ div.main-page-box:nth-child(even) > div.main-page-boxes:nth-child(even) {
  #placeholder {
   padding: 20px;
  }
- #placeholder.superbox, #placeholder p, #placeholder details {
-  padding: 20px 70px;
+ #placeholder p, #placeholder details {
+  padding: 20px 100px;
+ }
+ #placeholder code {
+  margin: 10px 70px !important;
+ }
+ #placeholder textarea {
+  overflow: hidden;
+ }
+ #placeholder .superbox details {
+  padding: 0;
+ }
+ .superbox {
+  margin: 10px 70px;
+  padding: 10px 30px;
  }
  .cmd p {
   padding: 20px !important;
+ }
+ .def, .def p {
+  margin: 0;
+  padding: 10px !important;
+ }
+ .def ul {
+  margin: 10px !important;
  }
  /*.main-page-box {
   padding: 0 !important;
