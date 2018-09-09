@@ -737,12 +737,16 @@ div.main-page-box:nth-child(even) > div.main-page-boxes:nth-child(even) {
  #placeholder {
   padding: 20px;
  }
- #placeholder div {
+ #placeholder.superbox, #placeholder p, #placeholder details {
   padding: 20px 70px;
  }
- #placeholder p {
-  padding: 20px 70px;
+ .cmd p {
+  padding: 20px !important;
  }
+ /*.main-page-box {
+  padding: 0 !important;
+  margin: 0;
+ }*/
  #content {
   grid-column: 2 / 3 !important;
   grid-row: 2 / 3;
