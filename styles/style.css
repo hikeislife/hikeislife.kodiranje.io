@@ -753,6 +753,9 @@ div.main-page-box:nth-child(even) > div.main-page-boxes:nth-child(even) {
   margin: 10px 70px;
   padding: 10px 30px;
  }
+ .superbox p {
+  padding: 0 !important;
+ }
  .cmd p {
   padding: 20px !important;
  }
@@ -760,8 +763,14 @@ div.main-page-box:nth-child(even) > div.main-page-boxes:nth-child(even) {
   margin: 0;
   padding: 10px !important;
  }
- .def ul {
-  margin: 10px !important;
+ h3 {
+  margin-left: 100px;
+ }
+ #placeholder ul {
+  margin-left: 100px !important;
+ }
+ #placeholder ul li ul {
+  margin-left: 0px !important;
  }
  /*.main-page-box {
   padding: 0 !important;
