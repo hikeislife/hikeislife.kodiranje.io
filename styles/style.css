@@ -57,9 +57,9 @@ h2 {
 h3 {
  margin: 20px 0;
 }
-p {
+/*p {
  margin: 15px 0;
-}
+}*/
 a, a:visited {
  text-decoration: none;
  background-color: var(--mg);
@@ -734,11 +734,11 @@ div.main-page-box:nth-child(even) > div.main-page-boxes:nth-child(even) {
  }
 
  /* desktop front page main content */
- #placeholder {
+ /*#placeholder {
   padding: 20px;
  }
  #placeholder p, #placeholder details {
-  padding: 20px 100px;
+  padding: 10px 100px;
  }
  #placeholder code {
   margin: 10px 70px !important;
@@ -756,21 +756,33 @@ div.main-page-box:nth-child(even) > div.main-page-boxes:nth-child(even) {
  .superbox p {
   padding: 0 !important;
  }
- .cmd p {
+ /*.cmd p {
   padding: 20px !important;
- }
- .def, .def p {
+ }*/
+ /*.def, .def p {
   margin: 0;
+  padding: 10px !important;
+ }
+ .cmdwindow p {
   padding: 10px !important;
  }
  h3 {
   margin-left: 100px;
+ }
+ summary h3 {
+  margin-left: 10px;
  }
  #placeholder ul {
   margin-left: 100px !important;
  }
  #placeholder ul li ul {
   margin-left: 0px !important;
+ }*/
+ #placeholder {
+  padding: 20px 100px;
+ }
+ #placeholder p {
+  margin: 30px 0;
  }
  /*.main-page-box {
   padding: 0 !important;
