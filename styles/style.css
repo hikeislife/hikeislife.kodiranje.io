@@ -31,6 +31,7 @@
 /* general css */
 * {
  font-family: 'Roboto Mono', monospace;/*"Source Code Pro";/*"Prestige Elite Std", monospace;/*"Cutive Mono", monospace;*/
+ /*font-weight: bolder;*/
  line-height: 125%;
  margin: 0px;
  -webkit-box-sizing: border-box;
@@ -60,6 +61,12 @@ h3 {
 /*p {
  margin: 15px 0;
 }*/
+em {
+  border: 1px solid black;
+  border-radius: 3px;
+  background-color: #ddd;
+  padding: 0 5px;
+}
 a, a:visited {
  text-decoration: none;
  background-color: var(--mg);
@@ -83,6 +90,9 @@ ul.gap_li li {
 details {
  position: relative;
 }
+.inl {
+  display: inline;
+}
 summary {
  outline: none;
  padding: 20px 0;
@@ -92,6 +102,9 @@ summary::-webkit-details-marker {
  position: relative;
  /*display: none;*/
  color: var(--dg);
+}
+h2.inl{
+  text-align: center;
 }
 /*summary::after {
  content: "";
@@ -135,6 +148,9 @@ blockquote::after {
 }
 .highlight {
  background-color: var(--lg);
+}
+.listless {
+  list-style-type: none;
 }
 footer {
  background-color: var(--mg);
