@@ -66,6 +66,7 @@ em {
   border-radius: 3px;
   background-color: #ddd;
   padding: 0 5px;
+  white-space: nowrap;
 }
 a, a:visited {
  text-decoration: none;
