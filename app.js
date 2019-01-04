@@ -322,7 +322,7 @@ function loadSideNav(sideNavId) {
                                  "Brisanje Fajlova",
                                  "Promena Naziva",
                                  ]],
-                /*  ["js", [         // links
+                  ["js", [         // links
                          "#uvod_u_js",
                          "#js_varijable_i_konstante",
                          "#js_funkcije",
@@ -330,7 +330,7 @@ function loadSideNav(sideNavId) {
                                  "Uvod u JS",
                                  "Varijable i konstante",
                                  "Funkcije",
-                                 ]]*/
+                                 ]]
                   ];
 
 // clears up previously selected top nav item
