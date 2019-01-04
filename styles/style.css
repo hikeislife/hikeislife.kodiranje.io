@@ -31,7 +31,6 @@
 /* general css */
 * {
  font-family: 'Roboto Mono', monospace;/*"Source Code Pro";/*"Prestige Elite Std", monospace;/*"Cutive Mono", monospace;*/
- /*font-weight: bolder;*/
  line-height: 125%;
  margin: 0px;
  -webkit-box-sizing: border-box;
@@ -58,9 +57,6 @@ h2 {
 h3 {
  margin: 20px 0;
 }
-/*p {
- margin: 15px 0;
-}*/
 em {
   border: 1px solid black;
   border-radius: 3px;
@@ -107,14 +103,6 @@ summary::-webkit-details-marker {
 h2.inl{
   text-align: center;
 }
-/*summary::after {
- content: "";
- background:;
- float:;
-}
-summary[open] summary::after {
- background: url();
-}*/
 blockquote {
  font-weight: bold;
  position: relative;
@@ -139,8 +127,6 @@ blockquote::before {
  content: "\201c";
  font-size: 30px;
  color: var(--dg);
- /*position: absolute;
- left: 5px;*/
 }
 blockquote::after {
  content: "\201d";
@@ -160,6 +146,36 @@ footer {
  text-align: center;
  background: linear-gradient(to bottom, var(--lg) 20%, var(--mg) 100%);
 }
+footer > hr {
+  width: 90%;
+  margin: 10px auto 20px;
+  border-color: var(--lightf);
+  align-items: center;
+}
+
+.various {
+
+ display: grid;
+ grid-template-columns: 1fr 40px 3fr;
+ grid-row-gap: 10px;
+ grid-column-gap: 20px;
+ padding-bottom: 20px;
+ grid-auto-rows: all;
+}
+.don {
+  text-align: left;
+  grid-column: 3/4;
+  align-self: end;
+  font-weight: 700;
+}
+.links {
+  text-align: right;
+  grid-column: 1/2;
+
+}
+.icon {
+  grid-column: 2/3;
+align-self: end;}
 
 /* logo and top nav container for mobile */
 header {
@@ -213,7 +229,6 @@ header {
 #side-nav li.active {
  background-color: var(--lg);
  font-weight: bold;
- /*border: 2px solid #bbb;*/
 }
 span.selected {
  font-weight: bold;
@@ -277,8 +292,6 @@ span.selected {
  color: var(--dg);
 }
 
-
-
 /* tooltips mobile */
 dfn {
  font-style: normal;
@@ -333,14 +346,6 @@ td {
   word-break: break-all; 
   font-size: 2vw;
 }
-/*tr td {
-  display: contents;
-}
-tr td div {
- display: inline-block;
- width: 16%;
- border: 1px solid;
-}*/
 
 .thouter {
  margin: 10px 0;
@@ -563,9 +568,7 @@ svgns|a text {
  cursor: pointer;
  background-color: white;
 }
-/*svg text {
- font-weight: bold;
-}*/
+
 
 /* classes added through js */
 .fixed-top { 
@@ -723,7 +726,6 @@ div.main-page-box:nth-child(even) > div.main-page-boxes:nth-child(even) {
  #side-nav[style] {
   display: inline !important;
   position: relative !important;
-  /*background-color: var(--sg);*/
   margin-top: -2px;
   list-style-type: none;
   z-index: 0;
