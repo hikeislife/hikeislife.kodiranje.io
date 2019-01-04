@@ -324,7 +324,30 @@ dfn {
  border-width: 7px;
  border-color: black transparent transparent transparent;
 }
-
+.various {
+ display: grid;
+ grid-template-columns: 1fr 40px 3fr;
+ grid-row-gap: 10px;
+ grid-column-gap: 20px;
+ padding-bottom: 20px;
+ grid-auto-rows: all;
+}
+.don {
+  text-align: left;
+  /*padding: 20px;*/
+  grid-column: 3/4;
+  align-self: end;
+  font-weight: 700;
+}
+.links {
+  text-align: right;
+  /*padding: 20px;*/
+  grid-column: 1/2;
+  
+}
+.icon {
+  grid-column: 2/3;
+align-self: end;}
 /* table */
 table {
  width: 20%;
