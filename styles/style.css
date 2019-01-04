@@ -66,6 +66,7 @@ em {
   border-radius: 3px;
   background-color: #ddd;
   padding: 0 5px;
+  white-space: nowrap;
 }
 a, a:visited {
  text-decoration: none;
@@ -79,12 +80,6 @@ hr {
  border-style: solid;
  border-color: #ffc600;
  margin: 20px 0;
-}
-footer > hr {
-  width: 90%;
-  margin: 10px auto 20px;
-  border-color: var(--lightf);
-  align-items: center;
 }
 main ul li {
  text-align: justify;
@@ -163,7 +158,6 @@ footer {
  grid-column: 1 / 3;
  padding: 5px;
  text-align: center;
- /*align-content: space-around;*/
  background: linear-gradient(to bottom, var(--lg) 20%, var(--mg) 100%);
 }
 
@@ -324,30 +318,7 @@ dfn {
  border-width: 7px;
  border-color: black transparent transparent transparent;
 }
-.various {
- display: grid;
- grid-template-columns: 1fr 40px 3fr;
- grid-row-gap: 10px;
- grid-column-gap: 20px;
- padding-bottom: 20px;
- grid-auto-rows: all;
-}
-.don {
-  text-align: left;
-  /*padding: 20px;*/
-  grid-column: 3/4;
-  align-self: end;
-  font-weight: 700;
-}
-.links {
-  text-align: right;
-  /*padding: 20px;*/
-  grid-column: 1/2;
-  
-}
-.icon {
-  grid-column: 2/3;
-align-self: end;}
+
 /* table */
 table {
  width: 20%;
