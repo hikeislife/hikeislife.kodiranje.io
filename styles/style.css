@@ -94,7 +94,7 @@ summary {
  outline: none;
  padding: 20px 0;
 }
-summary::-webkit-details-marker {
+summary::-webkit-details-marker, summary::-moz-details-marker {
  float: left;
  position: relative;
  /*display: none;*/
@@ -162,11 +162,6 @@ footer > hr {
   overflow: hidden;
 }
 .cogitself img {
-  /*top: 25%;
-  left: 25%;*/
-  /*width: 40px;
-  height: 40px;*/
-  /*margin:-10px 0 0 -10px;*/
   -webkit-animation:spin 60s linear infinite;
   -moz-animation:spin 60s linear infinite;
   animation:spin 60s linear infinite;
@@ -225,7 +220,6 @@ footer > hr {
   display: inline-block;
   width: 35px;
   cursor: pointer;
-  /*overflow: hidden;*/
 }
 div.don div.icon {
   width: 35px;
