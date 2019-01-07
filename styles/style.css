@@ -506,8 +506,11 @@ button:active {
  background-color: var(--qy)!important;
 }
 .kviz::before {
-  font-family: "FontAwesome";
-  content: "\f059";
+ font-family: "FontAwesome";
+ content: "\f059";
+ padding: 0 5px;
+ color: var(--darkf);
+ font-weight: 900;
 }
 .error {
  background-color: var(--dy)!important;
@@ -531,9 +534,11 @@ button:active {
  color: var(--qy);
 }
 .tip::before {
-  font-family: "FontAwesome";
-  content: "\f005";
-  /*color: var(--dy);*/
+ font-family: "FontAwesome";
+ content: "\f005";
+ padding: 0 5px;
+ color: var(--darkf);
+ font-weight: 900;
 }
 .warning {
  background-color: var(--wr)!important;
@@ -542,6 +547,9 @@ button:active {
 .warning::before {
  font-family: "FontAwesome";
  content: "\f06a";
+ padding: 0 5px;
+ color: var(--darkf);
+ font-weight: 900;
 }
 .depr {
  border-color: var(--wr);

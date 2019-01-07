@@ -326,7 +326,7 @@ function loadSideNav(sideNavId) {
                          "#uvod_u_js",
                          "#js_konzola",
                          "#js_tipovi",
-                         "#typeof",
+                         "#js_typeof",
                          "#js_varijable_i_konstante",
                          "#js_funkcije",
                          ], [      //items
