@@ -324,12 +324,16 @@ function loadSideNav(sideNavId) {
                                  ]],
                   ["js", [         // links
                          "#uvod_u_js",
+                         "#js_konzola",
                          "#js_tipovi",
+                         "#typeof",
                          "#js_varijable_i_konstante",
                          "#js_funkcije",
                          ], [      //items
                                  "Uvod u JS",
-                                 "Tipovi podataka",
+                                 "Konzola",
+                                 "Primitivni tipovi",
+                                 "Spec tipovi i typeof",
                                  "Varijable i konstante",
                                  "Funkcije",
                                  ]]
