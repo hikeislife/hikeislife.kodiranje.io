@@ -246,10 +246,12 @@ div.various > div.links > div.icon + div.sol,
 .icon + .error, 
 .icon + .kviz {
   width: auto !important;
+  cursor: context-menu !important;
   /**/
 }
 div.various > div.links > div.icon + div.sol {
   padding-right: 35px !important;
+  cursor: context-menu !important;
 }
 
 div.don div.adr {
