@@ -329,6 +329,7 @@ function loadSideNav(sideNavId) {
                          "#js_typeof",
                          "#js_varijable_i_konstante",
                          "#js_funkcije",
+                         "#js_unutrasnjost_brauzera",
                          ], [      //items
                                  "Uvod u JS",
                                  "Konzola",
@@ -336,6 +337,7 @@ function loadSideNav(sideNavId) {
                                  "Spec tipovi i typeof",
                                  "Varijable i konstante",
                                  "Funkcije",
+                                 "JS Motor",
                                  ]]
                   ];
 

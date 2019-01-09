@@ -177,6 +177,18 @@ footer > hr {
   -moz-animation:spin 60s linear infinite;
   animation:spin 60s linear infinite;
 }
+/*#eventLoop {
+ position: relative;
+}*/
+/*#evloop {
+  animation:spin 60s linear infinite;
+  position: absolute;
+  width: 48px;
+  display: block;
+  height: 48px;
+  bottom: -20px;
+  left: 24px;
+}*/
 .cogtext {
   position: absolute;
   z-index: 1;
