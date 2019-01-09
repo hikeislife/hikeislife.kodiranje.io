@@ -42,7 +42,7 @@ font-style : normal;
 /* general css */
 * {
  font-family: 'Roboto Mono', monospace;/*"Source Code Pro";/*"Prestige Elite Std", monospace;/*"Cutive Mono", monospace;*/
- line-height: 125%;
+ line-height: 160%;
  margin: 0px;
  -webkit-box-sizing: border-box;
  -moz-box-sizing: border-box;
