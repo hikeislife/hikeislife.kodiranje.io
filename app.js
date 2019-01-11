@@ -328,6 +328,9 @@ function loadSideNav(sideNavId) {
                          "#js_tipovi",
                          "#js_typeof",
                          "#js_varijable_i_konstante",
+                         "#js_stringovi",
+                         "#js_brojevi",
+                         "#js_bools",
                          "#js_funkcije",
                          "#js_unutrasnjost_brauzera",
                          ], [      //items
@@ -336,6 +339,9 @@ function loadSideNav(sideNavId) {
                                  "Primitivni tipovi",
                                  "Spec tipovi i typeof",
                                  "Varijable i konstante",
+                                 "Stringovi naširoko",
+                                 "Brojevi naširoko",
+                                 "Buliani naširoko",
                                  "Funkcije",
                                  "JS Motor",
                                  ]]
