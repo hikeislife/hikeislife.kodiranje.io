@@ -516,6 +516,13 @@ button:active {
 .superbox p {
   color: var(--darkf);
 }
+.why {
+  background-color: var(--dy);
+}
+.why::before {
+  content: 'Zašto ovo učimo? ';
+  font-weight: bolder;
+}
 .sol {
  background-image: url("dot.png");
  font-weight: bold;
