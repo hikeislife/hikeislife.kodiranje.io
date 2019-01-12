@@ -331,6 +331,7 @@ function loadSideNav(sideNavId) {
                          "#js_stringovi",
                          "#js_brojevi",
                          "#js_bools",
+                         "#js_simboli",
                          "#js_funkcije",
                          "#js_unutrasnjost_brauzera",
                          ], [      //items
@@ -342,6 +343,7 @@ function loadSideNav(sideNavId) {
                                  "Stringovi naširoko",
                                  "Brojevi naširoko",
                                  "Buliani naširoko",
+                                 "Simboli naširoko",
                                  "Funkcije",
                                  "JS Motor",
                                  ]]
