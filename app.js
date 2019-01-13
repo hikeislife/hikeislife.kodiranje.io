@@ -1,53 +1,53 @@
 // registers service worker
-if ('serviceWorker' in navigator) { // browser support check
-  navigator.serviceWorker.register('sw.js')
-  .then(function(reg) {
-    // run if registration worked
-    if(!navigator.serviceWorker.controller) {
-      return;
-    }
-    if(reg.waiting) {
-      function initializeUI() {
-        reg.pushManager.getSubscription()
-        .then(function(subscription) {
-          isSubscribed = !(subscription === null);
+// if ('serviceWorker' in navigator) { // browser support check
+//   navigator.serviceWorker.register('sw.js')
+//   .then(function(reg) {
+//     // run if registration worked
+//     if(!navigator.serviceWorker.controller) {
+//       return;
+//     }
+//     if(reg.waiting) {
+//       function initializeUI() {
+//         reg.pushManager.getSubscription()
+//         .then(function(subscription) {
+//           isSubscribed = !(subscription === null);
 
-          if (isSubscribed) {
-            console.log('User IS subscribed.');
-          } else {
-            console.log('User is NOT subscribed.');
-          }
+//           if (isSubscribed) {
+//             console.log('User IS subscribed.');
+//           } else {
+//             console.log('User is NOT subscribed.');
+//           }
 
-        updateBtn();
-        });
-      }
-    }
+//         updateBtn();
+//         });
+//       }
+//     }
 
-    function updateBtn() {
-      if (isSubscribed) {
-        pushButton.textContent = 'Disable Push Messaging';
-      } else {
-        pushButton.textContent = 'Enable Push Messaging';
-      }
+//     function updateBtn() {
+//       if (isSubscribed) {
+//         pushButton.textContent = 'Disable Push Messaging';
+//       } else {
+//         pushButton.textContent = 'Enable Push Messaging';
+//       }
 
-      pushButton.disabled = false;
-    }
+//       pushButton.disabled = false;
+//     }
 
-    initializeUI();
+//     initializeUI();
 
-    if(reg.installing) {
-          console.log('Service worker installing');
-        } else if(reg.waiting) {
-          console.log('Service worker installed');
-        } else if(reg.active) {
-          console.log('Service worker active');
-        }
-    console.log('Registration succeeded. Scope is ' + reg.scope);
-  }).catch(function(error) {
-    // run if registration failed
-    console.log('Registration failed with ' + error);
-  });
-}
+//     if(reg.installing) {
+//           console.log('Service worker installing');
+//         } else if(reg.waiting) {
+//           console.log('Service worker installed');
+//         } else if(reg.active) {
+//           console.log('Service worker active');
+//         }
+//     console.log('Registration succeeded. Scope is ' + reg.scope);
+//   }).catch(function(error) {
+//     // run if registration failed
+//     console.log('Registration failed with ' + error);
+//   });
+// }
 
 
 
