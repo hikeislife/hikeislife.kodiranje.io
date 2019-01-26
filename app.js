@@ -335,7 +335,7 @@ function loadSideNav(sideNavId) {
                          "#js_bools",
                          "#js_simboli",
                          "#js_funkcije",
-                         "#js_unutrasnjost_brauzera",
+                         "#js_kako_brauzer_radi",
                          ], [      //items
                                  "Uvod u JS",
                                  "Konzola",
