@@ -403,6 +403,7 @@ dfn {
 .tt {
  position: relative;
  border-bottom: 2px solid var(--dy);
+ cursor: help;
 }
 .error span.tt {
   border-bottom: 2px solid var(--darkf);
