@@ -239,7 +239,7 @@ function loadSideNav(sideNavId) {
                          "#brendan_eich",
                          "#vitalik_buterin",
                          "#grace_hopper",
-                         "#lajnus_torvalds"
+                         "#lajnus_torvalds",
                          "#maja_pantic",
                          "#mika_alas",
                          "#ryan_dahl",
@@ -256,7 +256,7 @@ function loadSideNav(sideNavId) {
                                  "Brendan Ajk",
                                  "Vitalik Buterin",
                                  "Grejs Hoper",
-                                 "Lajnus Torvalds"
+                                 "Lajnus Torvalds",
                                  "Maja Pantić",
                                  "Mihailo Petrović Alas",
                                  "Rajan Dal",
