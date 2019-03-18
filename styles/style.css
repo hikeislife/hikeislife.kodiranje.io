@@ -1,4 +1,4 @@
-/* setting up the colors that will be used troughout the site */
+  /* setting up the colors that will be used troughout the site */
 :root {
   /* greens */
  --mg: #9af629;/* main green #7cc91c; #ccff66; */
@@ -1154,7 +1154,7 @@ div.main-page-box:nth-child(even) > div.main-page-boxes:nth-child(even) {
   padding: 20px 100px;
  }*/
  article {
-  padding: 20px 200px;
+  padding: 20px 150px;
  }
  #placeholder p {
   margin: 30px 0;
