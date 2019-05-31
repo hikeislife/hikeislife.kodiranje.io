@@ -1450,7 +1450,7 @@ div.main-page-box:nth-child(even) > div.main-page-boxes:nth-child(even) {
     color: white;
     position: relative;
     display: inline;
-    left: -784px;
+    left: -798px;
     top: -208px;
     border: none;
    }
@@ -1466,7 +1466,7 @@ div.main-page-box:nth-child(even) > div.main-page-boxes:nth-child(even) {
     border: none;
     color: white;
     position: relative;
-    left: -775px;
+    left: -786px;
     top: -208px;
     display: inline;
   }
@@ -1482,7 +1482,7 @@ div.main-page-box:nth-child(even) > div.main-page-boxes:nth-child(even) {
     color: white;
     position: relative;
     top: -221px;
-    left: -745px;
+    left: -749px;
   }
   .multiplier {
     font-size: 18px;
