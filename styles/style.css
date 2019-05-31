@@ -1498,7 +1498,6 @@ div.main-page-box:nth-child(even) > div.main-page-boxes:nth-child(even) {
   }
   .tolerance {
     font-size: 18px;
-    /*text-align: center;*/
     width: 60px;
   }
 
