@@ -1377,7 +1377,7 @@ div.main-page-box:nth-child(even) > div.main-page-boxes:nth-child(even) {
   }
   #firstno { /* both */
     position: relative;
-    left: -96px;
+    left: -97px;
     top: 11px;
     padding-top: 25px;
     padding-right: 2px;
@@ -1391,14 +1391,13 @@ div.main-page-box:nth-child(even) > div.main-page-boxes:nth-child(even) {
     position: absolute;
     z-index: 3;
     top: -40px;
-    left: 76px;
+    left: 78px;
     padding-left: 73px;
     padding-top: 40px;
   }
   #secondno {
     position: relative;
-    left: -93px;
-
+    left: -101px;
     z-index: 2;
     top: 11px;
     padding-top: 70px;
@@ -1408,7 +1407,7 @@ div.main-page-box:nth-child(even) > div.main-page-boxes:nth-child(even) {
   }
   #multiplier {
     position: relative;
-    left: -85px;
+    left: -93px;
     z-index: 2;
     top: 11px;
     padding-top: 70px;
@@ -1417,7 +1416,7 @@ div.main-page-box:nth-child(even) > div.main-page-boxes:nth-child(even) {
     border-width: 0 0 2px 2px;
   }
   #tolerance { /* both */
-    left: -86px;
+    left: -98px;
     position: relative;
     top: 11px;
     padding-top: 20px;
@@ -1450,14 +1449,12 @@ div.main-page-box:nth-child(even) > div.main-page-boxes:nth-child(even) {
     color: white;
     position: relative;
     display: inline;
-    left: -798px;
+    left: -799px;
     top: -208px;
     border: none;
    }
   .firstvalue {
     font-size: 18px;
-    /*top: 100px;*/
-    /*position: absolute;*/
     left: 15px;
     text-align: center;
     width: 60px;
@@ -1466,7 +1463,7 @@ div.main-page-box:nth-child(even) > div.main-page-boxes:nth-child(even) {
     border: none;
     color: white;
     position: relative;
-    left: -786px;
+    left: -794px;
     top: -208px;
     display: inline;
   }
@@ -1481,8 +1478,8 @@ div.main-page-box:nth-child(even) > div.main-page-boxes:nth-child(even) {
     border: none;
     color: white;
     position: relative;
-    top: -221px;
-    left: -749px;
+    top: -225px;
+    left: -757px;
   }
   .multiplier {
     font-size: 18px;
@@ -1493,8 +1490,8 @@ div.main-page-box:nth-child(even) > div.main-page-boxes:nth-child(even) {
   #tolerancecol {
     border: none;
     position: relative;
-    top: -222px;
-    left: -455px;
+    top: -225px;
+    left: -469px;
   }
   .tolerance {
     font-size: 18px;
