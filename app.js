@@ -352,6 +352,19 @@ function loadSideNav(sideNavId) {
                                  "Simboli naširoko",
                                  "Funkcije",
                                  "JS Motor",
+                                 ]],
+                    ["ar", [         // links
+                         "#arduino_uvod_i_instalacija",
+                         "#arduino_pregled_arduina",
+                         "#arduino_diode",
+                         "#arduino_otpornici",
+                         "#arduino_ide",
+                         ], [      //items
+                                 "Uvod i instalacija",
+                                 "Pregled arduina",
+                                 "LED",
+                                 "Otpornici",
+                                 "IDE",
                                  ]]
                   ];
 
