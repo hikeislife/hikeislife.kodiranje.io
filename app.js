@@ -360,6 +360,7 @@ function loadSideNav(sideNavId) {
                          "#arduino_otpornici",
                          "#arduino_ide",
                          "#arduino_varijable",
+                         "#arduino_rgb_led",
                          ], [      //items
                                  "Uvod i instalacija",
                                  "Pregled arduina",
@@ -367,6 +368,7 @@ function loadSideNav(sideNavId) {
                                  "Otpornici",
                                  "IDE",
                                  "Varijable",
+                                 "RGB LED",
                                  ]]
                   ];
 
