@@ -361,6 +361,7 @@ function loadSideNav(sideNavId) {
                          "#arduino_ide",
                          "#arduino_varijable",
                          "#arduino_rgb_led",
+                         "#arduino_if_blokovi",
                          ], [      //items
                                  "Uvod i instalacija",
                                  "Pregled arduina",
@@ -369,6 +370,7 @@ function loadSideNav(sideNavId) {
                                  "IDE",
                                  "Varijable",
                                  "RGB LED",
+                                 "If blokovi",
                                  ]]
                   ];
 
