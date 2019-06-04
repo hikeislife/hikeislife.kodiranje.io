@@ -114,8 +114,8 @@ a.nocolor {
   z-index: 5;
   background: transparent !important;
 }
-@media only screen and (min-width: 940px) {
-  left: 260px;
+@media only screen and (min-width: 640px) {
+  .a2a_kit, .a2a_menu, .a2a_modal, .a2a_overlay {left: 260px;}
 }
 hr {
  border-style: solid;
