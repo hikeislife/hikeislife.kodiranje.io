@@ -108,6 +108,15 @@ a, a:visited {
 a.nocolor {
   background-color: transparent;
 }
+.a2a_kit, .a2a_menu, .a2a_modal, .a2a_overlay {
+  position: fixed;
+  left: 10px;
+  z-index: 5;
+  background: transparent !important;
+}
+@media only screen and (min-width: 940px) {
+  left: 260px;
+}
 hr {
  border-style: solid;
  border-color: #ffc600;
@@ -980,6 +989,7 @@ dl dt {
  display: grid;
  padding: 10px;
  text-align: justify;
+ top: -40px;
 }
 .main-page-box {
  display: grid;
