@@ -338,7 +338,7 @@ function loadSideNav(sideNavId) {
                          "#js_brojevi",
                          "#js_bools",
                          "#js_simboli",
-                         "js_arrayi_uvod",
+                         "#js_arrayi_uvod",
                          "#js_funkcije",
                          "#js_kako_brauzer_radi",
                          ], [      //items
