@@ -339,6 +339,7 @@ function loadSideNav(sideNavId) {
                          "#js_bools",
                          "#js_simboli",
                          "#js_arrayi_uvod",
+                         "#es1_array",
                          "#js_funkcije",
                          "#js_kako_brauzer_radi",
                          ], [      //items
@@ -352,6 +353,7 @@ function loadSideNav(sideNavId) {
                                  "Buliani naširoko",
                                  "Simboli naširoko",
                                  "Array-i uvod",
+                                 "Array metode ES1",
                                  "Funkcije",
                                  "JS Motor",
                                  ]],
