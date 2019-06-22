@@ -341,6 +341,7 @@ function loadSideNav(sideNavId) {
                          "#js_arrayi_uvod",
                          "#es1_array",
                          "#es5_array",
+                         "#es6_array",
                          "#js_funkcije",
                          "#js_kako_brauzer_radi",
                          ], [      //items
@@ -356,6 +357,7 @@ function loadSideNav(sideNavId) {
                                  "Array-i uvod",
                                  "Array metode ES1",
                                  "Array metode ES3 i ES5",
+                                 "Array metode ES6 i ES7",
                                  "Funkcije",
                                  "JS Motor",
                                  ]],
