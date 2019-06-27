@@ -1,6 +1,6 @@
 let CACHE = "cache";
 const precacheFiles = [
-        '/',
+        '/kodiranje/',
         '/#Home',
         '/kodiranje/index.html'
 ];
