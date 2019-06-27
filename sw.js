@@ -2,7 +2,10 @@ let CACHE = "cache";
 const precacheFiles = [
         '/kodiranje/',
         '/#Home',
-        '/kodiranje/index.html'
+        '/kodiranje/index.html',
+        '/kodiranje/styles/style.css',
+        '/kodiranje/styles/dot.png',
+        '/kodiranje/other/'
 ];
 
 // TODO: replace the following with the correct offline fallback page i.e.: const offlineFallbackPage = "offline.html";
