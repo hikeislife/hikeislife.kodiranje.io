@@ -1,6 +1,6 @@
 let CACHE = "cache";
 const precacheFiles = [
-        '/hikeislife.kodiranje.io/'
+        '/'
 ];
 
 // TODO: replace the following with the correct offline fallback page i.e.: const offlineFallbackPage = "offline.html";
