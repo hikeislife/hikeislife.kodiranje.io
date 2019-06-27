@@ -1,7 +1,7 @@
 let CACHE = "cache";
 const precacheFiles = [
         '/',
-        '/*',
+        '/#Home',
         '/index.html'
 ];
 
