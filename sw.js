@@ -1,24 +1,7 @@
 const CACHE = "pwabuilder-adv-cache";
 const precacheFiles = [
         '/',
-        'other/manifest.webmanifest',
-
-        '',
-        'index.html',
-
-        'styles/style.css',
-
-        'other/cog192.png',
-        'other/cog512.png',
-        'other/cog48.png',
-
-        'js/content.json',
-
-        'app.js',
-        'sw.js',
-        'cog.png',
-
-        'https://fonts.googleapis.com/css?family=Cutive+Mono'
+        
 ];
 
 // TODO: replace the following with the correct offline fallback page i.e.: const offlineFallbackPage = "offline.html";
