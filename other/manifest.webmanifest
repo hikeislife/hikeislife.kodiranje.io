@@ -4,7 +4,7 @@
   "name": "Kodiranje_",
   "scope" : "https://hikeislife.github.io/hikeislife.kodiranje.io/",
   "short_name": "Kodiranje",
-  "start_url": "https://hikeislife.github.io/hikeislife.kodiranje.io/",
+  "start_url": "/",
   "display": "fullscreen",
   "background_color": "#fff",
   "theme_color": "#7cc91c",
