@@ -1,7 +1,8 @@
 {
-  "dir": "rtl",
+  "dir": "ltr",
   "lang": "sr",
   "name": "Kodiranje_",
+  "scope" : "/",
   "short_name": "Kodiranje",
   "start_url": "https://hikeislife.github.io/hikeislife.kodiranje.io/",
   "display": "fullscreen",
