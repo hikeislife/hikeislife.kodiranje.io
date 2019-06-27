@@ -5,11 +5,11 @@ const precacheFiles = [
         '/kodiranje/index.html',
         '/kodiranje/styles/style.css',
         '/kodiranje/styles/dot.png',
-        '/kodiranje/other/cog.192.png',
+        '/kodiranje/other/cog192.png',
         '/kodiranje/other/cog48.png',
         '/kodiranje/other/cog512.png',
         '/kodiranje/other/flipping_robot.gif',
-        '/kodiranje/other/carriage_return.gih',
+        '/kodiranje/other/carriage-return.gif',
         '/kodiranje/other/radni-ciklus.gif',
         '/kodiranje/other/what-is-this-for.gif',
         '/kodiranje/other/manifest.webmanifest'
