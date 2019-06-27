@@ -1,22 +1,22 @@
 const CACHE = "pwabuilder-adv-cache";
 const precacheFiles = [
         '/',
-        '../../hikeislife.kodiranje.io/other/manifest.webmanifest',
+        'other/manifest.webmanifest',
 
-        '../../hikeislife.kodiranje.io',
-        '../../hikeislife.kodiranje.io/index.html',
+        '',
+        'index.html',
 
-        'hikeislife.kodiranje.io/styles/style.css',
+        'styles/style.css',
 
-        '../../hikeislife.kodiranje.io/other/cog192.png',
-        '../../hikeislife.kodiranje.io/other/cog512.png',
-        '../../hikeislife.kodiranje.io/other/cog48.png',
+        'other/cog192.png',
+        'other/cog512.png',
+        'other/cog48.png',
 
-        'hikeislife.kodiranje.io/js/content.json',
+        'js/content.json',
 
-        'hikeislife.kodiranje.io/app.js',
-        '../../hikeislife.kodiranje.io/sw.js',
-        '../../hikeislife.kodiranje.io/cog.png',
+        'app.js',
+        'sw.js',
+        'cog.png',
 
         'https://fonts.googleapis.com/css?family=Cutive+Mono'
 ];
