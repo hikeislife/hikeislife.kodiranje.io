@@ -1,6 +1,6 @@
 let CACHE = "cache";
 const precacheFiles = [
-        'https://hikeislife.github.io/',
+        'https://hikeislife.github.io/hikeislife.kodiranje.io/',
         '../index.html'
 ];
 
