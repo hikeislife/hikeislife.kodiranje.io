@@ -166,13 +166,13 @@ function initContent(frag, contents) {
 
 
 // resizes text area containing code to fit the contents
-function textAreaSizer() {
- var test = document.getElementsByClassName("code_snippet");
- for (let i = 0; i < test.length; i ++) {
-  let scroll = test[i].scrollHeight;
-  test[i].style.height = test[i].scrollHeight + 'px';
- }
-}
+// function textAreaSizer() {
+//  var test = document.getElementsByClassName("code_snippet");
+//  for (let i = 0; i < test.length; i ++) {
+//   let scroll = test[i].scrollHeight;
+//   test[i].style.height = test[i].scrollHeight + 'px';
+//  }
+// }
 
 
 
