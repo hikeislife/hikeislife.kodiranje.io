@@ -12,7 +12,7 @@ const precacheFiles = [
         '/kodiranje/other/carriage-return.gif',
         '/kodiranje/other/radni-ciklus.gif',
         '/kodiranje/other/what-is-this-for.gif',
-        '/kodiranje/other/manifest.webmanifest'
+        '/kodiranje/manifest.webmanifest'
 ];
 
 // TODO: replace the following with the correct offline fallback page i.e.: const offlineFallbackPage = "offline.html";
