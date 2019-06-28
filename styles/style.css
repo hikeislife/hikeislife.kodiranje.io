@@ -239,6 +239,7 @@ footer > hr {
 }
 .don {
   text-align: left;
+  display: none;
 }
 
 .don div, .don div.adr {
@@ -263,6 +264,7 @@ footer > hr {
   }
   .don {
     grid-column: 3/4;
+    display: inline;
   }
   
   .links {
