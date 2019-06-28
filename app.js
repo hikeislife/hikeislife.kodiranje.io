@@ -23,20 +23,20 @@
 //       }
 //     }
 
-if ("serviceWorker" in navigator) {
-  if (navigator.serviceWorker.controller) {
-    console.log("Pronađen servisni worker, nema potrebe za registracijom");
-  } else {
-    // Register the service worker
-    navigator.serviceWorker
-      .register("sw.js", {
-        scope: "./kodiranje/"
-      })
-      .then(function (reg) {
-        console.log("Servisni worker je registrovan za zadati opseg: " + reg.scope);
-      });
-  }
-}
+// if ("serviceWorker" in navigator) {
+//   if (navigator.serviceWorker.controller) {
+//     console.log("Pronađen servisni worker, nema potrebe za registracijom");
+//   } else {
+//     // Register the service worker
+//     navigator.serviceWorker
+//       .register("sw.js", {
+//         scope: "./kodiranje/"
+//       })
+//       .then(function (reg) {
+//         console.log("Servisni worker je registrovan za zadati opseg: " + reg.scope);
+//       });
+//   }
+// }
 
 //     function updateBtn() {
 //       if (isSubscribed) {
