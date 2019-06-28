@@ -1,7 +1,7 @@
 let CACHE = "cache";
 const precacheFiles = [
         '/kodiranje/',
-        '/#Home',
+        '/kodiranje/#Home',
         '/kodiranje/index.html',
         '/kodiranje/styles/style.css',
         '/kodiranje/styles/dot.png',
