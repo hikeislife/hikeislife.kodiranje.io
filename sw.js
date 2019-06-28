@@ -44,7 +44,7 @@ function comparePaths(requestUrl, pathsArray) {
 
   return false;
 }
-
+console.log("test me")
 self.addEventListener("install", function (event) {
   console.log("Instalacija");
 

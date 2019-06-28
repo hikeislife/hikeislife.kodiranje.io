@@ -166,13 +166,13 @@ function initContent(frag, contents) {
 
 
 // resizes text area containing code to fit the contents
-// function textAreaSizer() {
-//  var test = document.getElementsByClassName("code_snippet");
-//  for (let i = 0; i < test.length; i ++) {
-//   let scroll = test[i].scrollHeight;
-//   test[i].style.height = test[i].scrollHeight + 'px';
-//  }
-// }
+function textAreaSizer() {
+ var test = document.getElementsByClassName("code_snippet");
+ for (let i = 0; i < test.length; i ++) {
+  let scroll = test[i].scrollHeight;
+  test[i].style.height = test[i].scrollHeight + 'px';
+ }
+}
 
 
 
@@ -180,7 +180,7 @@ function detailsFixer() {
   const detailsOpen = Array.from(document.getElementsByTagName("details"));
   for (em in detailsOpen) {
     detailsOpen[em].addEventListener("toggle", ()=> {
-      //textAreaSizer();
+      textAreaSizer();
       closeDetails(detailsOpen);
       // add func that will close all open details 
       // it should have open attribute, with statuses open and false
@@ -195,7 +195,7 @@ function closeDetails (detailsOpen) {
 function loadMain(page) {
  const mainContent = document.getElementById("placeholder");
  mainContent.innerHTML = page;
- //textAreaSizer();
+ textAreaSizer();
  detailsFixer();
 }
 
