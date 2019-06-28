@@ -11,8 +11,7 @@ const precacheFiles = [
         '/kodiranje/other/flipping_robot.gif',
         '/kodiranje/other/carriage-return.gif',
         '/kodiranje/other/radni-ciklus.gif',
-        '/kodiranje/other/what-is-this-for.gif',
-        '/kodiranje/manifest.webmanifest'
+        '/kodiranje/other/what-is-this-for.gif'
 ];
 
 // TODO: replace the following with the correct offline fallback page i.e.: const offlineFallbackPage = "offline.html";
