@@ -1,7 +1,7 @@
 let CACHE = "cache";
 const precacheFiles = [
         '/kodiranje/',
-        '/kodiranje/#Home',
+        '/kodiranje/#home',
         '/kodiranje/index.html',
         '/kodiranje/styles/style.css',
         '/kodiranje/styles/dot.png',
@@ -11,7 +11,8 @@ const precacheFiles = [
         '/kodiranje/other/flipping_robot.gif',
         '/kodiranje/other/carriage-return.gif',
         '/kodiranje/other/radni-ciklus.gif',
-        '/kodiranje/other/what-is-this-for.gif'
+        '/kodiranje/other/what-is-this-for.gif',
+        '/kodiranje/js/content.json'
 ];
 
 // TODO: replace the following with the correct offline fallback page i.e.: const offlineFallbackPage = "offline.html";
@@ -56,7 +57,7 @@ self.addEventListener("install", function (event) {
 
       return cache.addAll(precacheFiles).then(function () {
         if (offlineFallbackPage === "index.html") {
-          return cache.add(new Response("Updejt vrednosti offlineFallbackPage constante swervisnog workera."));
+          return cache.add(new Response("Updejt vrednosti offlineFallbackPage constante servisnog workera."));
         }
 
         return cache.add(offlineFallbackPage);
