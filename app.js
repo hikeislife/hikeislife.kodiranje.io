@@ -180,7 +180,7 @@ function detailsFixer() {
   const detailsOpen = Array.from(document.getElementsByTagName("details"));
   for (em in detailsOpen) {
     detailsOpen[em].addEventListener("toggle", ()=> {
-      textAreaSizer();
+      //textAreaSizer();
       closeDetails(detailsOpen);
       // add func that will close all open details 
       // it should have open attribute, with statuses open and false
@@ -195,7 +195,7 @@ function closeDetails (detailsOpen) {
 function loadMain(page) {
  const mainContent = document.getElementById("placeholder");
  mainContent.innerHTML = page;
- textAreaSizer();
+ //textAreaSizer();
  detailsFixer();
 }
 
