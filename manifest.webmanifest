@@ -11,11 +11,11 @@
   "description": "Tutorijali za kodere na Srpskom. Naučite HTML, CSS, JavaScript",
   "orientation": "portrait-primary",
   "icons": [{
-    "src": "cog512.png",
+    "src": "other/cog512.png",
     "sizes": "512x512",
     "type": "image/png"
     }, {
-    "src": "cog192.png",
+    "src": "other/cog192.png",
     "sizes": "192x192",
     "type": "image/png"
   }]
