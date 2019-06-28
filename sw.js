@@ -12,7 +12,8 @@ const precacheFiles = [
         '/kodiranje/other/carriage-return.gif',
         '/kodiranje/other/radni-ciklus.gif',
         '/kodiranje/other/what-is-this-for.gif',
-        '/kodiranje/js/content.json'
+        '/kodiranje/js/content.json',
+        '/kodiranje/js/app.js'
 ];
 
 // TODO: replace the following with the correct offline fallback page i.e.: const offlineFallbackPage = "offline.html";
@@ -165,7 +166,7 @@ function updateCache(request, response) {
   return Promise.resolve();
 }
 
-console.log("test me")
+
 // let staticCacheName = 'kodiranje';
 
 // self.addEventListener('install', function(event) {
