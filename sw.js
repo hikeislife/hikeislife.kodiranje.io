@@ -44,7 +44,7 @@ function comparePaths(requestUrl, pathsArray) {
 
   return false;
 }
-console.log("test me")
+
 self.addEventListener("install", function (event) {
   console.log("Instalacija");
 
@@ -165,7 +165,7 @@ function updateCache(request, response) {
   return Promise.resolve();
 }
 
-
+console.log("test me")
 // let staticCacheName = 'kodiranje';
 
 // self.addEventListener('install', function(event) {
