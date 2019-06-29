@@ -1,6 +1,5 @@
 let CACHE = "cache";
 const precacheFiles = [
-        //'.',
         'index.html',
         'styles/style.css',
         'styles/dot.png',
