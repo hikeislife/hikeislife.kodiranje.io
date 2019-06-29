@@ -344,6 +344,22 @@ header {
 #logo-text {
  font-size: 48px;
 }
+.menu-lg {
+  display: none;
+}
+.menu-sm {
+  align-items: center;
+  display: flex;
+  flex-flow: column;
+}
+@media only screen and (min-width: 500px) { 
+ .menu-lg {
+    display: inline-flex;
+  }
+  .menu-sm {
+    display: none !important;
+  }
+}
 #header-bottom {
  display: block;
  background-color: var(--mg);
