@@ -12,6 +12,7 @@ if ("serviceWorker" in navigator) {
         console.log("Servisni worker je registrovan za zadati opseg: " + reg.scope);
       });
   }
+}
 
 
 
