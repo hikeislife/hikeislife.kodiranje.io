@@ -1,17 +1,17 @@
 let CACHE = "cache";
 const precacheFiles = [
-        'index.html',
-        'styles/style.css',
-        'styles/dot.png',
-        'other/cog192.png',
-        'other/cog48.png',
-        'other/cog512.png',
-        'other/flipping_robot.gif',
-        'other/carriage-return.gif',
-        'other/radni-ciklus.gif',
-        'other/what-is-this-for.gif',
-        'js/content.json',
-        'js/app.js'
+        // 'index.html',
+        // 'styles/style.css',
+        // 'styles/dot.png',
+        // 'other/cog192.png',
+        // 'other/cog48.png',
+        // 'other/cog512.png',
+        // 'other/flipping_robot.gif',
+        // 'other/carriage-return.gif',
+        // 'other/radni-ciklus.gif',
+        // 'other/what-is-this-for.gif',
+        // 'js/content.json',
+        // 'js/app.js'
 ];
 
 // TODO: replace the following with the correct offline fallback page i.e.: const offlineFallbackPage = "offline.html";
