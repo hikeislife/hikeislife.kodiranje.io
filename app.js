@@ -454,6 +454,7 @@ function bindMenu() {
   else {
    topMenu.className = "";
    home.style.visibility = "hidden";
+   // home.style.top = "0px";
   }
 }
 

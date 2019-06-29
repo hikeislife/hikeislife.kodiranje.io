@@ -342,9 +342,9 @@ header {
  
 }
 @media only screen and (max-width: 505px) { 
-  header {
+  /*header {
     margin-bottom: -25px !important;
-  }
+  }*/
 }
 #header-top {
  padding: 0px;
@@ -369,10 +369,15 @@ header {
   .menu-sm {
     display: none !important;
   }
-
+  /*.menuitems * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }*/
 }
 #header-bottom {
- display: block;
+ display: flex;
+ justify-content: space-between;
  background-color: var(--mg);
  background: linear-gradient(to bottom, var(--dg) 0%, var(--mg) 100%);
  padding: 16px;
@@ -441,12 +446,7 @@ span.selected {
  float: right;
 }
 
-@media only screen and (min-width: 540px) { 
-  #backhome {
-    position: relative !important;
-    top: -45px !important;
-  }
-}
+
 
 /* sideways navigation */
 .leftright {
@@ -1601,3 +1601,10 @@ div.main-page-box:nth-child(even) > div.main-page-boxes:nth-child(even) {
   .ind {
     padding-left: 20px;
   }
+
+  /*@media only screen and (min-width: 540px) { 
+  #backhome {
+    position: relative !important;
+    top: -45px !important;
+  }*/
+}
