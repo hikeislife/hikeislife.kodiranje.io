@@ -369,11 +369,9 @@ header {
   .menu-sm {
     display: none !important;
   }
-  /*.menuitems * {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }*/
+  .menuitems * {
+    width: 200px; 
+  }
 }
 #header-bottom {
  display: flex;
