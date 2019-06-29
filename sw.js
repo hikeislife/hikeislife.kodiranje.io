@@ -1,20 +1,20 @@
 let CACHE = "cache";
 const precacheFiles = [
         '.',
-        '/kodiranje/',
-        '/kodiranje/#home',
-        '/kodiranje/index.html',
-        '/kodiranje/styles/style.css',
-        '/kodiranje/styles/dot.png',
-        '/kodiranje/other/cog192.png',
-        '/kodiranje/other/cog48.png',
-        '/kodiranje/other/cog512.png',
-        '/kodiranje/other/flipping_robot.gif',
-        '/kodiranje/other/carriage-return.gif',
-        '/kodiranje/other/radni-ciklus.gif',
-        '/kodiranje/other/what-is-this-for.gif',
-        '/kodiranje/js/content.json',
-        '/kodiranje/js/app.js'
+        //'/kodiranje/',
+        '/#home',
+        '/index.html',
+        '/styles/style.css',
+        '/styles/dot.png',
+        '/other/cog192.png',
+        '/other/cog48.png',
+        '/other/cog512.png',
+        '/other/flipping_robot.gif',
+        '/other/carriage-return.gif',
+        '/other/radni-ciklus.gif',
+        '/other/what-is-this-for.gif',
+        '/js/content.json',
+        '/js/app.js'
 ];
 
 // TODO: replace the following with the correct offline fallback page i.e.: const offlineFallbackPage = "offline.html";
