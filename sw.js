@@ -17,7 +17,7 @@ const precacheFiles = [
 ];
 
 // TODO: replace the following with the correct offline fallback page i.e.: const offlineFallbackPage = "offline.html";
-const offlineFallbackPage = "index.html";
+const offlineFallbackPage = "offline.html";
 
 const networkFirstPaths = [
   /* Add an array of regex of paths that should go network first */
@@ -57,7 +57,7 @@ self.addEventListener("install", function (event) {
       console.log("Keširanje stranica pri instalaciji");
 
       return cache.addAll(precacheFiles).then(function () {
-        if (offlineFallbackPage === "index.html") {
+        if (offlineFallbackPage === "offline.html") {
           return cache.add(new Response("Updejt vrednosti offlineFallbackPage constante servisnog workera."));
         }
 
