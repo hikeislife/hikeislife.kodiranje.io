@@ -369,7 +369,7 @@ header {
   .menu-sm {
     display: none !important;
   }
-  .menuitems * {
+  .menuitems {
     width: 200px; 
   }
 }
