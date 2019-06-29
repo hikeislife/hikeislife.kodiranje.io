@@ -17,7 +17,7 @@
     // Register the service worker
     navigator.serviceWorker
       .register("sw.js", {
-        scope: "/kodiranje/"
+        scope: "./kodiranje/"
       })
       .then(function (reg) {
         console.log("Servisni worker je registrovan za zadati opseg: " + reg.scope);
