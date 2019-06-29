@@ -1,31 +1,7 @@
 <!DOCTYPE html>
 <html lang="sr">
 <head>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140133259-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-140133259-1');
-
-  // if ("serviceWorker" in navigator) {
-  //   if (navigator.serviceWorker.controller) {
-  //     console.log("Pronađen servisni worker, nema potrebe za registracijom");
-  //   } else {
-  //     // Register the service worker
-  //     navigator.serviceWorker
-  //     .register("service-worker.js", {
-  //       //scope: "./kodiranje/"
-  //       scope: "./"
-  //   })
-  //     .then(function (reg) {
-  //       console.log("Servisni worker je registrovan za zadati opseg: " + reg.scope);
-  //     });
-  // }
-//}
-</script>
+  
 
  <meta charset="UTF-8" />
  <meta name="description" content="Tutorijali za ljude koji žele da nauče da kodiraju, na Srpskom jeziku" id="metadesc" />
@@ -544,6 +520,16 @@ a2a_config.locale = "sr";
 </div>
 </footer>
  
- <script src="app.js" async></script>
+ <script src="app.js" defer async></script>
 </body>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async defer src="https://www.googletagmanager.com/gtag/js?id=UA-140133259-1"></script>
+<script defer async>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-140133259-1');
+</script>
 </html>
