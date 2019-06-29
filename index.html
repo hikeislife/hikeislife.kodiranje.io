@@ -155,6 +155,16 @@ div.main-page-box:nth-child(even) > div.main-page-boxes:nth-child(even) {
  align-items: center;
  transform: translate(0, 50px);
 }
+label {
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+}
  </style>
  <link rel="stylesheet" media="all" href="styles/style.css" defer />
  <link href="//fonts.googleapis.com/css?family=Roboto|Roboto+Mono" rel="stylesheet" defer/>
@@ -366,7 +376,7 @@ a2a_config.locale = "sr";
     <div class="main-page-boxes" style="display: inline-block;">
      <div>
       <code class="front-page" style="position: static;">
-        <label for="htmlcode" style="position: absolute; left: -10000px; overflow: hidden; width: 1px; height: 1px; top:auto;">just code</label>
+        <label for="htmlcode" >just code</label>
        <textarea class="code_snippet html" id="htmlcode" aria-label="htmlcode" readonly aria-readonly="true" aria-disabled="true">
  <blockquote>
   Ko ne voli karanfile, ne treba ni da živi!
@@ -428,7 +438,7 @@ a2a_config.locale = "sr";
     <div class="main-page-boxes" style="display: inline-block; padding-top: 20%;">
      <div>
       <code class="front-page">
-        <label for="code2" style="position: absolute; left: -10000px; overflow: hidden;">just code</label>
+        <label for="code2">just code</label>
        <textarea class="code_snippet html" id="code2" name="code2" readonly="readonly" aria-readonly="true" >
  if (a+b == c+d) {
   alert("singularnost dosegnuta");
