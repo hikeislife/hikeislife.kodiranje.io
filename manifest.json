@@ -4,7 +4,7 @@
   "name": "Kodiranje_",
   "scope" : "./",
   "short_name": "Kodiranje",
-  "start_url": "./#home",
+  "start_url": "./kodiranje/",
   "display": "fullscreen",
   "prefer_related_applications": false,
   "background_color": "#fff",
