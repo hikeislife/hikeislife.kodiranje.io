@@ -110,12 +110,16 @@ a.nocolor {
 }
 .a2a_kit, .a2a_menu, .a2a_modal, .a2a_overlay {
   position: fixed;
-  left: 10px;
+  /*left: 10px;*/
   z-index: 5;
-  background: transparent !important;
+  top: 146px;
+  /*background: transparent !important;*/
 }
 @media only screen and (min-width: 640px) {
-  .a2a_kit, .a2a_menu, .a2a_modal, .a2a_overlay {left: 260px;}
+  .a2a_kit, .a2a_menu, .a2a_modal, .a2a_overlay {
+    left: 260px;
+    top: unset;
+  }
 }
 hr {
  border-style: solid;
@@ -358,13 +362,14 @@ header {
   display: flex;
   flex-flow: column;
 }
-@media only screen and (min-width: 500px) { 
+@media only screen and (min-width: 540px) { 
  .menu-lg {
     display: inline-flex;
   }
   .menu-sm {
     display: none !important;
   }
+
 }
 #header-bottom {
  display: block;
@@ -374,6 +379,7 @@ header {
  width: 100vw;
  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3), 0 1px 2px 0 rgba(0, 0, 0, 0.3) !important;
  overflow: visible;
+ height: 63px;
 }
 #mobile-cog {
  position: fixed;
@@ -433,6 +439,13 @@ span.selected {
  margin-right: 20px;
  display:inline;
  float: right;
+}
+
+@media only screen and (min-width: 540px) { 
+  #backhome {
+    position: relative !important;
+    top: -45px !important;
+  }
 }
 
 /* sideways navigation */
