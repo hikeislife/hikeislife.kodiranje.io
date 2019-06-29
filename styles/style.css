@@ -369,10 +369,14 @@ header {
   .menu-sm {
     display: none !important;
   }
+  
+}
+@media only screen and (max-width: 540px) { 
   .menuitems {
     width: 200px; 
   }
 }
+
 #header-bottom {
  display: flex;
  justify-content: space-between;
