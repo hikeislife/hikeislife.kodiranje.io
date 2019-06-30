@@ -38,10 +38,6 @@ function loadMenu() {
  }
 }
 
-
-
-
-
 // content loader...
 let xhr = new XMLHttpRequest();
 xhr.open("GET", "js/content.json");
@@ -70,8 +66,6 @@ function pageInit() {
  //getXMP(contents);
 }
 
-
-
 /*
  scrolls the page back to top on link click as it otherwise loads
  the content staying at the same scroll pos it was at before the click
@@ -82,8 +76,6 @@ function backToTop() {
   toTop[topSide].onclick = () => window.scrollTo(0, 0);
  }
 }
-
-
 
 // highlights active side nav item
 function setActive(frag) {
@@ -97,8 +89,6 @@ function setActive(frag) {
  }
  backToTop();
 }
-
-
 
 function initContent(frag, contents) {
  for (e in contents) {
@@ -114,7 +104,6 @@ function initContent(frag, contents) {
  setActive(frag);
 }
 
-
 // resizes text area containing code to fit the contents
 function textAreaSizer() {
  var test = document.getElementsByClassName("code_snippet");
@@ -123,8 +112,6 @@ function textAreaSizer() {
   test[i].style.height = test[i].scrollHeight + 'px';
  }
 }
-
-
 
 function detailsFixer() {
   const detailsOpen = Array.from(document.getElementsByTagName("details"));
@@ -149,11 +136,7 @@ function loadMain(page) {
  detailsFixer();
 }
 
-
-
 window.addEventListener("hashchange", pageInit);
-
-
 
 // functionality of sideway nav
 function leftRightNav(links) {
@@ -376,8 +359,6 @@ function loadSideNav(sideNavId) {
  leftRightNav(links);
 }
 
-
-
 // populates side-nav 
 function getSideNavList(list) {
  let sideMenu = '<ul id="side-menu">';
@@ -388,8 +369,6 @@ function getSideNavList(list) {
  document.getElementById("side-nav").innerHTML = sideMenu + '</ul>';
  //leftRightNav(links);
 }
-
-
 
 // fixes top bar to the top of the page once scrolled pass logo
 function bindMenu() {
@@ -410,15 +389,11 @@ function bindMenu() {
 
 window.onscroll = ()=> bindMenu();
 
-
-
 // adds copy/date to the footer
 (copid = function() {
  let d = new Date().getFullYear();
  document.querySelector('#copydate').innerHTML = "&copy; ČĎŠ " + d;
 })();
-
-
 
 // JSON escape tool button 1
 function escapeBad() {
@@ -437,7 +412,6 @@ function escapeBad() {
               "Ď", 
               "ô", 
               "λ",
-              //"&", 
               '"', 
               "(\\r\\n|\\r|\\n)", 
               "\\/", 
@@ -456,7 +430,6 @@ function escapeBad() {
               "\\u010E", // Ď
               "\\u00F4", // ô
               "\\u03BB", // λ
-              //"&amp;", 
               '\\\"', 
               "\\r\\n", 
               "\\/", 
@@ -469,25 +442,8 @@ function escapeBad() {
  res.value = `${insertion}`;
 }
 
-
 // JSON escape tool button 2
 function clearField() {
  document.getElementById("insertf").value = "";
  document.getElementById("result").value = "";
 }
-
-
-
-
-/*(test = function(){
- const target = document.querySelector('#logo-text');
- const split = Array.from(target.textContent.substring(3,13));
- //const split =
- let writeKodiranje_ = '<text x="40" y="48">';
- let i = 0;
- 
- }, 1000);
- writeKodiranje_ += '</text>';
- 
- console.log(split);
-})();*/
