@@ -46,18 +46,14 @@ function comparePaths(requestUrl, pathsArray) {
 }
 
 self.addEventListener("install", function (event) {
-  //console.log("Instalacija");
 
-  //console.log("Preskakanje čekanja na instalaciju");
   self.skipWaiting();
 
   event.waitUntil(
     caches.open(CACHE).then(function (cache) {
-      //console.log("Keširanje stranica pri instalaciji");
 
       return cache.addAll(precacheFiles).then(function () {
         if (offlineFallbackPage === "offline.html") {
-          //return cache.add(new Response("Updejt vrednosti offlineFallbackPage constante servisnog workera."));
         }
 
         return cache.add(offlineFallbackPage);
@@ -68,7 +64,6 @@ self.addEventListener("install", function (event) {
 
 // Allow sw to control of current page
 self.addEventListener("activate", function (event) {
-  //console.log("Preuzimanje klijenta");
   event.waitUntil(self.clients.claim());
 });
 
@@ -114,7 +109,7 @@ function cacheFirstFetch(event) {
               return;
             }
 
-            console.log("[PWA Builder] Network request failed and no cache." + error);
+            console.log("Nema mreže i nema keša" + error);
             // Use the precached offline page as fallback
             return caches.open(CACHE).then(function (cache) {
               cache.match(offlineFallbackPage);
@@ -134,7 +129,7 @@ function networkFirstFetch(event) {
         return response;
       })
       .catch(function (error) {
-        console.log("Mreža nije dostupna. Koristi se sadržaj keša: " + error);
+        //console.log("Mreža nije dostupna. Koristi se sadržaj keša: " + error);
         return fromCache(event.request);
       })
   );

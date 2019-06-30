@@ -1,6 +1,6 @@
 if ("serviceWorker" in navigator) {
     if (navigator.serviceWorker.controller) {
-      console.log("Pronađen servisni worker, nema potrebe za registracijom");
+      //console.log("Pronađen servisni worker, nema potrebe za registracijom");
     } else {
       // Register the service worker
       navigator.serviceWorker
@@ -14,7 +14,7 @@ if ("serviceWorker" in navigator) {
   }
 }
 
-
+console.log(`Dobro došli na sajt za učenje kodiranja i programiranja. Ovo je naša konzola :)`)
 
 
 // adding mobile menu to the cog click

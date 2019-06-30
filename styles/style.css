@@ -747,8 +747,7 @@ button:active {
 .cmd table td p {
   color: #aaa;
 }
-.code_snippet {
-}
+
 code {
  margin-right: 20px;
  position: relative;
@@ -763,20 +762,7 @@ code {
  word-wrap: all;
  z-index: 0;
 }
-textarea {
- background: transparent;
- font-size: 16px;
- width: 100%;
- height: auto;
- overflow: visible;
- resize: none;
- border: 0 none;
- outline: none;
- word-break: break-word;
- display: block;
- font-weight: bold;
- z-index: 0;
-}
+
 
 /* images */
 img:not([alt]) {
@@ -1197,64 +1183,14 @@ div.main-page-box:nth-child(even) > div.main-page-boxes:nth-child(even) {
   font-size: 14px;
  }
 
- /* desktop front page main content */
- /*#placeholder {
-  padding: 20px;
- }
- #placeholder p, #placeholder details {
-  padding: 10px 100px;
- }
- #placeholder code {
-  margin: 10px 70px !important;
- }
- #placeholder textarea {
-  overflow: hidden;
- }
- #placeholder .superbox details {
-  padding: 0;
- }
- .superbox {
-  margin: 10px 70px;
-  padding: 10px 30px;
- }
- .superbox p {
-  padding: 0 !important;
- }
- /*.cmd p {
-  padding: 20px !important;
- }*/
- /*.def, .def p {
-  margin: 0;
-  padding: 10px !important;
- }
- .cmdwindow p {
-  padding: 10px !important;
- }
- h3 {
-  margin-left: 100px;
- }
- summary h3 {
-  margin-left: 10px;
- }
- #placeholder ul {
-  margin-left: 100px !important;
- }
- #placeholder ul li ul {
-  margin-left: 0px !important;
- }*/
- /*#placeholder {
-  padding: 20px 100px;
- }*/
+ 
  article {
   padding: 20px 150px;
  }
  #placeholder p {
   margin: 30px 0;
  }
- /*.main-page-box {
-  padding: 0 !important;
-  margin: 0;
- }*/
+
  #content {
   grid-column: 2 / 3 !important;
   grid-row: 2 / 3;
@@ -1604,9 +1540,9 @@ div.main-page-box:nth-child(even) > div.main-page-boxes:nth-child(even) {
     padding-left: 20px;
   }
 
-  /*@media only screen and (min-width: 540px) { 
-  #backhome {
-    position: relative !important;
-    top: -45px !important;
-  }*/
+
+/* Links */
+main a[href^="http"]:before, 
+main a[href^="https"]:before {
+     content: " " url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAVklEQVR4Xn3PgQkAMQhDUXfqTu7kTtkpd5RA8AInfArtQ2iRXFWT2QedAfttj2FsPIOE1eCOlEuoWWjgzYaB/IkeGOrxXhqB+uA9Bfcm0lAZuh+YIeAD+cAqSz4kCMUAAAAASUVORK5CYII=);
 }
