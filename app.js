@@ -291,7 +291,7 @@ function loadSideNav(sideNavId) {
                          "#es5_array",
                          "#es6_array",
                          "#js_funkcije",
-                         "pwa_uvod_manifest",
+                         "#pwa_uvod_manifest",
                          "#js_kako_brauzer_radi",
                          ], [      //items
                                  "Uvod u JS",
