@@ -115,7 +115,7 @@ a.nocolor {
   top: 146px;
   /*background: transparent !important;*/
 }
-@media only screen and (min-width: 640px) {
+@media only screen and (min-width: 1000px) {
   .a2a_kit, .a2a_menu, .a2a_modal, .a2a_overlay {
     left: 260px;
     top: unset;
@@ -1125,8 +1125,21 @@ div.main-page-box:nth-child(even) > div.main-page-boxes:nth-child(even) {
  padding-left: 20px;
 }
 
-
 @media only screen and (min-width: 640px) {
+  article {
+  padding: 20px 75px;
+ }
+}
+
+@media only screen and (min-width: 800px) {
+  article {
+  padding: 20px 150px;
+ }
+}
+
+
+
+@media only screen and (min-width: 1000px) {
 
  /* header for desktop */
  #mobile-cog {
@@ -1184,9 +1197,7 @@ div.main-page-box:nth-child(even) > div.main-page-boxes:nth-child(even) {
  }
 
  
- article {
-  padding: 20px 150px;
- }
+ 
  #placeholder p {
   margin: 30px 0;
  }
