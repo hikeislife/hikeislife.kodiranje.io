@@ -98,7 +98,11 @@ em {
   font-style: normal;
   background-color: #ddd;
   padding: 0 5px;
-  white-space: nowrap;
+}
+@media only screen and (min-width: 640px) {
+  em {
+    white-space: nowrap;
+  }
 }
 a, a:visited {
  text-decoration: none;
