@@ -19,5 +19,9 @@
     "src": "other/cog192.webp",
     "sizes": "192x192",
     "type": "image/webp"
+  }, {
+    "src": "other/cog144.webp",
+    "sizes": "144x144",
+    "type": "image/webp"
   }]
 }
