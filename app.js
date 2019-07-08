@@ -292,6 +292,7 @@ function loadSideNav(sideNavId) {
                          "#es6_array",
                          "#js_funkcije",
                          "#uvod_u_node",
+                         "#node_modularnost",
                          "#pwa_uvod_manifest",
                          "#js_kako_brauzer_radi",
                          ], [      //items
@@ -310,6 +311,7 @@ function loadSideNav(sideNavId) {
                                  "Array metode ES6 i ES7",
                                  "Funkcije",
                                  "Node uvod",
+                                 "Node Modularnost",
                                  "PWA Manifest",
                                  "JS Motor",
                                  ]],
