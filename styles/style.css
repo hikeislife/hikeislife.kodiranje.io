@@ -224,9 +224,9 @@ footer > hr {
   display: grid;
   min-width: 192px;
   min-height: 192px;
-  justify-content: center;
-  align-content: center;
-  overflow: hidden;
+  justify-items: center;
+  align-items: center;
+  /*overflow: hidden;*/
 }
 .cogitself img {
   -webkit-animation:spin 60s linear infinite;
@@ -236,11 +236,11 @@ footer > hr {
 .cogtext {
   position: absolute;
   z-index: 1;
-  justify-self: center;
-  align-self: center;
+  /*justify-self: center;
+  align-self: center;*/
   font-weight: 900;
   font-size: 25px;
-  padding: 3px 19px;
+  padding: 3px 17px;
   background-color: var(--dy);
   border: 2px solid var(--darkf);
   border-radius: 5px;
