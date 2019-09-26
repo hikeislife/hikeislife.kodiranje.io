@@ -498,7 +498,7 @@ dfn {
  border-bottom: 2px solid var(--dy);
  cursor: help;
 }
-.error span.tt {
+.error span.tt, .why span.tt {
   border-bottom: 2px solid var(--darkf);
 }
 .tt .ttt {
@@ -519,7 +519,7 @@ dfn {
  opacity: 0;
  transition: opacity 1s;
 }
-.error .tt .ttt {
+.error .tt .ttt, .why .tt .ttt {
  background-color: var(--mg);
 }
 .tt:hover .ttt {
