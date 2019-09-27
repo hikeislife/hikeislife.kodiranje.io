@@ -623,6 +623,7 @@ button:active {
 .sol {
  background-image: url("dot.png");
  font-weight: bold;
+ color: midnightblue;
 }
 .kviz {
  background-color: var(--qy)!important;
