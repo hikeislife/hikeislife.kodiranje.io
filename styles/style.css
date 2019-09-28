@@ -1514,3 +1514,9 @@ main a[href^="http"]:before,
 main a[href^="https"]:before {
      content: " " url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAVklEQVR4Xn3PgQkAMQhDUXfqTu7kTtkpd5RA8AInfArtQ2iRXFWT2QedAfttj2FsPIOE1eCOlEuoWWjgzYaB/IkeGOrxXhqB+uA9Bfcm0lAZuh+YIeAD+cAqSz4kCMUAAAAASUVORK5CYII=);
 }
+
+.operatori td {
+  padding: 5px 10px;
+  font-weight: bold;
+  font-size: 16px;
+}
