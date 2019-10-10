@@ -298,7 +298,7 @@ function loadSideNav(sideNavId) {
                          "#js_objekti",
                          "#js_objekti_metode",
                          "#js_prototipovi",
-                         "#js_proto_nasleđivanje",
+                         "#js_proto_nasledjivanje",
                          "#js_simboli",
                          "#json",
                          "#uvod_u_node",
