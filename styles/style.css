@@ -1091,14 +1091,21 @@ div.main-page-box:nth-child(even) > div.main-page-boxes:nth-child(even) {
 
 @media only screen and (min-width: 800px) {
   article {
-  padding: 20px 150px;
+  padding: 20px 150px 100px;
+ }
+}
+@media only screen and (min-width: 1500px) {
+  article {
+  padding: 20px 300px 100px;
  }
 }
 
 
 
 @media only screen and (min-width: 1000px) {
-
+article {
+  padding: 20px 200px 100px;
+ }
  /* header for desktop */
  #mobile-cog {
   display: none;
