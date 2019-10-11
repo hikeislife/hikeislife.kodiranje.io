@@ -497,6 +497,7 @@ dfn {
  position: relative;
  border-bottom: 2px solid var(--dy);
  cursor: help;
+ color: black;
 }
 .error span.tt, .why span.tt {
   border-bottom: 2px solid var(--darkf);
@@ -967,7 +968,7 @@ dl dt {
  border-radius: .2em;
  background-color: white;
  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3), 0 1px 2px 0 rgba(0, 0, 0, 0.3);
- font-size: 1em;
+ font-size: 1.2em;
  display: grid;
  padding: 10px;
  text-align: justify;
@@ -1512,7 +1513,7 @@ div.main-page-box:nth-child(even) > div.main-page-boxes:nth-child(even) {
 /* Links */
 main a[href^="http"]:before, 
 main a[href^="https"]:before {
-     content: " " url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAVklEQVR4Xn3PgQkAMQhDUXfqTu7kTtkpd5RA8AInfArtQ2iRXFWT2QedAfttj2FsPIOE1eCOlEuoWWjgzYaB/IkeGOrxXhqB+uA9Bfcm0lAZuh+YIeAD+cAqSz4kCMUAAAAASUVORK5CYII=);
+     content: "" url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAVklEQVR4Xn3PgQkAMQhDUXfqTu7kTtkpd5RA8AInfArtQ2iRXFWT2QedAfttj2FsPIOE1eCOlEuoWWjgzYaB/IkeGOrxXhqB+uA9Bfcm0lAZuh+YIeAD+cAqSz4kCMUAAAAASUVORK5CYII=);
 }
 
 .operatori td {
