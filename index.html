@@ -10,7 +10,7 @@
  <title>Kodiranje</title>
  <link rel="manifest" href="manifest.json">
  <!-- above the fold css -->
- <style>
+ <!-- <style>
   :root {
   /* greens */
  --mg: #9af629;/* main green #7cc91c; #ccff66; */
@@ -44,7 +44,7 @@
  --conDG: #e0e0e0;
 
  /* otpornik */
---silver: #b0b0b8;
+  --silver: #b0b0b8;
   --base: #d8b87f;
   --red: #ca0125;
   --black: #212121;
@@ -60,141 +60,140 @@
   /* arduino ide */
   --ardLight: rgb(23,161,165);
   --ardDark: rgb(0, 100, 104);
-}
-* {
-  font-display: swap;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-header {
- grid-column: 1 / 3;
-}
-#header-top {
- padding: 0px;
- height: 70px;
- background-color: white;
-}
-.menu-sm {
-  align-items: center;
-  display: flex;
-  flex-flow: column;
-}
-@media only screen and (min-width: 540px) { 
- .menu-lg {
-    display: inline-flex;
+  }
+  * {
+    font-display: swap;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  header {
+    grid-column: 1 / 3;
+  }
+  #header-top {
+    padding: 0px;
+    height: 70px;
+    background-color: white;
   }
   .menu-sm {
-    display: none !important;
+    align-items: center;
+    display: flex;
+    flex-flow: column;
   }
-  
-}
-@media only screen and (max-width: 540px) { 
-  .menuitems {
-    width: 200px; 
+  @media only screen and (min-width: 540px) { 
+    .menu-lg {
+      display: inline-flex;
+    }
+    .menu-sm {
+      display: none !important;
+    }
   }
-}
+  @media only screen and (max-width: 540px) { 
+    .menuitems {
+      width: 200px; 
+    }
+  }
 
-#header-bottom {
- display: flex;
- justify-content: space-between;
- background-color: var(--mg);
- background: linear-gradient(to bottom, var(--dg) 0%, var(--mg) 100%);
- padding: 16px;
- width: 100vw;
- box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3), 0 1px 2px 0 rgba(0, 0, 0, 0.3) !important;
- overflow: visible;
- height: 63px;
-}
-#placeholder {
- border-radius: .2em;
- background-color: white;
- box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3), 0 1px 2px 0 rgba(0, 0, 0, 0.3);
- font-size: 1em;
- display: grid;
- padding: 10px;
- text-align: justify;
- top: -40px;
-}
-.main-page-box {
- display: grid;
- grid-template-columns: 1fr 1fr;
- padding: 10px;
- width: 100%;
-}
-.main-page-boxes {
- padding: 20px;
- display: grid;
- grid-auto-rows: 30vh;
- align-items: center;
- text-align: center;
- grid-column: 1/3;
- margin-top: 133px;
- margin-bottom: 20px;
-}
-.main-page-box:nth-child(even) {
- background-color: var(--sg);
-}
-.main-page-boxes:nth-child(odd) {
- grid-row: 1 / 2;
-}
-.main-page-boxes:nth-child(even) {
- grid-row: 2 / 3;
-}
-div.main-page-box:nth-child(even) > div.main-page-boxes:nth-child(odd) {
- grid-row: 2/3;
-}
-div.main-page-box:nth-child(even) > div.main-page-boxes:nth-child(even) {
- grid-row: 1/2;
-}
-#content {
- padding: 10px;
- margin-top: 2px;
- grid-column: 1 / 3;
-}
-.front-page {
- align-items: center;
- transform: translate(0, 50px);
-}
-label {
-  z-index: -999;
-}
-h1 {
- text-align: center;
- margin: 18px 0;
- font-size: 36px;
- color: #000;
- }
- textarea {
- background: transparent;
- font-size: 16px;
- width: 100%;
- height: auto;
- overflow: visible;
- resize: none;
- border: 0 none;
- outline: none;
- word-break: break-word;
- display: block;
- font-weight: bold;
- z-index: 0;
-}
-.logo-cog {
- position: absolute;
- top: 25px;
- left: 25px;
- width: 40px;
- height: 40px;
- margin:-10px 0 0 -10px;
- -webkit-animation:spin 10s linear infinite;
- -moz-animation:spin 10s linear infinite;
- animation:spin 10s linear infinite;
-}
-@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
-@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
-@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+  #header-bottom {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--mg);
+    background: linear-gradient(to bottom, var(--dg) 0%, var(--mg) 100%);
+    padding: 16px;
+    width: 100vw;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3), 0 1px 2px 0 rgba(0, 0, 0, 0.3) !important;
+    overflow: visible;
+    height: 63px;
+  }
+  #placeholder {
+    border-radius: .2em;
+    background-color: white;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3), 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+    font-size: 1em;
+    display: grid;
+    padding: 10px;
+    text-align: justify;
+    top: -40px;
+  }
+  .main-page-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 10px;
+    width: 100%;
+  }
+  .main-page-boxes {
+    padding: 20px;
+    display: grid;
+    grid-auto-rows: 30vh;
+    align-items: center;
+    text-align: center;
+    grid-column: 1/3;
+    margin-top: 133px;
+    margin-bottom: 20px;
+  }
+  .main-page-box:nth-child(even) {
+    background-color: var(--sg);
+  }
+  .main-page-boxes:nth-child(odd) {
+    grid-row: 1 / 2;
+  }
+  .main-page-boxes:nth-child(even) {
+    grid-row: 2 / 3;
+  }
+  div.main-page-box:nth-child(even) > div.main-page-boxes:nth-child(odd) {
+    grid-row: 2/3;
+  }
+  div.main-page-box:nth-child(even) > div.main-page-boxes:nth-child(even) {
+    grid-row: 1/2;
+  }
+  #content {
+    padding: 10px;
+    margin-top: 2px;
+    grid-column: 1 / 3;
+  }
+  .front-page {
+    align-items: center;
+    transform: translate(0, 50px);
+  }
+  label {
+    z-index: -999;
+  }
+  h1 {
+    text-align: center;
+    margin: 18px 0;
+    font-size: 36px;
+    color: #000;
+  }
+  textarea {
+    background: transparent;
+    font-size: 16px;
+    width: 100%;
+    height: auto;
+    overflow: visible;
+    resize: none;
+    border: 0 none;
+    outline: none;
+    word-break: break-word;
+    display: block;
+    font-weight: bold;
+    z-index: 0;
+  }
+  .logo-cog {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    width: 40px;
+    height: 40px;
+    margin:-10px 0 0 -10px;
+    -webkit-animation:spin 10s linear infinite;
+    -moz-animation:spin 10s linear infinite;
+    animation:spin 10s linear infinite;
+  }
+  @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+  @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+  @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
 
- </style>
+ </style> -->
  <link rel="stylesheet" media="all" href="styles/style.css" defer />
  <link href="//fonts.googleapis.com/css?family=Roboto|Roboto+Mono" rel="stylesheet" defer/>
  
@@ -209,16 +208,16 @@ h1 {
  <div id="header-top">
     <svg id="logo" preserveAspectRatio="none" style="height: 70px;width: 100vw;" xmlns="http://www.w3.org/2000/svg">
        <desc>logo sajta</desc>
-<g id="bcg" style="stroke: #b1b1b1;fill: none;stroke-width: 1;stroke-dasharray: 1, 10;">
-  <path d="M5 5 5000 5" />
-  <path d="M5 15 5000 15" />
-  <path d="M5 25 5000 25" />
-  <path d="M5 35 5000 35" />
-  <path d="M5 45 5000 45" />
-  <path d="M5 55 5000 55" />
-  <path d="M5 65 5000 65" />
-  <path d="M5 75 5000 75" />
-  <path d="M5 85 5000 85" />
+  <g id="bcg" style="stroke: #b1b1b1;fill: none;stroke-width: 1;stroke-dasharray: 1, 10;">
+   <path d="M5 5 5000 5" />
+   <path d="M5 15 5000 15" />
+   <path d="M5 25 5000 25" />
+   <path d="M5 35 5000 35" />
+   <path d="M5 45 5000 45" />
+   <path d="M5 55 5000 55" />
+   <path d="M5 65 5000 65" />
+   <path d="M5 75 5000 75" />
+   <path d="M5 85 5000 85" />
   </g>
 
   <a href="#home" rel="start chapter" aria-label="homepage"><g id="logo-text">
@@ -386,9 +385,12 @@ a2a_config.locale = "sr";
   <!-- htmbox-->
    <div class="main-page-box" id="htmlcssbox">
     <div class="main-page-boxes">
-     <a href="#uvod_u_HTML_i_css" class="nocolor" rel="chapter" aria-label="html i css tutorial"><svg version="1.1" id="htmlcss" viewBox="0 220 566.482 350">
+     <a href="#uvod_u_HTML_i_css" rel="chapter" aria-label="html i css tutorial">
+      <h1>Nauči da praviš sajtove<br />Nauči HTML i CSS</h1>
+      <svg version="1.1" id="htmlcss" viewBox="-220 220 1000 350" style="text-align: center;" preserveAspectRatio="xMidYMid">
       <desc>html i css logo</desc>
     <!--css-->
+      
       <polygon id="cssstit" fill="#264DE4" points="129.679,511.999 23.632,482.561 0,217.5 259.675,217.5 236.018,482.519 "/>
       <polygon id="cssodsjaj" fill="#2965F1" points="215.765,465.643 235.981,239.173 129.837,239.173 129.837,489.466 "/>
       <polygon id="triruka" fill="#EBEBEB" points="54.176,337.48 57.089,369.989 129.837,369.989 129.837,337.48 "/>
@@ -403,29 +405,29 @@ a2a_config.locale = "sr";
       <polygon id="petstomak" fill="#FFFFFF" points="436.532,369.989 476.563,369.989 472.79,412.149 436.532,421.935 436.532,455.756 503.176,437.286 503.666,431.793 511.304,346.209 512.097,337.48 503.337,337.48 436.532,337.48 "/>
       <polygon id="petglava" fill="#FFFFFF" points="436.532,304.111 436.532,304.191 514.951,304.191 514.951,304.191 515.055,304.191 515.708,296.883 517.189,280.403 517.966,271.682 436.532,271.682 436.532,291.872 "/>
       
-     <text transform="translate(90, 570)" style="font-size:40px;"><h1>Nauči HTML i CSS</h1></text>
+     <text transform="translate(90, 570)" style="font-size:40px;"></text>
      </svg></a>
     </div>
     <div class="main-page-boxes" style="display: inline-block;">
      <div>
-      <code class="front-page" style="position: static;">
-        <div class="superbox sol" style="border: none; text-align: left;">
-          &lt;blockquote&gt;<br />
-  Ko ne voli karanfile, ne treba ni da živi!<br />
-  &lt;cite&gt;<br />
-   Pera Mitić&lt;br&gt;<br />
-   Beogradski Davitelj<br />
-  &lt;/cite&gt;<br />
- &lt;/blockquote&gt;
+      <div class="front-page">
+        <div class="superbox sol" style="text-align: left; margin: 50px 20px 0">
+          &lt;<span style="color: deeppink">blockquote</span>&gt;<br />
+            <span class="ind"></span>Ko ne voli karanfile, ne treba ni da živi!<br />
+            <span class="ind"></span>&lt;<span style="color: deeppink">cite</span>&gt;<br />
+             <span class="ind"></span><span class="ind"></span>Pera Mitić&lt;<span style="color: deeppink">br</span>&gt;<br />
+             <span class="ind"></span><span class="ind"></span>Beogradski Davitelj<br />
+            <span class="ind"></span>&lt;/<span style="color: deeppink">cite</span>&gt;<br />
+           &lt;/<span style="color: deeppink">blockquote</span>&gt;
         </div>
-      </code></div>
+      </div></div>
     </div>
    </div>
   <!-- gitbox -->
    <div class="main-page-box" id="gitbox">
     <div class="main-page-boxes" style="display: inline-block;">
      <div class="front-page" style="margin: 50px 0;">
-      <div style="border: thin solid black; border-radius:4px;">
+      <div class="cmdWrapper" style="border: thin solid black; border-radius:4px;">
       <div class="cmd">
        <div class="cmdtitlebar">MINGW32 ~</div>
        <div class="cmdwindow">
@@ -437,7 +439,8 @@ a2a_config.locale = "sr";
      </div>
     </div>
     <div class="main-page-boxes" style="position: relative;">
-     <a href="#uvod_u_git" class="nocolor" rel="chapter" aria-label="git i cmd tutorijal">
+     <a href="#uvod_u_git" rel="chapter" aria-label="git i cmd tutorijal">
+      <h1>Nauči Git<br />Verzionisanje softvera</h1>
       <svg xmlns="http://www.w3.org/2000/svg" width="200px" height="208px" viewBox="0 0 570 450" id="gitsvg" style="position:relative;">
        <g id="gitcont" transform="translate(-150,-700)">
         <g transform="matrix(1.3504475,0,0,1.2531051,-39.273794,683.85723)">
@@ -448,7 +451,7 @@ a2a_config.locale = "sr";
          style="fill:#e74327" />
         </g>
        </g>
-      <text transform="translate(120, 520)" style="font-size:60px;"><h1>Nauči Git</h1></text>
+      <text transform="translate(120, 520)" style="font-size:60px;"></text>
       </svg>
      </a>
     </div>
@@ -456,26 +459,27 @@ a2a_config.locale = "sr";
   <!-- js box -->
    <div class="main-page-box" id="jsbox">
     <div class="main-page-boxes">
-     <a href="#uvod_u_js" class="nocolor" rel="chapter" aria-label="javascript tutorijal">
+     <a href="#uvod_u_js" rel="chapter" aria-label="javascript tutorijal">
+      <h1>Nauči JavaScript<br />Programski jezik weba</h1>
       <?xml version="1.0" encoding="utf-8"?>
       <svg version="1.1" id="Layer_1"
            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="160px"
            height="160px" viewBox="0 0 566.93 566.93" enable-background="new 0 0 566.93 566.93" xml:space="preserve">
           <rect y="-1.153" fill="#F7E018" stroke="#F7E018" width="566.93" height="569.235"/>
           <text transform="matrix(1 0 0 1 70 525)" font-family="MyriadPro-Regular" font-size="430">JS</text>
-          <text transform="translate(90, 570)" style="font-size:40px;"><h1>Nauči JavaScript</h1></text>
+          <text transform="translate(90, 570)" style="font-size:40px;"></text>
       </svg>
      </a>
     </div>
     <div class="main-page-boxes" style="display: inline-block; padding-top: 20%;">
      <div>
-      <code class="front-page">
-        <div class="superbox sol" style="border: none; text-align: left;">
-          if (a+b == c+d) {<br />
-           alert("singularnost dosegnuta");<br />
+      <div class="front-page">
+        <div class="superbox sol" style="text-align: left; margin: 50px 20px 0">
+          <span style="color: deeppink">if</span> (<span style="color: darkviolet">a</span>+<span style="color: darkviolet">b</span> == <span style="color: darkviolet">c</span>+<span style="color: darkviolet">d</span>) {<br />
+           <span class="ind"><span style="color: darkviolet">alert</span>("singularnost dosegnuta");</span><br />
           }
         </div>
-      </code></div>
+      </div></div>
     </div>
     </div>
 
@@ -490,7 +494,15 @@ a2a_config.locale = "sr";
 
 
 
-   </div>
+</div>
+
+
+
+
+
+
+
+
 
   <div>
    <div id="left" class="leftright" style="display: none;"></div>
