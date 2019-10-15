@@ -1,0 +1,162 @@
+<article>
+<section>
+ <h1>Border CSS svojstvo</h1>
+ <p>U odeljku "<a href="#prvi_sajt" aria-label="prva lekcija">prvi sajt</a>" ste videli kako <dfn class="tt"><span class="ttt">en: Inline</span>unizano</dfn> ubaciti CSS kod u HTML. Sada ćemo videti drugi način da se CSS uvede u HTML, i njega nazivamo <dfn class="tt"><span class="ttt">en: Embedded</span>usađen</dfn> ili <dfn class="tt"><span class="ttt">en: Internal</span>unutrašnji</dfn> CSS.</p>
+ <code>
+  <textarea class="code_snippet css" readonly>
+   <!DOCTYPE html>
+   <html>
+   <head>
+   <style>
+    * {
+     border: 1px solid black;
+    }
+    body {
+     border: 3px dotted red;
+    }
+    body * {
+     border: 5px dashed green;
+    }
+   </style>
+   <title>naslov sajta</title>
+   </head>
+   <body>
+   <h1>naslov</h1>
+   <p>prvi paragraf</p>
+   <p>drugi paragraf</p>
+  </body>
+  </html>
+  </textarea>
+ </code>
+ <p>Zapazite da se unutrašnji CSS stavlja unutar <b>&lt;style&gt;</b> HTML tagova, koji se postavljaju unutar <b>&lt;head&gt;</b> tagova.</p>
+ <p>Dok je unizani CSS omražen naširoko, i opet ga svi koriste (unizani CSS je najlakši način da naterate neki HTML element da izgleda kako vi želite, čak i kada mu CSS s nekog drugog mesta, govori nešto drugo), unutrašnji CSS ima svoje ozbiljne prednosti i mane. Naime, za razliku od direktnog CSS-a, unutrašnji CSS je mnogo lakši za editovanje. A za razliku od <dfn class="tt"><span class="ttt">en: External</span>spoljnog</dfn> CSS-a (koga ćemo obraditi kasnije), unutrašnji CSS se učitava zajedno sa HTML-om, dakle ne zahteva dodatni poziv ka serveru, i naknadni download. Iz ovog razloga unutrašnji CSS znatno doprinosi brzini pravilnog prvobitnog učitavanja strane, što je od posebnog značaja kad se sajt učitava sa mobilnog uređaja, i na šta google jako obraća pažnju kad rangira sajtove u rezultatima.</p>
+ <div class="superbox tip">Česta je praksa da se deo CSS-a, koji se odnosi na tzv "<dfn class="tt"><span class="ttt">sr lit: Iznad prevoja</span><a href="#recnik" rel="glossary chapter" aria-label="rečnik">above the fold</a></dfn>" deo sajta, koji odmah postaje vidljiv, pre nego što korisnik počne da skroluje, uvodi kao unutrašnji CSS, dok se sav ostali CSS, odvaja u zaseban fajl (spoljni CSS).</div>
+ <div class="superbox warning">Glavna mana unutrašnjeg CSS-a jeste da je unutar HTML fajla, pa je opet u slučaju kasnijih izmena, CSS potrebno tražiti na više različitih mesta.</div>
+</section>
+<section>
+ <h2>CSS border svojstvo</h2>
+ <p>border CSS svojstvo je jako korisno u ovoj ranoj fazi, zato što HTML elementu daje okvir, koji je jasno uočljiv u brauzeru, pa je lako zapaziti kako se pojedini HTML elementi ponašaju, gde počinju, a gde se završavaju.</p>
+ <p>CSS će biti primenjen na onaj HTML element koji je zadovoljen selektorom. U ovom primeru su navedena tri selektora, *, body, i body *.</p> 
+ <p><b>* {}</b> znači da će stil naveden u <b>{}</b> biti primenjen na ceo HTML dokument (osim ako neki specifičniji selektor kasnije, ne uvede drugačiji stil, kao u našem primeru). Ako ovaj kod sačuvate u .html fajl, i otvorite u brauzeru, videćete da je sveukupna sadržina stranice uokvirena crnim ramom, <dfn class="tt"><span class="ttt">en: Solid</span>pune linije</dfn>, debljine 1px. Ako ne bismo imali druga dva selektora (oba specifičnija od <b>* {}</b>), svaki element na strani bi bio uokviren istim ramom.</p>
+ <p>Drugi navedeni selektor u primeru je "body" i odnosi se &lt;body&gt;...&lt;/body&gt; tag. Sam <b>body {}</b> selektor je strogo specifičan, i odnosi se isključivo na body HTML tag, ali ne i na elemente koji se nalaze u njemu. Svaki HTML element možete ovako selektovati CSS-om, navedete naziv HTML taga, bez &lt; i &gt; zagrada, i specifičnost će uvek biti ista, s tom razlikom da možete imati samo jedan body tag po strani, i neograničeno mnogo &lt;p&gt; tagova. Selektor <b>p {}</b> bi primenio stil na sve p tagove, osim ako naravno kasnije ne bismo naveli <a href="#klase_i_id-ijevi" rel="chapter" aria-label="o html klasama i id-ijevima">dodatne stilove za samo neke p tagove</a>.</p>
+ <p>Ovakva CSS deklaracija znači da će body element imati crveni <dfn class="tt"><span class="ttt">en: Dotted</span>tačkasti</dfn> ram, debljine 3px.</p>
+ <p>Treći navedeni selektor je "<b>body *</b>". Ovaj selektor znači da će se navedeni stil primeniti na sve elemente, unutar body elementa. Pošto se unutar &lt;body&gt;...&lt;/body&gt; taga nalazi vidljivi deo HTML stranice, to je razlika između ove i naše prve <b>* {}</b> deklaracije vrlo mala, a pošto je <b>body * {}</b> selektor specifičniji od <b>* {}</b>, to će i sav sadržaj na toj strani, a unutar &lt;body&gt; imati zeleni <dfn class="tt"><span class="ttt">en: Dashed</span>crtičasti</dfn> okvir, debljine 5px.</p>
+ <div class="superbox tip">Border ne mora da se definiše za sve četiri strane HTML elementa, kao što smo to uradili u gornjem primeru. Takođe, širina, stil i boja bordera, svi mogu da se definišu ponaosob.</div>
+<!-- border-width -->
+<section>
+ <h3>border-width ili širina okvira</h3>
+ <p><b>border-width: vrednost;</b> je CSS svojstvo kojim se definiše širina (debljina) okvira nekog elementa. Može imati 1 od 4 i to:
+  <ul class="gap_li">
+   <li><span style="border: thin solid #88CC00">"thin"</span> tanka</li>
+   <li><span style="border: medium solid #88CC00">"medium"</span> ili srednja, i ovo je podrazumevana vrednost ako se svojstvo ne navede</li>
+   <li><span style="border: thick solid #88CC00">"thick"</span> ili debela, i</li>
+   <li><span style="border: 1px solid #88CC00">brojna vrednost</span>, prikazana je širina od 1px koja je u hromu šira od thin, a tanja od medium, dok na Firefox-u izgleda isto kao "thin"</li>
+  </ul>
+ <p>primer:</p>
+ <code>
+  <textarea class="code_snippet css" readonly>
+   p {
+    border-width: thick;
+   }
+  </textarea>
+ </code>
+ <p>Ovako definisano svojstvo znači da će okir sa sve 4 strane biti debela linija. Dakle, ako navedemo samo jednu vrendost, ona se odnosi na sve 4 ivice.</p>
+ <div class="superbox sol">
+  <p style="border: thick solid var(--dg); color: var(--dg);">Primer</p>
+ </div>
+ <hr />
+ <code>
+  <textarea class="code_snippet css" readonly>
+   p {
+    border-width: thick thin;
+   }
+  </textarea>
+ </code>
+ <p>Ovako definisan border-width znači da će gornji i donji ram biti debeli, a levi i desni tanki. Dakle ako navedemo dve vrednosti, prva se uvek odnosi na gorni i donji ram, a druga na levi i desni.</p>
+ <div class="superbox sol">
+  <p style="border-style: solid; color: var(--dg); border-width: thick thin;">Primer</p>
+ </div>
+ <hr />
+ <code>
+  <textarea class="code_snippet css" readonly>
+   p {
+    border-width: thick medium thin;
+   }
+  </textarea>
+ </code>
+ <p>Kada navedemo tri vrednosti, prva se odnosi na gornji ram, koji će u ovom primeru biti debeo, druga vrednost, medium, se odnosi na levi i desni ram, koji će u ovom slučaju biti srednje debljine, a treća vrednost, thin, se odnosi na donji ram, koji će biti tanak.</p>
+ <div class="superbox sol">
+  <p style="border: medium solid; border-top: thick solid; border-bottom: thin solid; color: var(--dg);">Primer</p>
+ </div>
+ <hr />
+ <p>Konačno ako navedemo sve četiri vrednosti;</p>
+ <code>
+  <textarea class="code_snippet css" readonly>
+   p {
+    border-width: 20px 10px 5px 0;
+   }
+  </textarea>
+ </code>
+ <p>Tada se vrednosti odnose na strane u smeru kazaljke na satu, počev odozgo, dakle: gornja (20px), desna (10px), donja (5px), leva (0).</p>
+ <div class="superbox sol">
+  <p style="border-style: solid; border-width: 20px 10px 5px 0; color: var(--dg);">Primer</p>
+ </div>
+ <div class="superbox tip">Zapazite da se vrednosti u sva tri slučaja odvajaju praznim mestom, i da ako je vrednost 0, ne pišemo jedinice (px). Jedinice kada se pišu, pišu se bez razmaka posle brojne vrednosti. Bilo koja omaška u formatu, rezultiraće time da se border ne pojavi na elementu. Dok je HTML vrlo fleksibilan sa greškama, CSS je izuzetno sitničav, jedan izostavljen ; i sve stade, on nema pojma šta ste vi mislili, on samo zna šta ste napisali.</div>
+ <hr />
+ <p>Takođe, moguće je navesti širinu samo jedne strane rama, u kom slučaju će ostale tri strane zadržati predefinisanu širinu. To radimo na sledeći način izborom jedne željene od 4 navedene linije koda:</p>
+ <code>
+  <textarea class="code_snippet css" readonly>
+   border-top: 20px;
+   border-right: 10px;
+   border-bottom: 5px;
+   border-left: 0;
+  </textarea>
+ </code>
+</section>
+<!-- border-color -->
+<section>
+ <h3>border-color ili boja okvira</h3>
+ <p>I u ovom slučaju se može navesti od jedne do 4 vrednosti, na isti način kao u prethodna dva slučaja. Boja može da se definiše na sve načine koji su uobičajeni pri definisanju boja, o čemu će više reči biti kasnije, u poglavlju "<a href="#boje" rel="chapter" aria-label="o bojama u html-u">boje</a>"</p>
+ <div class="superbox warning">Ukoliko se boja ne navede posebno, okvir će biti iste boje kao tekst</div>
+</section>
+<!-- border-style -->
+<section>
+ <h3>border-style ili stil bordera</h3>
+ <p>Stil bordera se takođe može definisati sa 1 - 4 vrednosti, kao u slučaju border-width svojstva. U ovom slučaju te vrednosti mogu biti:</p>
+ <ul class="gap_li">
+  <li><span style="border: 4px none #88CC00;">"none"</span> je podrazumevana vrednost, nema okvira</li>
+  <li><span style="border: 4px hidden #88CC00;">"hidden"</span> takođe nema bordera, a koristi se kad imamo konflikt u definiciji bordera kod tabela</li>
+  <li><span style="border: 4px dotted #88CC00;">"dotted"</span> tačkasti okvir</li>
+  <li><span style="border: 4px dashed #88CC00;">"dashed"</span> crtičasti okvir</li>
+  <li><span style="border: 4px solid #88CC00;">"solid"</span> okvir je puna linija</li>
+  <li><span style="border: 4px double #88CC00;">"double"</span> dupla linija</li>
+  <li><span style="border: 4px groove #88CC00;">"groove"</span> definiše 3d žljeb čiji efekat zavisi od boje okvira - vi definišete samo jednu boju, brauzer izračunava drugu.</li>
+  <li><span style="border: 4px ridge #88CC00;">"ridge"</span> definiše 3d greben čiji efekat zavisi od boje okvira</li>
+  <li><span style="border: 4px inset #88CC00;">"inset"</span> definiše 3d uleglunće čiji efekat zavisi od boje okvira</li>
+  <li><span style="border: 4px outset #88CC00;">"outset"</span> definiše 3d ispupčenje  čiji efekat zavisi od boje okvira</li>
+  <li><span style="border: 4px initial #88CC00;">"initial"</span> podešava vrednost na početnu</li>
+  <li><span style="border: 4px inherit #88CC00;">"inherit"</span> naslediće okvir od elementa u kome se nalazi</li>
+ </ul>
+ <div class="superbox tip">Od tri karakteristike border svojstva, border-style je jedina koja mora da se navede. Podrazumevana vrednost za border-style je "none", tako da ako se ova karakteristika ne navede, neće ni biti bordera. Ako je border-style jedina navedena, okvir će biti medium širine, i imaće istu boju kao i uokvireni tekst.</div>
+</section>
+<section>
+  <h2>Poluprovidan border</h2>
+  <p>U nekim situacijama biste možda želeli da kreirate border koji bi bio poluprovidan, tako da bi se kroz njega mogla nazirati slova u drugom boxu. Ovo svojstvo ćemo obraditi kada budemo radili pozadine elemenata.<!-- background-clip: padding-box; --></p>
+</section>
+<!-- border-image -->
+<section>
+ <h2>border-image ili slika okvira</h2>
+ <p>
+</section>
+<!-- border-spacing -->
+<section>
+ <h2>border-spacing ili razmak okvira</h2>
+ <p>border-spacing je svojstvo koje se koristi kod tabela, i biće obrađeno kad budemo radili tabele.</p>
+</section>
+<!-- border-collapse -->
+<section>
+ <h2>border-collapse ili kolaps okvira</h2>
+ <p>border-collapse je svojstvo koje se koristi kod tabela, i biće obrađeno kad budemo radili tabele.</p>
+</section>
+</section>
+</article>

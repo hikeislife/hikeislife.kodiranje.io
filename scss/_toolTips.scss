@@ -1,0 +1,48 @@
+.tt {
+  position: relative;
+  border-bottom: 2px solid $dy;
+  cursor: help;
+  color: black;
+}
+
+.tt .ttt {
+  visibility: hidden;
+  position: absolute;
+  text-align: center;
+  z-index: 1;
+  background-color: $dy;
+  border: 2px solid $darkF;
+  border-radius: 4px;
+  padding: 4px;
+  width: 40vw;
+  margin-left: -20vw;
+  bottom: 100%;
+  left: 50%;
+  margin-bottom: 5px;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.tt:hover .ttt {
+  visibility: visible;
+  opacity: 1;
+}
+
+.tt .ttt::after {
+  content: " ";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -7px;
+  border-style: solid;
+  border-width: 7px;
+  border-color: black transparent transparent transparent;
+}
+
+.error span.tt, .why span.tt {
+  border-bottom: 2px solid $darkF;
+}
+
+.error .tt .ttt, .why .tt .ttt {
+ background-color: $mainG;
+}

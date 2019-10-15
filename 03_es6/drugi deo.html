@@ -1,0 +1,79 @@
+<section>
+ <h2>Uvod u ECMAScript ili "nije broj" je broj</h2>
+ 
+</section>
+<section>
+ <h2>Operandi u JS</h2>
+ <p>Ok, otvorite svoj brauzer, na bilo koju stranu, i pritisnite dugme "F12". Taj prozor koji vam se otvorio, nazivamo "<dfn title="alati za developere">Developer Tools</dfn>". Videćete meni; Elements, Console, Sources, itd. Kliknite na Console. To vam je konzola. U konzolu možete kucati JS, i testirati kod na brzaka.</p>
+
+ <p>Ukucajte u konzolu "2 + 1" bez navodnika, i pritisnite enter. Da, konzola radi računske operacije. Zato što JS radi računske operacije. Kao i bilo koji drugi programski jezik. Možete pored sabiranja, raditi oduzimanje (-), množenje (*), deljenje (/), i, moduo (%). Moduo daje ostatak deljenja dva broja. Npr, 7%3, daje 1. 3 se u 7 nalazi 2 cela puta, 2 * 3 je 6, 7 - 6 je 1, dakle ostaje jedan, u kom se 3 ne nalazi ni jednom.</p>
+ <p>Isto kao i u matematici, množenje i deljenje se rade pre sabiranja i oduzimanja, osim ako nemamo zagrade, u kom slučaju se prvo radi ono što je u zagradama.</p>
+ <p>Nemate pojma koliko vremena tutorijali provode objašnjavajući ovaj deo. Nema na čemu.</p>
+ <div class="superbox tip">Preporučljivo je da se malo poigrate s konzolom, da vidite šta kako funkcioniše. Slično kao u CMD-u, i ovde možete pritiskom na strelicu na gore ili dole, da se šetate između prethodno ukucanih komandi.</div>
+ <details>
+  <summary class="superbox kviz">Samo da ne zaboravim, decimale se u svim programskim jezicima označavaju po američki, dakle, 0,2 je 0.2. I kad smo već kod decimala, ukucajte u konzolu 0.2*0.2 i pritisnite enter. Primetićete da rezultat nije baš kao što bi se očekivalo, i ta greška je nešto što trebate imati na umu ako računate s decimalnim brojevima. Ova greška nije greška JS-a, to je greška koja se javlja usled zaokruživanja decimalnih brojeva u kompjuterima.</summary>
+  <div class="superbox tip">Decimalni brojevi se u kompjuterskom svetu obično nazivaju Floating point, ili "plutajuća tačka".</div>
+ </details>
+ <p>Neki jezici prave razliku između tipova brojeva. Ne i JS. Ovde, sve što je broj, je broj. Ako ukucate u konzolu typeof(2), čime pitate JavaScript u koji tip podataka spada vrednost u zagradama, on će vam reći da je 2 <dfn title="en: Number">broj</dfn>. Neće ga nazvati integer, ili floating point, ili double, ne, svi brojevi su samo brojevi u js.</p>
+ <p><abbr title="od 'Not a Number', što znači 'nije broj'">NaN</abbr> predstavlja numeričku vrednost koja se ne može definisati, ali ako ukucate u konzolu typeof(NaN); i pritisnete enter, dobićete odgovor da je u pitanju broj. Ovo jeste jedna od grešaka JavaScripta.</p>
+ <p>NaN možete dobiti ako pokušate da primenite aritmetiču operaciju, recmo množenje, na neki broj, i nešto što ne može da se evaluira kao broj, npr: 3*"kodiranje".</p>
+ <p>"kodiranje" je drugi tip podataka u JavaScriptu, koga nazivamo string. Stringovi su tekstualne vrednosti, i moraju da se pišu unutar navodnika. Navodnici mogu da budu dupli "", ili apostrofi '', ali je jako bitno da se međusobno ne mešaju. Dakle možete imati "string" ili 'string', ali ne možete imati "string'. Ako ovo pokušate da date JS-u kao string, on će da smatra da taj sting niste zatvorili, da je apostrof njegov deo, kao i sve što sledi nakon apostrofa, sve dok negde dalje u kodu ne nađe sledeći ". Ovo što programski jezici odbijaju da mešaju "" i '' se koristi kada je potrebno unutar stringa imati navodnike ili apostrofe:</p>
+ <code>
+  <textarea class="code_snippet js" readonly>
+   'Pera reče Mili: "Hoćeš karanfil?"'
+  </textarea>
+ </code>
+ <p>je sasvim okay string, a takođe i:</p>
+ <code>
+  <textarea class="code_snippet js" readonly>
+   "je l' da?"
+  </textarea>
+ </code>
+ <p>Važno je napomenuti, da je + operacija koja postoji za stringove, i naziva se konkatinacija. Ako imate dva stringa, i pokušate da ih saberete, to će da vam uspe:</p>
+ <code>
+  <textarea class="code_snippet js" readonly>
+   "Danas je " + "subota"
+  </textarea>
+ </code>
+ <p>će proizvesti:</p>
+ <div class="superbox sol">
+  "Danas je subota"
+ </div>
+ <p>Ovo je značajno, jer ako pokušate da saberete broj i string, JS će konvertovati broj u string, i konkatiniraće ih:</p>
+ <code>
+  <textarea class="code_snippet js" readonly>
+   3 + "5"
+  </textarea>
+ </code>
+ <p>će dati string</p>
+ <div class="superbox sol">
+  "35"
+ </div>
+ <p>Ako dobijate čudan rezultat nekog sabiranja, ovo je verovatno razlog, i bar jedna od vaših promenjivih, je string. Ako niste sigurni, uvek možete ukucati u konzolu: typeof("35") da provrite da li je nešto odgovarajući tip podatka.</p>
+ <p>Pored brojeva i stringova, JS ima i druge tipove podataka, koji će biti obrađeni zasebno:</p>
+ <ul>
+  <li>Array (niz)</li>
+  <li>Set (skup) i weakset</li>
+  <li>Boolean (ima samo dve moguće vrednosti, <dfn title="sr: Tačno">True</dfn> i <dfn title="sr: Netačno">False</dfn>)</li>
+  <li>Object</li>
+  <li>Map</li>
+  <li>Null</li>
+  <li>Undefined</li>
+  <li>Symbols</li>
+ </ul>
+</section>
+<section>
+ <h2>Još malo o konzoli</h2>
+ <p>Konzola nije samo digitron i sredstvo za procenu tipa podataka. Ona je i izuzetno bitna alatka u procesu <dfn title="pronalaženja grešaka">debagovanja</dfn> našeg koda. Jedna od najčešće korišćenih komandi za konzolu jeste:</p>
+ <code>
+  <textarea class="code_snippet js" readonly>
+   console.log(nešto_nešto);
+  </textarea>
+ </code>
+ <p>U najprostijem slučaju, ovo bi nam pokazalo da li JS i dalje radi u toj tački u kodu. JS će da radi sve dok ne naleti na neku grešku s kojom ne zna šta će, tako da ovo može da bude jako korisno.</p>
+ <>console.debug similar to console.log
+ <>console.info daje ispis sa i info ikonicom
+ <>console.warn daje žutu ikonicu s uzvičnikom
+ <>console.error daje daje crvenu ikonicu s iksom
+</section>
+</article>

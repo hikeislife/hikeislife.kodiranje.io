@@ -1,0 +1,53 @@
+![] // false
+!![] // true
+
+unary plus operator transformiše vrednosti u brojeve:
++![] // 0
++!![] // 1
+
+!![] + !![] // 2 i tako dalje
+
+[] se pri operacijama automatski transformiše u string
+
+![] + [] // "false"
+!![] + [] // "true"
+
+ili
+![] + "" // "false"
+!![] + "" // "true"
+
++!![] + [] // "1"
+!![] + !![] + [] // "2"
+
+veći brojevi:
++ (+!![] + "") + (!![]+!![] + "") + (!![] + !![] + !![] + "") // "123"
++ ((+!![] + "") + (!![]+!![] + "") + (!![] + !![] + !![] + "")) // 123
+
+!{} // false
+
+još neke reči:
+
+[][[]] // undefined
+([][[]] + "") // "undefined"
+
++{} // NaN
++{} + "" // "NaN"
+
+[]+{} // object Object
+
+slova:
+
+(+{} + "")[1] // "a"
+([]+{})[2] // "b"
+([]+{})[5] // "c"
+([][[]] + "")[2] // "d"
+([][[]] + "")[3] // "e"
+([][[]] + "")[4] // "f"
+
+https://www.youtube.com/watch?v=gE9xn-KOp1I
+
+http://www.jsfuck.com/
+
+https://github.com/aemkei/jsfuck/blob/master/jsfuck.js
+
+    <a href="https://www.youtube.com/watch?v=gE9xn-KOp1I" target="_blank">kodiranje zagradama</a><br /><br />

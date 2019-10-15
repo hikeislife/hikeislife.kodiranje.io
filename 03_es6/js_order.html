@@ -1,0 +1,12 @@
+const num1 = [[1]];
+let num2 = [2, [3]];
+
+const nums = num1.concat(num2);
+
+console.log(nums);
+// results in [[1], 2, [3]]
+
+num1[0].push(4); // ne pušuje u num1, već u subarray num1[0]
+
+console.log(num1);  // nums have changed as well !!!
+console.log(nums);

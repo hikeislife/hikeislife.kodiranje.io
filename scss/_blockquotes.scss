@@ -1,0 +1,34 @@
+blockquote {
+  font-weight: bold;
+  position: relative;
+  padding: 20px;
+  padding-bottom: 40px;
+  border: 2px solid black;
+  border-radius: 4px;
+  background-color: $lg;
+
+  &::before {
+    content: "\201c";
+    font-size: 30px;
+    color: $dg;
+  }
+
+  &::after {
+    content: "\201d";
+    font-size: 30px;
+    color: $dg;
+  }
+
+  cite {
+    display: block;
+    right: 30px;
+    position: absolute;
+    bottom: 10px;
+
+    &::before {
+      content:"~ ";
+      font-size: 30px;
+      color: $dg;
+    }
+  }
+}

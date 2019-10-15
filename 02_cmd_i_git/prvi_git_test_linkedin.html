@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>linkedin git test</title>
+    <style>
+        .code {
+            border: 2px solid black;
+            padding: 10px;
+        }
+        .correct {
+            background: green;
+        }
+    </style>
+</head>
+<body>
+    <h1>prvi jul 2019</h1>
+    <h2>1. What command would let you modify your previous commit?</h2>
+    <div>
+        
+    </div>
+    <div>
+        <p>fix</p>
+        <p>quickfix</p>
+        <p>modify</p>
+        <p>*amend</p>
+    </div>
+    <p class="code">Imortant: you can only modify the message part of the commit, and only if it hasn't been pushed. <a href="https://stackoverflow.com/questions/179123/how-to-modify-existing-unpushed-commit-messages#179147" target="_blank">stackoverflow</a> </p>
+    <h2>2. Looking at the following commands, describe what is happening.</h2>
+    <div class="code">
+        git checkout feature-user-location<br />
+        git cherry-pick {af5597c299...}
+    </div>
+    <div>
+        <p>The commit is being tagged for release on the feature-user-location branch</p>
+        <p>*A commit is being copied from it's original branch over to the feature-user-location branch</p>
+        <p>The commit is beng cherry-picked as the new HEAD of the commit history</p>
+        <p>A commit is being copied from the feature-user-location branch to the master branch</p>
+    </div>
+    <p class="code"><a href="https://stackoverflow.com/questions/9339429/what-does-cherry-picking-a-commit-with-git-mean#9339460" target="_blank">stack</a></p>
+    <h2 class="correct">3. Your current project has several branches; master, beta, and push-notifications. You've just finished the notification feature in the push-notifications branch, and you want to commit it to the beta branch. How can you accomplish this?</h2>
+    <div>
+        
+    </div>
+    <div>
+        <p>Checkout the push-notifications branch and run git merge beta</p>
+        <p>Checkout the master branch, and run git merge beta -> push-notifications</p>
+        <p>Delete the push-notifications branch, and it will be commited to the master branch automatically</p>
+        <p>Checkout the beta branch and run git merge push-notifications</p>
+    </div>
+    <p class="code"><a href="https://git-scm.com/book/en/v2/Git-Branching-Rebasing" target="_blank">documentation</a></p>
+    <h2 class="correct">4. What command would you use to create a new git repo</h2>
+    <div>
+        
+    </div>
+    <div>
+        <p>git add</p>
+        <p>git start</p>
+        <p>git new</p>
+        <p>git init</p>
+    </div>
+    <h2>5. </h2>
+    <div>
+        
+    </div>
+    <div>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+    </div>
+    <h2>6. Why would you use a pre-receive hook in your remote repo?</h2>
+    <div>
+        
+    </div>
+    <div>
+        <p>You wouldn't, you would use it in the local repo</p>
+        <p>To invoke a hook script when commits are pushed but before any references are updated</p>
+        <p>To fire a script after updates are made to the remote repo</p>
+        <p>to debug all commit tags and release versions</p>
+    </div>
+    <h2 class="correct">7. Why would the following command be used?</h2>
+    <div class="code">
+        git rebase -i HEAD~10
+    </div>
+    <div>
+        <p>To run comparative search of the last 10 commits for differences</p>
+        <p>To list the last 10 commits and modify them with either the squash or fixup command</p>
+        <p>To delete the last 10 commits and reset the HEAD</p>
+        <p>In order to locally cache the last 10 commits</p>
+    </div>
+    <h2 class="correct">8. Where are files stored before they are commited to the local repo?</h2>
+    <div>
+        
+    </div>
+    <div>
+        <p>Saved files</p>
+        <p>git documents</p>
+        <p>Staging area</p>
+        <p>git cache</p>
+    </div>
+    <h2>9. After checking your git status, you get the following output, which shows the file beta-notes.js in the commit but also unstaged. How can this situation occur?</h2>
+    <div class="code">
+        Changes to be committed<br />
+        (use "git reset HEAD &lg;file&gt;..." to unstage) <br /><br />
+        modified: beta-notes.js<br /><br />
+        Changes not staged for commit: <br />
+        (use "git add  &lg;file&gt;..." to update what will be commited)
+        (use "git checkout -- &lg;file&gt;..." to discard changes in working directory)<br /><br />
+        modified: beta-notes.js
+    </div>
+    <div>
+        <p>There were two copies of beta-notes.js, but one was deleted</p>
+        <p>beta-notes.js was staged, but then modified afterwards, creating two different versions of the file</p>
+        <p>Two copies of beta-notes.js were created but only one is being tracked</p>
+        <p>There are two tracked copies of beta-notes.js, but one was removed from the commit</p>
+    </div>
+    <h2>10. How could you squash multiple commits together without using git merge --squash?</h2>
+    <div>
+        
+    </div>
+    <div>
+        <p>Caching</p>
+        <p>You can't. git merge --squash is the only git command for that operation</p>
+        <p>Rebasing</p>
+        <p>Reflogging</p>
+    </div>
+    <h2 class="correct">11. How can you check your current git vesrion</h2>
+    <div>
+        
+    </div>
+    <div>
+        <p>git --v</p>
+        <p>git --version</p>
+        <p>git --options</p>
+        <p>git --current</p>
+    </div>
+    <h2>12. </h2>
+    <div>
+        
+    </div>
+    <div>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+    </div>
+    <h2>13. Which of the following is true of the git push command?</h2>
+    <div>
+        
+    </div>
+    <div>
+        <p>By default a push doesn't send tags to the remote repo</p>
+        <p>Commits can only be tagged when they are created</p>
+        <p>Tags are pushed to the remote repo with their respective commits</p>
+        <p>Only annotated tags are automatically pushed to the remote repo with a commit</p>
+    </div>
+    <h2 class="correct">14. If you cloned an existing git repo, what would happen?</h2>
+    <div>
+        
+    </div>
+    <div>
+        <p>A new copy would overwrite the central repo</p>
+        <p>A copy of the repo would be created on your local machine</p>
+        <p>Nothing. Cloning is not supported git function</p>
+        <p>A copy of the repo would be created on the hosting platform</p>
+    </div>
+    <h2 class="correct">15. What files is the following .gitignore programmed to leave out?</h2>
+    <div class="code">
+        <p># .swift</p>
+        <p>build/</p>
+        <p>*.txt</p>
+        <p>*.metadata</p>
+    </div>
+    <div>
+        <p>All files with a .swift, .txt, or .metadata file extension, as well as the entire build directory</p>
+        <p>Only the build directory</p>
+        <p>All files in the build directory, as well as files ending with .txt or .metadata</p>
+        <p>Only files with .swift and .txt extensions</p>
+    </div>
+</body>
+</html>

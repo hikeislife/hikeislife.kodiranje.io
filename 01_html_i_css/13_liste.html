@@ -1,0 +1,226 @@
+<article>
+ <section>
+  <h1>Liste</h1>
+  <p>Sad sigurno mislite "liste? kome uopšte trebaju liste? čega liste misliš da ću da pravim?" Da, liste ne zvuče mnogo zanimljivo. Ali sugurno ste mislili da svom sajtu nekada dodate i meni? Šta mislite da je meni? Pa lista! Lista adresa. Liste se koriste na skoro svakom sajtu.</p>
+  <h2>Elementi liste &lt;li&gt;</h2>
+  <p>Svaki član liste se upisuje između <b>&lt;<abbr class="tt"><span class="ttt">en: List Item</span>li</abbr>&gt;</b> i <b>&lt;/li&gt;</b> tagova. li tag se koristi unutar numerisanih i nenumerisanih lista.</p>
+  <h3>Atributi li taga</h3>
+  <ul>
+   <li><b>value=""</b> atribut definiše broj s kojim numerisana lista počinje. Svaki sledeći član liste, će imati broj za jedan veći od prethodnog. Jedina dozvoljena vrednost ovog atributa je broj, čak i kada je lista numerisana slovima ili rimskim brojevima. Nema nikakvog uticaja na nenumerisane liste.</li>
+   <li><b>type=""</b> atribut se koristio da se precizira kakve tačke treba da ukazuju na članove liste, ali se u HTML-u 5 obeshrabruje njegova upotreba i umesto toga se ide na udešavanje lista putem <a href="#css_liste" rel="chapter" aria-label="stilizacija listi">CSS</a>-a.
+    <ul>
+     <li type="1">1</li>
+     <li type="A">A</li>
+     <li type="a">a</li>
+     <li type="I">I</li>
+     <li type="i">i</li>
+     <li type="none">none</li>
+     <li type="disc">disc</li>
+     <li type="square">square</li>
+     <li type="circle">circle</li>
+    </ul>
+   </li>
+  </ul>
+  <p>Ova mala lista atributa je HTML lista, i to jedna nenumerisana lista, sa usađenom dodatnom listom. Naravno, ako koristite neki od prvih 5 navedenih <b>type=""</b> atributa, to se ona očigledno prikazuje kao numerisana lista.</p>
+  <h2>Nenumerisane liste &lt;ul&gt;</h2>
+  <p>&lt;<abbr class="tt"><span class="ttt">en: Unordered List</span>ul</abbr>&gt; je tag koji koristimo kada želimo da kreiramo ne-numerisanu listu. Po definiciji, brauzeri prave nenumerisane liste sa <dfn class="tt"><span class="ttt">en: Bullets</span>tačkama</dfn> ispred svakog unosa. Korišćenjem <a href="#css_liste" rel="chapter" aria-label="o stilizaciji listi">CSS</a>-a možemo da izmenimo kako te tačke izgledaju, ili, čak, da ih sasvim uklonimo.</p>
+  <code>
+   <textarea class="code_snippet html">
+    <ul>
+     <li>Aždaja</li>
+     <li>Ala</li>
+     <li>Beštija</li>
+     <li>Gmaz</li>
+     <li>Zmaj</li>
+    </ul>
+   </textarea>
+  </code>
+  <p>Što rezultira sledećim prikazom u brauzeru</p>
+  <div class="superbox sol">
+   <ul>
+    <li>Aždaja</li>
+    <li>Ala</li>
+    <li>Beštija</li>
+    <li>Gmaz</li>
+    <li>Zmaj</li>
+   </ul>
+  </div>
+  <h3>Atributi nenumerisanih lista</h3>
+  <p>HTML5 je izbacio sve atribute nenumerisanih lista u <a href="#css_liste" rel="chapter"  aria-label="stilizacija listi">CSS</a>. Ovo znači da bi verovatno i dalje radili, ali je sasvim moguće da ih brauzeri počnu izbacivati u budućnosti.</p>
+  <h2>Numerisane liste &lt;ol&gt;</h2>
+  <p>Numerisane liste se pišu unutar <b>&lt;<abbr class="tt"><span class="ttt">en: Ordered Lists</span>ol</abbr>&gt;</b> tagova, i svi članovi liste su i ovde unutar <b>&lt;li&gt;</b> tagova. Po default-u ove liste su označene brojevima, ali to možemo izmeniti <a href="#css_liste" rel="chapter" aria-label="stilizacija listi">CSS</a>-om</p>
+  <code>
+   <textarea class="code_snippet html">
+    <ol>
+     <li>Aždaja</li>
+     <li>Ala</li>
+     <li>Beštija</li>
+     <li>Gmaz</li>
+     <li>Zmaj</li>
+    </ol>
+   </textarea>
+  </code>
+  <p>Što rezultira sledećim prikazom u brauzeru</p>
+  <div class="superbox sol">
+   <ol>
+    <li>Aždaja</li>
+    <li>Ala</li>
+    <li>Beštija</li>
+    <li>Gmaz</li>
+    <li>Zmaj</li>
+   </ol>
+  </div>
+  <h3>Atributi numerisanih listi</h3>
+  <p>start="" atribut precizira s kojim brojem treba da počne brojanje u listi</p>
+  <code>
+   <textarea class="code_snippet html">
+    <ol start="13">
+     <li>Aždaja</li>
+     <li>Ala</li>
+     <li value="27">Beštija</li>
+     <li>Gmaz</li>
+     <li>Zmaj</li>
+    </ol>
+   </textarea>
+  </code>
+  <p>Što daje:</p>
+  <div class="superbox sol">
+   <ol start="13">
+    <li>Aždaja</li>
+    <li>Ala</li>
+    <li value="27">Beštija</li>
+    <li>Gmaz</li>
+    <li>Zmaj</li>
+   </ol>
+  </div>
+  <p><b>reversed</b> atribut, govori da numeracija liste, treba da ide u nazad</p>
+  <code>
+   <textarea class="code_snippet html">
+    <ol start="13" reversed>
+     <li>Aždaja</li>
+     <li>Ala</li>
+     <li>Beštija</li>
+     <li>Gmaz</li>
+     <li>Zmaj</li>
+    </ol>
+   </textarea>
+  </code>
+  <p>Što daje:</p>
+  <div class="superbox sol">
+   <ol start="13" reversed>
+    <li>Aždaja</li>
+    <li>Ala</li>
+    <li>Beštija</li>
+    <li>Gmaz</li>
+    <li>Zmaj</li>
+   </ol>
+  </div>
+  <h2>Opisne liste &lt;dl&gt;</h2>
+  <p>Ove liste su liste pojmova, sa opisom svakog pojma. Liste se stavljaju unutar <b>&lt;<abbr class="tt"><span class="ttt">en: Description List</span>dl</abbr>&gt;</b> tagova. Za razliku od prethodne dve, ovde ne koristimo &lt;li&gt; tag da označimo elemente liste. Umesto njih, koristimo <b>&lt;dt&gt;</b> i <b>&lt;dd&gt;</b> tagove. Unutar <b>&lt;dt&gt;</b> taga upisujemo pojam koji želimo objasniti, a unutar <b>&lt;dd&gt;</b> taga, opis tog pojma.</p>
+  <code>
+   <textarea class="code_snippet html">
+    <dl>
+     <dt>Ala</dt>
+     <dd>- Proždrljivo mitsko biće</dd>
+     <dt>Bauk</dt>
+     <dd>- Mitsko biće sastavljeno od mraka</dd>
+     <dt>Zmaj</dt>
+     <dd>- Zmijoliko mitsko biće koje dolazi iz daleka, raspolaže velikim bogatstvima i jako je inteligentno. Ako mu se neka devojka svidi, može poprimiti ljudsko obličje, kako bi tu devojku zavelo. Dete zmaja i ljudske žene uvek poraste u velikog heroja. Miloš Obilić i Milunka Savić su bili polu-zmajevi.</dd>
+     <dd>- Mit o Zmajevima je jasan pokazatelj da Srpska opsesija strancima nije nova pojava, već vuče korene iz davnina</dd>
+    </dl>
+   </textarea>
+  </code>
+  <p>Što rezultira sledećim prikazom u brauzeru</p>
+  <div class="superbox sol">
+   <dl>
+     <dt>Ala</dt>
+     <dd>- Proždrljivo mitsko biće</dd>
+     <dt>Bauk</dt>
+     <dd>- Mitsko biće sastavljeno od mraka</dd>
+     <dt>Zmaj</dt>
+     <dd>- Zmijoliko mitsko biće koje dolazi iz daleka, raspolaže velikim bogatstvima i jako je inteligentno. Ako mu se neka devojka svidi, može poprimiti ljudsko obličje, kako bi tu devojku zavelo. Dete zmaja i ljudske žene uvek poraste u velikog heroja. Miloš Obilić i Milunka Savić su bili polu-zmajevi.</dd>
+     <dd>- Mit o Zmajevima je jasan pokazatelj da Srpska opsesija strancima nije nova pojava, već vuče korene iz davnina</dd>
+    </dl>
+  </div>
+  <h2>Ugnježdene liste</h2>
+  <p>I numerisane i nenumerisane liste mogu biti ugnježdene, i mogu se ugnježdivati jedne u druge. Po defaultu, brauzeri formatiraju ugnježdene liste drugačije od listi u koje su ugnježdene, pored toga što ih dodatno uvlače:</p>
+  <code>
+   <textarea class="code_snippet html">
+    <ul>
+     <li>Mitska bića na slovo A:
+      <ul>
+       <li>Aždaja</li>
+       <li>Ala</li>
+       <li>Akrep</li>
+       <li>Avet</li>
+      </ul>
+     </li>
+     <li>Mitska bića na ostala slova:
+      <ul>
+       <li>Baba Roga</li>
+       <li>Svetski poznata mitska bića
+        <ul>
+         <li>Vampir</li>
+         <li>Crni Arapin</li>
+        </ul>
+       </li>
+       <li>Gmaz</li>
+       <li>Zmaj</li>
+      </ul>
+     </li>
+    </ul>
+   </textarea>
+  </code>
+  <p>Što daje:</p>
+  <div class="superbox sol">
+   <ul>
+     <li>Mitska bića na slovo A:
+      <ul>
+       <li>Aždaja</li>
+       <li>Ala</li>
+       <li>Akrep</li>
+       <li>Avet</li>
+      </ul>
+     </li>
+     <li>Mitska bića na ostala slova:
+      <ul>
+       <li>Baba Roga</li>
+       <li>Svetski poznata mitska bića
+        <ul>
+         <li>Vampir</li>
+         <li>Crni Arapin</li>
+        </ul>
+       </li>
+       <li>Gmaz</li>
+       <li>Zmaj</li>
+      </ul>
+     </li>
+    </ul>
+  </div>
+  <h2>Naslov liste</h2>
+  <p>U predlozima za HTML3 se pominje tag koji bi listama davao naslove, &lt;lh&gt;. Od cele HTML3 specifikacije se bilo odustalo, i elementi u njoj predloženi, nikada nisu zaživeli, i nikada nisu implementirani u brauzere. Ako vam je potrebno da listi date naslov, koristite odgovarajuće <b>&lt;h_&gt;</b> tagove.</p>
+  <code>
+   <textarea class="code_snippet html">
+    <h3>Srpska mitologija:</h3>
+    <ol>
+     <li>Aždaja</li>
+     <li>Ala</li>
+     <li>Beštija</li>
+     <li>Gmaz</li>
+     <li>Zmaj</li>
+    </ol>
+   </textarea>
+  </code>
+  <p>Što rezultira sledećim prikazom u brauzeru</p>
+  <div class="superbox sol">
+   <h3>Srpska mitologija:</h3>
+   <ol>
+    <li>Aždaja</li>
+    <li>Ala</li>
+    <li>Beštija</li>
+    <li>Gmaz</li>
+    <li>Zmaj</li>
+   </ol>
+  </div>
+ </section>
+</article>

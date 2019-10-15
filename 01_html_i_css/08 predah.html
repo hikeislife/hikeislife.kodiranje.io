@@ -1,0 +1,63 @@
+<section><h1>Tri mala taga</h1>
+ <p>Prethodna dva poglavlja su bila prilično obimna, pa ne bi bilo na odmet da napravimo mali break!</p>
+<section>
+ <h2>Break tag &lt;br /&gt;</h2>
+ <p>Kao što smo zapazili, &lt;p&gt; kreira paragraf i paragraf će biti prikazan s određenim razmakom ispred i iza teksta. Ako želimo da pređemo u novi red, bez razmaka, koristićemo &lt;br&gt; tag:</p>
+ <code>
+  <textarea class="code_snippet" readonly>
+   neki tekst<br /> dalji tekst...
+  </textarea>
+ </code>
+ <div class="superbox sol">neki tekst<br>
+  dalji tekst...</div>
+ <p>&lt;br&gt; tag se ne zatvara ali ga zbog XHTML-a pišemo kao samozatvarajući tag &lt;br /&gt;.</p>
+ <p>Koristan je ako želimo da prikažemo adrese, pesme i sl</p>
+</section>
+<section>
+ <h2>horizonal rule tag &lt;hr&gt;</h2>
+ <p>&lt;hr&gt; tag označava tematski predah na stanici.</p>
+ <p>Na ekranu se prikazuje kao horizontalna linija</p>
+ <p>U HTML-u, &lt;hr&gt; ne mora da se zatvara. U XHTML-u je samozatvarajući i piše se kao: &lt;hr /&gt;</p>
+ <code>
+  <textarea class="code_snippet" readonly>
+   <p>Kraj jedne celine</p>
+   <hr />
+   <p>Početak druge celine</p>
+  </textarea>
+ </code>
+ <div class="superbox sol"><p>Kraj jedne celine</p>
+   <hr />
+   <p>Početak druge celine</p></div>
+ <p>podrazumevani CSS &lt;hr /&gt; taga je:</p>
+ <code>
+  <textarea class="code_snippet" readonly>
+   hr {
+    display: block;
+    margin: 0.5em auto;
+    border-style: inset;
+    border-width: 1px;
+   }
+  </textarea>
+ </code>
+</section>
+<section>
+ <h2>Komentari</h2>
+ <p>Komentare koristimo u kôdu, kada želimo da objasnimo budućem sebi, ili nekom koderu koji će doći posle nas, zašto smo nešto uradili baš tako, i zašto to tako mora da bude. Komentari u HTML-u izgledaju ovako:</p>
+ <code>
+  <textarea class="code_snippet" readonly>
+   <p>Ovo je vidljivi deo sajta</p>
+   <!-- ovo je komentar koji se ne prikazuje na sajtu, ali je vidljiv u kôdu -->
+   <p>Ovo je nastavak vidljivog dela sajta</p>
+  </textarea>
+ </code>
+ <p>Komentari u CSS-u izgledaju ovako:</p>
+ <code>
+  <textarea class="code_snippet" readonly>
+   /* p {
+    border-style: solid;
+   } */
+  </textarea>
+ </code>
+ <p>Dakle, sav kôd ili tekst unutar &lt;!-- i --&gt; u HTML-u, ili između /* i */ u CSS-u će se smatrati za komentar, i brauzer ga neće prikazivati.</p>
+</section>
+</section>

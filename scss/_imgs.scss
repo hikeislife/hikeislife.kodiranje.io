@@ -1,0 +1,33 @@
+img:not([alt]) {
+  filter: grayscale(100%);
+}
+
+.responsive {
+  width: 80%;
+  height: auto;
+  text-align: center;
+}
+
+.cent {
+  text-align: center;
+  border: 0;
+}
+
+.tri {
+  max-width: 300px;
+}
+
+.pet {
+  max-width: 500px;
+}
+
+.osam {
+  max-width: 800px;
+}
+
+figure {
+  text-align: center;
+}
+figcaption {
+  font-size: 14px;
+}

@@ -1,0 +1,57 @@
+<article>
+ <section>
+  <h1>Preimenovanje fajlova</h1>
+  <p>Kao i u slučaju brisanja fajlova, i preimenovanje fajlova možemo uraditi iz git-a, ili ručno pa onda to prijaviti git-u. Ako to uradimo ručno, git će nam prijaviti da smo naš fajl obrisali, i onda dodali novi fajl koji on još ne prati.</p>
+  <p>Da bismo dodali ove izmene, pisaćemo:</p>
+  <div class="cmdborder">
+   <div class="cmd">
+    <div class="cmdtitlebar">MINGW32:~</div>
+    <div class="cmdwindow">
+     <p><span class="gitwhite">$ git add preimenovan_fajl.txt</span></p>
+     <p><span class="gitwhite">$ git rm stari_naziv.txt</span></p>
+     <p>$_ </p>
+    </div>
+   </div>
+  </div>
+  <p>Ovim su obe izmene prebačene u indeks, i u tom trenutku će ih git uporediti, i primetiti da je u pitanju samo preimenovanje:</p>
+  <div class="cmdborder">
+   <div class="cmd">
+    <div class="cmdtitlebar">MINGW32:~</div>
+    <div class="cmdwindow">
+     <p><span class="gitwhite">$ git status</span><br />
+     On branch master<br />
+     Changes to be committed:<br />
+     (use "git reset HEAD &lt;file&gt;..." to unstage)</p>
+     <p><span class="gitgreen">renamed: stari_naziv.txt -> preimenovan_fajl.txt</span></p>
+     <p>$_ </p>
+    </div>
+   </div>
+  </div>
+  <p>Git će registrovati sličnost između fajlova, čak i ako smo fajl izmenili nakon poslednjeg komita, a pre preimenovanja.</p>
+  <p>Što se gita tiče, promena naziva fajla, ili pomeranje fajla na drugu lokaciju u strukturi foldera koje on prati, su jedna te ista stvar. Tako UNIX to radi. Tako da ako želimo da promenimo naziv fajla kroz git, ili da ga prenesemo na neku drugu lokaciju, koristićemo istu komandu:</p>
+  <div class="cmdborder">
+   <div class="cmd">
+    <div class="cmdtitlebar">MINGW32:~</div>
+    <div class="cmdwindow">
+     <p><span class="gitwhite">$ git mv fajl_za_preimenovanje.txt novi_naziv.txt</span></p>
+     <p><span class="gitwhite">$ git status</span></p>
+     <p><span class="gitgreen">renamed: fajl_za_preimenovanje.txt -> novi_naziv.txt</span></p>
+     <p>$_ </p>
+    </div>
+   </div>
+  </div>
+  <p>Analogno ako hoćemo da pomerimo fajl u folder moj_direktorijum., pisaćemo:</p>
+  <div class="cmdborder">
+   <div class="cmd">
+    <div class="cmdtitlebar">MINGW32:~</div>
+    <div class="cmdwindow">
+     <p><span class="gitwhite">$ git mv fajl_za_preseljenje.txt moj_direktorijum/fajl_za_preseljenje.txt</span></p>
+     <p><span class="gitwhite">$ git status</span></p>
+     <p><span class="gitgreen">renamed: fajl_za_preseljenje.txt -> moj_direktorijum/fajl_za_preseljenje.txt</span></p>
+     <p>$_ </p>
+    </div>
+   </div>
+  </div>
+  <p>Pošto UNIX ne pravi razliku između preimenovanja, i preseljenja fajla, to mi možemo u isto vreme i preseliti fajl, i preimenovati ga.</p>
+ </section>
+</article>

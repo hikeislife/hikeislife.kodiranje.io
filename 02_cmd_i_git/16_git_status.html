@@ -1,0 +1,57 @@
+<article>
+ <section>
+  <h1>git status</h1>
+  <p>U bilo kom trenutku, ako u bash ukucate git status i pritisnete enter, on će vam na ekranu ispisati odnos između vašeg radnog direktorijuma, indeksa, i repozitorijuma.</p>
+  <div class="cmdborder">
+   <div class="cmd">
+    <div class="cmdtitlebar">MINGW32:~</div>
+    <div class="cmdwindow">
+     <p><span class="gitwhite">$ git status</span><br />
+     On branch master</br>
+     Your branch is ahead of 'origin/master' by 3 commits.</br>
+     (use "git push" to publish your local commits)</br>
+     Changes to be commited:</br>
+     (use "git reset HEAD &lt;file&gt;..." to unstage)</p>
+     <p><span class="gitgreen">modified: fajl.txt</span></p>
+     <p>Changes not staged for commit:</br>
+     (use "git add &lt;file&gt;..." to update what will be commited)</br>
+     (use "git checkout -- &lt;file&gt;..." discard changes in working directory)</br>
+     </p>
+     <p><span class="gitred">modified: file1.txt</br>
+     modified: file2.txt</span></p>
+     <p>$_ </p>
+    </div>
+   </div>
+  </div>
+  <p>Ok, u opštem slučaju, $ git status vam ne bi izbacio ovoliku poruku. Ali hajde da vidimo šta tu sve ima.</p>
+  <p>Prva rečenica nam poručuje na kojoj smo grani. Do sada nismo pričali o granama, mada jesmo pomenuli forking, tako da ćemo ovo ostaviti za kasnije.</p>
+  <p>Druga rečenica nas obaveštava da je naša grana (master) ispred origin/master-a. Origin master je repozitorijum na github-u, o kome takođe još nije bilo reči, ali ono što nam git ovde govori je da smo uradili tri lokalna komita od kad smo zadnji put updejtovali origin/master. Dalje nam poručuje koju komandu da koristimo da sinhronizujemo ova dva repozitorijuma. I o ovome će biti više reči kasnije.</p>
+  <p>Zatim nam git navodi fajl.txt kao fajl koji je u indeksu, ali nije komitovan. Takve fajlove će nam prikazivati zelenom bojom.</p>
+  <p>Dva crvena fajla su oba u radnom direktorijumu, ali nisu dodata u indeks. "Changes not staged for commit:" je git poruka iznad ova dva fajla, dakle ako u ovom trenutku uradimo git commit, ova dva fajla neće biti komitovana. Git nam takođe govori kako da prebacimo ta dva fajla u indeks kako bi mogla da budu komitovana:</p>
+  <p>(use "git add &lt;file&gt;..." to update what will be commited)</p>
+  <p>O checkout-u će kasnije biti više reči.</p>
+  <h2>HEAD</h2>
+  <p>Jednu poruku gita smo preskočili:</p>
+  <div class="superbox sol">(use "git reset HEAD &lt;file&gt;..." to unstage)</div>
+  <p>Ova poruka nam govori kako da fajlove koji su u indeksu izbacimo iz indeksa bez da ih komitujemo.</p>
+  <p>HEAD koga treba da resetujemo je kao igla gramofona, ili hard diska, naš trenutni položaj. Ako resetujemo "glavu", to znači da smo vratili iglu unazad. Svaki put kad nešto komitujemo, glava se pomera na taj novi komit. Kada promenimo granu na kojoj smo, glava se menja na poslednji komit na toj glavi. Ako se prebacimo na stariju verziju projekta, "glava" se seli na taj komit.</p>
+  <p>Git updejtuje "glavu" pri svakoj promeni.</p>
+  <p>Ako pogledate u svoj .git folder, videćete u njemu fajl HEAD bez ekstenzije. Ovaj fajl možete otvoriti pomoću tekst editora, i u njemu ćete videti samo jednu adresu:</p>
+  <div class="superbox sol">ref: refs/heads/master</div>
+  <p>Ova adresa je relativna u odnosu na .git folder. U njemu ćete videti refs folder, a u njemu heads folder, i u njemu konačno fajl master, opet bez ekstenzije, koji opet možete otvoriti tekstualnim editorom.</p>
+  <p>Sadržaj ovog fajla, jeste haš našeg poslednjeg komita na datoj grani, odnosno komita na koji smo se vratili. To je kako git zna gde se u kom trenutku nalazimo, tako što u jednom fajlu drži ispisan trenutni haš.</p>
+  <div class="superbox warning">Već je bilo reči da sadržaj .git foldera ne treba da menjate. Gledajte do mile volje, ali ne pipajte :)</div>
+  <h2>git status foldera koga git ne prati</h2>
+  <p>Ako se nalazite u folderu koji git ne prati, i uradite $ git status, git će vam dati grešku:</p>
+  <div class="cmdborder">
+   <div class="cmd">
+    <div class="cmdtitlebar">MINGW32:~</div>
+    <div class="cmdwindow">
+     <p class="gitwhite">$ git status<p>
+     <p>fatal: not a git repository (or any of the parent directories): .git</p>
+    </div>
+   </div>
+  </div>
+  <p>Ovaj zadnji deo, govori da git ne nalazi .git folder ni u trenutnom folderu, ni u nekom od njegovih roditelja, po čemu zna da ovo nije folder koga on prati.</p>
+ </section>
+</article>

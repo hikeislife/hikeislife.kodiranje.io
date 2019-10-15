@@ -1,0 +1,72 @@
+<article>
+ <section>
+  <h1>Pregled izmena $ git diff</h1>
+  <p>Šta ako bacimo pogled u git status, pre nego što add/komitujemo izmene, i vidimo da je editovan fajl za koji se ne sećamo da smo ga editovali? Da li da ga add/komitujemo, ili ne. Gledanje u sam fajl nam ne bi mnog pomoglo, red za redom koda. Ko će znati šta smo promenili...</p>
+  <div class="cmdborder">
+   <div class="cmd">
+    <div class="cmdtitlebar">MINGW32:~</div>
+    <div class="cmdwindow">
+     <p><span class="gitwhite">$ git diff</span><br />
+     </p>
+     <p>$_ </p>
+    </div>
+   </div>
+  </div>
+  <p>Ova komanda će nam ispisati razlike između verzije na koju HEAD ukazuje, i naše trenutne radne verzije.</p>
+  <p>Git će nam ukazati na sve redove kôda koji su obrisani, ili samo izmenjeni, u HEAD fajlu, pomoću predznaka -. Takođe ovi redovi će biti prikazani crvenom bojom.</p>
+  <p>Redove koji su dodati, ili izmenjeni u našem lokalnom fajlu, git će označiti predznakom + i zelenom bojom.</p>
+  <p>Ove boje možete shvatiti i kao semafor. Sve promene koje redove koje smo uklonili (zaustavili) git prikazuje crveno, a one koji idu dalje, zeleno.</p>
+  <p>Ako vam konkretan kôd koji smo izmenili nije dovoljan, git će nam još ispisati i tačan red kôda na koji se izmena odnosi, izmedu @@ i @@ znakova:</p>
+  <div class="cmdborder">
+   <div class="cmd">
+    <div class="cmdtitlebar">MINGW32:~</div>
+    <div class="cmdwindow">
+     <p>@@ -283,6 +283,8 @@
+     </p>
+     <p>$_ </p>
+    </div>
+   </div>
+  </div>
+  <p>I ti brojevi redova će se podudarati sa brojevima redova u tekstualnom editoru.</p>
+  <p>Ako imamo više fajlova koji su editovani, to bi izbacilo sve izmene, u svim fajlovima, što bi bilo nepregledno, ali možemo limitirati prikaz samo na onaj fajl koji nas zanima:</p>
+  <div class="cmdborder">
+   <div class="cmd">
+    <div class="cmdtitlebar">MINGW32:~</div>
+    <div class="cmdwindow">
+     <p><span class="gitwhite">$ git diff mojfajl.txt</span><br />
+     </p>
+     <p>$_ </p>
+    </div>
+   </div>
+  </div>
+  <p>Što bi nam izlistalo samo izmene u tom jednom fajlu.</p>
+  <p>Ovo jeste cool ako hoćemo da uporedimo naš radni folder sa repozitorijumom, ali šta ako smo već odradili $ git add ., i imamo u indeksu fajl za koji ne znamo šta smo menjali, i da li hoćemo da ga komitujemo? Pa, i za to postoji rešenje:</p>
+  <div class="cmdborder">
+   <div class="cmd">
+    <div class="cmdtitlebar">MINGW32:~</div>
+    <div class="cmdwindow">
+     <p><span class="gitwhite">$ git diff --staged mojfajl.txt</span><br />
+     </p>
+     <p>$_ </p>
+    </div>
+   </div>
+  </div>
+  <p>Dakle dodaćemo oznaku --staged, koja se odnosi na <span class="tt"><span class="ttt">en: Staging index</span>indeks</span>.</p>
+  <h2>Veći broj izmena</h2>
+  <p>Ako ste imali veliki broj izmena u fajlu, git ih neće sve prikazati u jednom dahu, već će ih prikazivati po stranama. Prikazaće vam prvu stranu, koja će se završavati sa :_. Ovo znači da ako pritisnete space na tastaturi, on će učitati sledeću stranu. Kada stigne do poslednje izmene, :_ će biti zamenjena sa <span style="background-color: #e0e79d;">(END) </span>.</p>
+  <p>Ovo se naziva "less pager", i u pitanju je UNIX program koji se generalno koristi za prikaz teksta stranu po stranu, umesto kao zid teksta. Kroz ove stranice, možete navigirati i pomoću tastera <span class="tt"><span class="ttt">en: Forwards</span>F</span> za napred i <span class="tt"><span class="ttt">en: Backwards</span>B</span> za nazad. Da biste iz less pager-a izašli, pritisnite "Q" na tastaturi.</p>
+  <p>Less je isključivo za pregled teksta, ne i za njegovo editovanje. Sličan je More komandi, ali ima te dodatne opcije gde može da ide i u nazad. Velika prednost u odnosu na ostale pager-e je i ta što da bi počeo da učitava fajl, čak i velike fajlove, ne mora da prvobitno učita ceo fajl, što ga čini znatno bržim od ostalih sličnih programa.</p>
+  <p>Iz git terminala, možete otvoriti bilo koji svoj fajl, ako se nalazite u odgovarajućem folderu komandom:</p>
+  <div class="cmdborder">
+   <div class="cmd">
+    <div class="cmdtitlebar">MINGW32:~</div>
+    <div class="cmdwindow">
+     <p><span class="gitwhite">$ less mojfajl.txt</span><br />
+     </p>
+     <p>$_ </p>
+    </div>
+   </div>
+  </div>
+  <p>I onda navigirati kroz njega gore navedenim komandama.</p>
+ </section>
+</article>

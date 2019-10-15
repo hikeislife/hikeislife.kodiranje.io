@@ -1,0 +1,167 @@
+<article>
+<section>
+ <h1>Podrazumevani CSS osnovnih HTML elemenata</h1>
+ <h2>CSS &lt;html&gt; taga</h2>
+ <code>
+  <textarea class="code_snippet" readonly>
+   html { 
+    display: block;
+   }
+   html:focus { 
+    outline: none;
+   }
+  </textarea>
+ </code>
+  <h3>CSS display svojstvo</h3>
+  <p>Svi HTML elementi se mogu posmatrati kao kućice unutar kojih se nalazi neki tekst. Kao takvi, tagovi se mogu podeliti u dve grupe. One kod kojih je podrazumevana vrednost <dfn class="tt"><span class="ttt">sr: Prikaz</span>display</dfn>-a "block", i one kod kojih je ova vrednost "inline"</p>
+  <p>Tagovi koji se prikazuju kao blokovi, zauzimaju celu širinu stranice, tako da se svaki sledeći blok može nalaziti samo ispod njih, i nikako u nastavku. Primer su &lt;body&gt;, &lt;p&gt;, i svi &lt;h_&gt; tagovi.</p>
+  <p>Tagovi koji se prikazuju kao inline, se prikazuju u nastavku teksta, a primer je &lt;a&gt; tag. Karakteristika inline elemenata je da im je nemoguće definisati visinu ili dužinu. Oni su uvek dugački onoliko koliko slova u njima zahtevaju, i visoki onoliko redova koliko obuhvataju. Usled ovoga ni se lepi uklapaju u okolni tekst.</p>
+  <p>Svi HTML elementi, po defaultu, imaju ili block, ili inline vrednosti za display svojstvo. Međutim vremenom su uvedene i mnoge druge vrednosti za različite svrhe i to:</p>
+  <ul>
+   <li>"<span class="tt"><span class="ttt">sr: Unizano</span>inline</span>" - prikazuje element u nastavku.</li>
+   <li>"<span class="tt"><span class="ttt">sr: Blokovi</span>block</span>" - element će započeti u novom redu, i zauzeće celu raspoloživu širinu ekrana</li>
+   <li>"<span class="tt"><span class="ttt">sr: Unizani blokovi</span>inline-block</span>" - element će i dalje biti prikazan u nizu, ali sada mu se mogu definisati visina i širina</li>
+   <li>"<span class="tt"><span class="ttt">sr: Ništa</span>none</span>" - element i njegov sadržaj, neće biti prikazani (ovo je korisno kod dizajna menija u kome se opcije pojavljuju tek kada kliknete na neki element menija, ili kod dizajna koji se razlikuje za mobilne i desktp platforme)</li>
+   <li>"<span class="tt"><span class="ttt">sr: Sadržina</span>contents</span>" - element neće biti prikazan, ali njegov sadržaj hoće, tako da se ovim remeti struktura <span class="tt"><span class="ttt">DOM - Document Object Model; sr: Model dokumenta kao skupa objekata</span>HTML stabla</span> - ne radi u IE i Edge brauzeru. Efekat je takav kao da je sav sadržaj ovakvog elementa, zbrljan u &lt;p&gt; tag. U slučaju tabela, u niz &lt;p&gt; tagova.</li>
+   <li>"<span class="tt"><span class="ttt">sr: Početno</span>initial</span>" - resetuje display na podrazumevanu vrednost</li>
+   <li>"<span class="tt"><span class="ttt">sr: Nasledno</span>inherit</span>" - naslediće svojstvo od roditeljskog elementa u <span class="tt"><span class="ttt">DOM - Document Object Model; sr: Model dokumenta kao skupa objekata</span>HTML stablu</span></li>
+   <li>"<span class="tt"><span class="ttt">odnosi se na grid box</span>grid</span>", "<span class="tt"><span class="ttt">odnosi se na grid box</span>inline-grid</span>" - biće obrađeni kad budemo radili CSS grid</li>
+   <li>"<span class="tt"><span class="ttt">odnosi se na flex box</span>flex</span>", "<span class="tt"><span class="ttt">odnosi se na flex box</span>inline-flex</span>" - biće obrađeni kad budemo radili CSS flex (u Safari-ju zahtevaju -webkit- prefiks</li>
+   <li>"table", "inline-table", "table-caption", "table-column-group", "table-header-group", "table-footer-group", "table-row-group", "table-cell", "table-column", "table-row" - biće obrađeni kad budemo radili tabele</li>
+   <li>"<span class="tt"><span class="ttt">sr: Stavka na listi</span>list-item</span>" - prikazuje element kao &lt;li&gt; element (<a href="#css_liste" rel="chapter" aria-label="o stilizaciji listi">vidi liste</a>)</li>
+   <li>"<span class="tt"><span class="ttt">sr: Utrčavajuća</span>run-in</span>" - element će biti prikazan ili kao blok, ili u nizu, zavisno od konteksta</li>
+  </ul>
+ </section>
+ <section>
+  <h3>:focus selektor</h3>
+  <p>:focus, je jedna od pseudo klasa u CSS. Pseudo klase se koriste da definišu specijalno stanje elementa. Ovaj selektor se koristi kod elemenata koji dozvoljavaju unos preko tastature. Kada se kursor nalazi u takvim elementima, smatra se da imaju fokus. U opštem slučaju, ovakvi elementi dobiju "<dfn class="tt"><span class="ttt">sr: Okvirna linija, javlja se oko border svojstva</span>outline</dfn>" kad su u fokusu. Uobičajeno je da se outline onda ovakvim selektorom ukloni, ili izmeni u nešto prikladnije za dati sajt. Druga svojstva se mogu takođe precizirati. Npr, možete imati polje za pretragu, koje bi normalno bilo usko, ali bi se proširilo kada biste kliknuli da ukucate traženi pojam. O outline svojstvu će kasnije biti više reči.</p>
+</section>
+<section>
+ <h2>CSS &lt;body&gt; taga</h2>
+ <code>
+  <textarea class="code_snippet" readonly>
+   body { 
+    display: block;
+    margin: 8px;
+   }
+   body:focus { 
+    outline: none;
+   }
+  </textarea>
+ </code>
+ <h3>CSS margin svojstvo</h3>
+ <p>Margina predstavlja deo HTML stanice koji se nalazi neposredno izvan kućice nekog taga. Svi HTML tagovi su okruženi marginom. Ako se stavi da je <span class="sol">margin: 0;</span> onda će ovaj element leći neposredno pored prethodnog elementa, dok margin: 8px; znači da će postojati 8 piksela razmaka između body taga, i njegove okoline (a za &lt;body&gt; to je &lt;html&gt; tag). Dakle, ako ovu vrednost ne promenimo, telo našeg sajta će imati marginu od 8 piksela, koja će se manifestovati odbojnikom oko celog sadržaja sajta. Ako bismo body tagu dodali <span class="tt"><span class="ttt">en: Border</span>okvir</span> jasno bismo videli da body tag odstupa od ivice ekrana za 8px.</p>
+ <p>Margina ne mora da bude ista sa sve četiri strane. Ako npr želimo da gornja i donja margina imaju vrenost 20px, a leva i desna 0, pisaćemo:</p>
+ <code>
+  <textarea class="code_snippet" readonly>
+   margin: 20px 0;
+  </textarea>
+ </code>
+ <div class="superbox tip">Vodite računa da ne pišete 0px. Piše se samo 0.</div>
+ <p>Ako navedemo tri vrednosti, kao i kod border svojstva, prva se odnosi na gornju, zadnja brojka na donju, a srednja na levu i desnu marginu.</p>
+ <p>Možemo takođe i sve četiri margine podesiti posebno:</p>
+ <code>
+  <textarea class="code_snippet" readonly>
+   margin: 20px 10px 5px 0;
+  </textarea>
+ </code>
+ <p>U ovakvom slučaju, gornja margina ima vrednost 20px, desna 10px, donja 5px, i leva 0. Redosled je u smeru kazaljke na satu, počev s vrha. gornja, desna, donja, leva, isto kao kod bordera.</p>
+ <p>Ako želimo, možemo definisati i samo jednu od 4 margine, u kom slučaju će preostale 3 imati podrazumevanu vrednost:</p>
+ <code>
+  <textarea class="code_snippet" readonly>
+   margin-top: 20px;
+   margin-right: 10px;
+   margin-bottom: 5px;
+   margin-left: 0;
+  </textarea>
+ </code>
+ <div class="superbox tip">Margine mogu imati negativne vrednosti.</div>
+ <p>Pored brojnih, margina se može podesiti i na sledeće vrednosti:</p>
+ <ul>
+  <li>"<dfn class="tt"><span class="ttt">sr: Automatski</span>auto</dfn>" u kom slučaju sam brauzer računa vrednost margine. Ako je širina elementa manja od širine spoljnog elementa, leva i desna margina će imati istu vrednost, i element će biti centralno pozicioniran na stranici</li>
+  <li>"<dfn class="tt"><span class="ttt">sr: Početno</span>initial</dfn>" znači da će se prikazivati podrazumevane vrednosti</li>
+  <li>"<dfn class="tt"><span class="ttt">sr: Nasledno</span>inherit</dfn>" znači da će element naslediti margine od elementa unutar koga se nalazi</li>
+ </ul>
+ <p>Konačno, gornja i donja margina imaju svojstvo kolapsa kod nekih elemenata, gde će dva elementa, jedan ispod drugog, imati između sebe samo vrednost veće margine, umesto zbira obe margine. Isto ne važi za levu i desnu marginu koje bi se sabirale.</p>
+</section>
+<section>
+ <h2>CSS &lt;title&gt; taga</h2>
+ <code>
+  <textarea class="code_snippet" readonly>
+   title { 
+    display: none;
+   }
+  </textarea>
+ </code>
+ <p>Brauzeri neće prikazivati sadržaj &lt;title&gt; taga na stranici.</p>
+</section>
+<section>
+ <h2>CSS &lt;p&gt; taga</h2>
+ <code>
+  <textarea class="code_snippet" readonly>
+   p { 
+    display: block;
+    margin: 1em 0;
+   }
+  </textarea>
+ </code>
+ <p>em je jedinica relativna u odnosu na veličinu slova u elementu. Ako su slova 16px, margina od 1em, znači da je u pitanju margina od 16px. To znači da je prored između dva paragrafa po defaultu jednak jednom redu teksta.</p>
+</section>
+<section>
+ <h2>CSS &lt;h_&gt; tagova</h2>
+ <code>
+  <textarea class="code_snippet" readonly>
+   h_ { 
+    display: block;
+    font-size: _em;
+    margin: _em 0;
+    font-weight: bold;
+   }
+  </textarea>
+ </code>
+ <h3>font-size svojstvo</h3>
+ <p>font-size definiše veličinu slova. Može se definisati u različitim jedinicama, najintuitivnija je svakako px.</p>
+ <p>em jedinica je relativna u odnosu na veličinu slova. 1em, je veličina jednog slova. Ako je veličina slova 16px, 1em je jednak 16px, .5em je jednaka 8px, 2em je 32px itd.</p>
+ <p>em jedinica potiče iz tipografije, gde je em značilo: "širina slova m", a ex: "visina slova x". em-ovi su se koristili da definišu širine, a ex-ovi da definišu visine. U web dizajnu, ex se vrlo retko koristi. em se koristi i za visine i za širine, i definiše se kao vrednost relativna u odnosu na veličinu slova, svih slova u elementu, radije nego kao širina slova m.</p>
+ <p>Kada je kao u ovom sl. veličina slova definisana u em-ovima, to znači da je ona relativna u odnosu na veličinu slova definisanu u root elementu.</p>
+ <p>font-size može imati sledeće vrednosti:</p>
+ <ul>
+  <li>"<dfn class="tt"><span class="ttt">sr: Srednja</span>medium</dfn>" - podrazumevana vrednost</li>
+  <li>"<dfn class="tt"><span class="ttt">sr: Vrlo vrlo mala</span>xx-small</dfn>" - ekstra ekstra mala slova</li>
+  <li>"<dfn class="tt"><span class="ttt">sr: Vrlo mala</span>x-small</dfn>" - ekstra mala slova</li>
+  <li>"<dfn class="tt"><span class="ttt">sr: Mala</span>small</dfn>" - mala slova</li>
+  <li>"<dfn class="tt"><span class="ttt">sr: Vrlo vrlo velika</span>xx-large</dfn>" - ekstra ekstra velika slova</li>
+  <li>"<dfn class="tt"><span class="ttt">sr: Vrlo velika</span>x-large</dfn>" - ekstra velika slova</li>
+  <li>"<dfn class="tt"><span class="ttt">sr: Velika</span>large</dfn>" - velika slova</li>
+  <li>"<dfn class="tt"><span class="ttt">sr: Manja</span>smaller</dfn>" - manja slova od onih u roditeljskom elementu</li>
+  <li>"<dfn class="tt"><span class="ttt">sr: Veća</span>larger</dfn>" - veća slova od onih u roditeljskom elementu</li>
+  <li>dužina - daje se brojna vrednost s odgovarajućom jedinicom</li>
+  <li>% - procenat od veličine slova u roditeljskom elementu</li>
+  <li>"<dfn class="tt"><span class="ttt">sr: Početno</span>initial</dfn>" - resetuje veličinu slova na podrazumevanu vrednost</li>
+  <li>"<dfn class="tt"><span class="ttt">sr: Nasledno</span>inherit</dfn>" - nasleđuje vrednost od roditeljskog elementa u <span class="tt"><span class="ttt">DOM</span>HTML stablu</span></li>
+ </ul>
+ <h3>font-weight svojstvo</h3>
+ <p><dfn class="tt"><span class="ttt">sr: Težina slova, bukvalno se odnosi na to koliko su slova debela ili tanka</span>font-weight</dfn> podešava masnoću slova. Moguće vrednosti su:</p>
+ <ul>
+  <li>"<dfn class="tt"><span class="ttt">sr: Normalna</span>normal</dfn>" - podrazumevana vrednost. Podrazumevane vrednosti se mogu razlikovati između brauzera. Hrom generalno prikazuje slova tanjim od ostalih brauzera</li>
+  <li>"<dfn class="tt"><span class="ttt">sr: Debela</span>bold</dfn>" - debela slova</li>
+  <li>"<dfn class="tt"><span class="ttt">sr: Deblja</span>bolder</dfn>" - deblja slova</li>
+  <li>"<dfn class="tt"><span class="ttt">sr: Tanja</span>lighter</dfn>" - tanja slova</li>
+  <li>brojna vrednost:
+  <ul>
+   <li>100</li>
+   <li>200</li>
+   <li>300</li>
+   <li>400 - isto kao normalna</li>
+   <li>500</li>
+   <li>600</li>
+   <li>700 - isto kao debela</li>
+   <li>800</li>
+   <li>900</li>
+  </ul></li>
+  <li>"<dfn class="tt"><span class="ttt">sr: Početno</span>initial</dfn>" - resetuje vrednost na podrazumevanu</li>
+  <li>"<dfn class="tt"><span class="ttt">sr: Nasledno</span>inherit</dfn>" - nasleđuje vrednost od roditeljskog elementa</li>
+  
+ </ul>
+</section>
+</article>

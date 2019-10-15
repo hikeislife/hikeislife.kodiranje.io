@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+ <meta charset="UTF-8" />
+ <meta name="description" content="Tutorijali za ljude koji žele da nauče da kodiraju, na Srpskom jeziku" id="metadesc" />
+ <meta name="keywords" content="HTML,CSS,JavaScript,git" />
+ <meta name="author" content="ČĎŠ" />
+ <meta name="theme-color" content="#ccff66">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <!--meta name="application-name" content="Kodiranje" />
+ <meta name="msapplication-tooltip" content="Kodiranje" />
+ <meta name="msapplication-starturl" content="/" />
+ <meta name="msapplication-task" content="name=Kodiranje on github;action-uri=https://github.com/;icon-uri=other/cog192.png" /-->
+ <title>Kodiranje</title>
+ <link rel="stylesheet" media="all" href="../styles/style.css">
+ <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Cutive+Mono" />
+ <link rel="manifest" href="other/manifest.webmanifest">
+ <link rel="icon" sizes="192x192" href="other/cog192.png">
+</head>
+
+<body>
+<header>
+ <div id="header-top">
+  <svg id="logo" preserveAspectRatio="none" style="height: 70px;width: 100vw;">
+   <desc>logo sajta</desc>
+  <g id="bcg" style="stroke: #b1b1b1;fill: none;stroke-width: 1;stroke-dasharray: 1, 10;">
+  <path d="M5 5 5000 5" />
+  <path d="M5 15 5000 15" />
+  <path d="M5 25 5000 25" />
+  <path d="M5 35 5000 35" />
+  <path d="M5 45 5000 45" />
+  <path d="M5 55 5000 55" />
+  <path d="M5 65 5000 65" />
+  <path d="M5 75 5000 75" />
+  <path d="M5 85 5000 85" />
+  </g>
+
+  <a xlink:href="#home" start aria-label="povratak na početnu stranicu"><g id="logo-text">
+  <text x="40" y="48">kodiranje_</text>
+  </g></a>
+
+  <g id="rounded-square" style="fill:none;stroke:#1A1A1A;stroke-width:2;width:35;height:35;">
+  <defs>
+     <filter id="f1" >
+       <feOffset result="offOut" in="SourceGraphic" dx="1" dy="1" />
+       <feGaussianBlur result="blurOut" in="offOut" stdDeviation="2" />
+       <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+     </filter>
+    </defs>
+  <rect x="37" y="17" rx="5" ry="5" width="35" height="35" filter="url(#f1)" />
+  </g>
+
+  <g id="fake-selection" style="fill: #e5e5e5;">
+   <circle cx="32.5" cy="12.5" r="3"/>
+   <circle cx="75.5" cy="12.5" r="3"/>
+   <circle cx="32.5" cy="55.25" r="3"/>
+   <circle cx="75.5" cy="55.25" r="3"/>
+   <g style="stroke:#e5e5e5;stroke-width:0.5;">
+    <line class="logo-sel" x1="32.5" y1="15.75" x2="32.5" y2="52" />
+    <line class="logo-sel" x1="75.5" y1="15.75" x2="75.5" y2="52"/>
+    <line class="logo-sel" x1="35.75" y1="12.5" x2="72.15" y2="12.5"/>
+    <line class="logo-sel" x1="35.75" y1="55.5" x2="72.15" y2="55.5"/>
+   </g>
+  </g>
+
+  <g id="cog" display="none">
+  <image x="25" y="15" width="30px" height="30px" href="cog.png" alt="zupčanik logo">
+        <animateTransform attributeName="transform" 
+  attributeType="XML" 
+  type="rotate" 
+  from="0 40 30" 
+  to="360 40 30" 
+  dur="10s" 
+  repeatCount="indefinite" />
+  </image>
+  </g>
+  </svg>
+ </div>
+
+<!-- absolutely do not change any of this, it will render the image inaccessible  -->
+ <div id="mobile-cog">
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo4MTM0QUQ0RUFGMzlFODExQkI3NUY1RjU5MDJCMDk1RCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpGQ0E0OTZGODNCNkMxMUU4OEU1QkYwNzI4MTYxRjlFRSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpGQ0E0OTZGNzNCNkMxMUU4OEU1QkYwNzI4MTYxRjlFRSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M2IChXaW5kb3dzKSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjgxMzRBRDRFQUYzOUU4MTFCQjc1RjVGNTkwMkIwOTVEIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjgxMzRBRDRFQUYzOUU4MTFCQjc1RjVGNTkwMkIwOTVEIi8+IDwvcmRmOkRlc2NyaXB0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" class="logo-cog" alt="mob-menu" width="40" height="40" />
+ </div>
+<!-- ok to change from this point onwards -->
+
+ <nav id="header-bottom" style="padding-left: 50px">
+  <span id="hc" class="top-nav"><a href="#uvod_u_HTML_i_CSS" class="nocolor" rel="chapter" aria-label="navigacija za html i css tut">HTML &amp; CSS</a></span> | 
+  <span id="gc" class="top-nav"><a href="#uvod_u_cmd" class="nocolor" rel="chapter" aria-label="navigacija za tutorijal o gitu">git</a></span> |
+  <span id="js" class="top-nav"><a href="#uvod_u_js" class="nocolor" rel="chapter" aria-label="navigacija za javascript tutorijal">ES6</a></span>
+  <span id="backhome"><a href="#home" class="nocolor" rel="start chapter" aria-label="povratak na početnu stranicu"><!--⌂&#x1F3E0;-->&#x1F3E1;</a></span>
+ </nav>
+
+</header>
+
+<nav id="side-nav" style="display:none;">
+ <!--ul id="side-menu"-->
+  <a href="#recnik" aria-label="navigacija ka rečniku"><li>Rečnik</li></a>
+  <a href="#brauzeri_i_editori" aria-label="navigacija ka resursima"><li>Softver</li></a>
+  <a href="#ada" aria-label="navigacija ka adi lovlejs"><li>Ada Lovlejs</li></a>
+  <a href="#turing" aria-label="navigacija ka alanu turingu"><li>Alan Turing</li></a>
+  <a href="#brendan_eich" aria-label="navigacija ka brendanu ajku"><li>Brendan Ajk</li></a>
+  <a href="#timbl" aria-label="navigacija ka timbl-u"><li>TimBL</li></a>
+  
+ <!--/ul-->
+</nav>
+
+<div id="content">
+ <main>
+  <div id="placeholder">
+  <!-- htmbox-->
+   <div class="main-page-box" id="htmlcssbox">
+    <div class="main-page-boxes">
+     <a href="#uvod_u_HTML_i_css" class="nocolor" aria-label="html i css tutorijal"><svg version="1.1" id="htmlcss" viewBox="0 220 566.482 294.499">
+      <desc>html i css logo</desc>
+     <!--css-->
+      <polygon id="cssstit" fill="#264DE4" points="129.679,511.999 23.632,482.561 0,217.5 259.675,217.5 236.018,482.519 "/>
+      <polygon id="cssodsjaj" fill="#2965F1" points="215.765,465.643 235.981,239.173 129.837,239.173 129.837,489.466 "/>
+      <polygon id="triruka" fill="#EBEBEB" points="54.176,337.48 57.089,369.989 129.837,369.989 129.837,337.48 "/>
+      <polygon id="triglava" fill="#EBEBEB" points="48.321,271.682 51.276,304.191 129.837,304.191 129.837,271.682 129.725,271.682 "/>
+      <polygon id="trirep" fill="#EBEBEB" points="129.837,421.907 129.695,421.946 93.49,412.17 91.175,386.242 73.583,386.242  58.542,386.242 63.097,437.286 129.688,455.772 129.837,455.731 "/>
+      <polygon id="tristomak" fill="#FFFFFF" points="205.291,337.48 211.16,271.682 129.725,271.682 129.725,304.191 175.533,304.191 172.575,337.48 129.725,337.48 129.725,369.989 169.756,369.989 165.982,412.149 129.725,421.935 129.725,455.756 196.37,437.286 196.858,431.793 204.498,346.209 "/>
+     <!--html-->
+      <polygon id="htmlstit" fill="#E44D26" points="566.482,217.5 542.826,482.519 436.486,511.999 330.439,482.561 306.806,217.5 "/>
+      <polygon id="htmlodsjaj" fill="#F16529" points="436.644,489.466 522.573,465.643 542.788,239.173 436.644,239.173 "/>
+      <polygon id="petledja" fill="#EBEBEB" points="390.656,304.191 436.644,304.191 436.644,271.682 436.532,271.682 355.128,271.682 355.906,280.403 363.896,369.989 436.644,369.989 436.644,337.48 393.627,337.48 "/>
+      <polygon id="petrep" fill="#EBEBEB" points="397.982,386.242 380.39,386.242 365.349,386.242 369.903,437.286 436.495,455.772 436.644,455.731 436.644,421.907 436.501,421.946 400.296,412.17 "/>
+      <polygon id="petstomak" fill="#FFFFFF" points="436.532,369.989 476.563,369.989 472.79,412.149 436.532,421.935 436.532,455.756 503.176,437.286 503.666,431.793 511.304,346.209 512.097,337.48 503.337,337.48 436.532,337.48 "/>
+      <polygon id="petglava" fill="#FFFFFF" points="436.532,304.111 436.532,304.191 514.951,304.191 514.951,304.191 515.055,304.191 515.708,296.883 517.189,280.403 517.966,271.682 436.532,271.682 436.532,291.872 "/>
+      <!--g><text top="150" y="150">nauči html i css</text></g-->
+     </svg></a>
+     <!--/div-->
+    </div>
+    <div class="main-page-boxes"><h1>Nauči html & css</h1></div>
+   </div>
+   <!-- gitbox -->
+   <div class="main-page-box" id="gitbox">
+    <div class="main-page-boxes"><h1>Nauči git</h1></div>
+    <div class="main-page-boxes">
+     <a href="#uvod_u_cmd" class="nocolor" aria-label="git i cmd tutorijal"><svg version="1.1" id="githublogo" viewBox="23.472 873.111 567.573 553.563">
+     	<a href="#uvod_u_cmd" alt="uvod u cmd" aria-label="git i cmd tutorijal">
+      <desc>git logo</desc>
+      <g>
+      <path fill="#191717" d="M307.259,873.111c-156.709,0-283.787,127.05-283.787,283.785c0,125.389,81.313,231.76,194.072,269.29 c14.181,2.625,19.39-6.158,19.39-13.657c0-6.765-0.262-29.122-0.386-52.833c-78.95,17.166-95.608-33.482-95.608-33.482 c-12.91-32.804-31.51-41.525-31.51-41.525c-25.751-17.611,1.941-17.254,1.941-17.254c28.495,2,43.502,29.252,43.502,29.252 c25.31,43.378,66.388,30.841,82.584,23.588c2.546-18.339,9.898-30.866,18.017-37.952c-63.034-7.17-129.299-31.511-129.299-140.248 c0-30.981,11.088-56.298,29.243-76.172c-2.946-7.149-12.662-36.012,2.749-75.104c0,0,23.832-7.622,78.06,29.094 c22.639-6.289,46.916-9.442,71.032-9.553c24.115,0.11,48.41,3.263,71.091,9.553c54.171-36.716,77.962-29.094,77.962-29.094 c15.447,39.092,5.736,67.954,2.79,75.104c18.192,19.874,29.206,45.19,29.206,76.172c0,109.003-66.387,132.998-129.583,140.027 c10.181,8.802,19.248,26.077,19.248,52.547c0,37.973-0.329,68.538-0.329,77.881c0,7.555,5.112,16.401,19.494,13.621 c112.693-37.569,193.906-143.913,193.906-269.254C591.044,1000.16,463.986,873.111,307.259,873.111z"/>
+      <path fill="#191717" d="M130.958,1280.569c-0.624,1.413-2.845,1.836-4.864,0.863c-2.061-0.928-3.212-2.846-2.547-4.259 c0.61-1.451,2.832-1.854,4.888-0.892C130.495,1277.207,131.669,1279.155,130.958,1280.569L130.958,1280.569z"/>
+      <path fill="#191717" d="M142.454,1293.391c-1.354,1.248-4.002,0.671-5.796-1.313c-1.859-1.983-2.204-4.626-0.831-5.901 c1.395-1.249,3.96-0.661,5.819,1.313C143.505,1289.49,143.868,1292.115,142.454,1293.391L142.454,1293.391z"/>
+      <path fill="#191717" d="M153.642,1309.729c-1.739,1.213-4.584,0.083-6.341-2.442c-1.741-2.523-1.741-5.553,0.041-6.764 c1.757-1.212,4.562-0.12,6.342,2.377C155.418,1305.469,155.418,1308.498,153.642,1309.729L153.642,1309.729z"/>
+      <path fill="#191717" d="M168.97,1325.525c-1.555,1.718-4.869,1.248-7.292-1.093c-2.483-2.285-3.171-5.533-1.616-7.25 c1.579-1.716,4.91-1.23,7.352,1.091C169.879,1320.56,170.627,1323.827,168.97,1325.525L168.97,1325.525z"/>
+      <path fill="#191717" d="M190.118,1334.694c-0.688,2.223-3.878,3.23-7.09,2.287c-3.212-0.974-5.31-3.58-4.663-5.821 c0.666-2.239,3.874-3.294,7.109-2.285C188.682,1329.847,190.784,1332.428,190.118,1334.694L190.118,1334.694z"/>
+      <path fill="#191717" d="M213.345,1336.392c0.077,2.341-2.648,4.277-6.021,4.324c-3.392,0.072-6.141-1.819-6.177-4.123 c0-2.367,2.667-4.286,6.058-4.34C210.577,1332.19,213.345,1334.071,213.345,1336.392L213.345,1336.392z"/>
+      <path fill="#191717" d="M234.955,1332.712c0.404,2.285-1.941,4.626-5.292,5.249c-3.295,0.607-6.343-0.808-6.765-3.064 c-0.408-2.34,1.979-4.69,5.27-5.297C231.522,1329.023,234.529,1330.39,234.955,1332.712L234.955,1332.712z"/>
+      </g>
+      </a>
+     </svg></a>
+    </div>
+   </div>
+  </div>
+  <div>
+   <div id="left" class="leftright"></div>
+   <div id="right" class="leftright"></div>
+  </div>
+ </main>
+</div>
+
+<footer><div id="copydate">&copy; ČĎŠ 2018</div></footer>
+ 
+ <script type="text/javascript" src="app.js" async></script>
+</body>
+</html>

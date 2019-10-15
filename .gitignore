@@ -1,11 +1,4 @@
 scrapped
-00_front_page
-01_html_i_css
-02_cmd_i_git
-03_es6
-04_arduino/
-05_solidity
-06_haskell/
 09_node
 other/cog48.png
 js/menu.json
@@ -14,3 +7,5 @@ admin/
 other/kodiranje.svg
 other/dino*
 .vscode/
+styles/style1.css
+styles/style2.css

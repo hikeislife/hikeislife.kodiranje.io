@@ -1,0 +1,87 @@
+<article>
+ <section>
+  <h1>Pregledanje Komit loga</h1>
+  <p>Ako postoji ikakva zabuna, log se u ovom kontekstu koristi sa značenjem "žurnal", "dnevnik", ili "poslovna knjiga". Nema nikakve veze sa "balvanima", "logaritmovanjem", ili logovanju na servere.</p>
+  <p>Da bismo izlistali sve prethodne izmene, koristićemo:</p>
+  <div class="cmdborder">
+   <div class="cmd">
+    <div class="cmdtitlebar">MINGW32:~</div>
+    <div class="cmdwindow">
+     <p><span class="gitwhite">$ git log</span><br />
+     commit d2f48781097e04ccc9d7785439a005e1cca63adc<br />
+     Author: Ime Autora &lt;email adreasa&gt;<br />
+     Date: Tue Aug 7 01:26:44 2018 +0200</p>
+
+     <p>Moj prvi komit</p>
+     <p>$_ </p>
+    </div>
+   </div>
+  </div>
+  <p>Git log će izlistati nekoliko poslednjih komitova, a ako želimo da vidimo starije, možemo ih otvoriti pritiskom na "space bar". Enter bi takođe otvarao novi red loga, ali space otvara cele stranice. Ovaj log može izlistati sve izmene u nazad do prve, koliko god da ih ima.</p>
+  <p>Što se ispisa tiče, onaj džumbus slova i brojeva, je jedinstveni id broj našeg komita. Da, naš komit biva hašovan, tako nakon što nešto komitujemo, ne možemo se vratiti i krišom ispraviti grešku, jedino možemo ispraviti grešku, i ponovo je komitovati, sada pod novim id brojem.</p>
+  <p>U sledećem redu, git ispisuje vaše ime, i email, koje smo podesili <a href="#git_instalacija" rel="chapter" aria-label="instalacija gita">ovde</a>. Slede datum, i poruka koju smo upisali pri tom komitu.</p>
+  <div class="superbox warning">Da biste izašli iz git loga, pritisnite <b>Q</b> na tastaturi</div>
+  <p>Kada budete imali veliki broj komitova, možda ćete hteti da izlistate samo nekoliko posledjih, tada ćete koristiti oznaku -n, i broj željeih komitova:</p>
+  <div class="cmdborder">
+   <div class="cmd">
+    <div class="cmdtitlebar">MINGW32:~</div>
+    <div class="cmdwindow">
+     <p><span class="gitwhite">$ git log -n 2</span></p>
+     <p><span class="gityellow">commit a005e1cca63adcd2f48781097e04ccc9d7785439</span><br />
+     Author: Ime Autora &lt;email adreasa&gt;<br />
+     Date: Tue Aug 7 01:34:14 2018 +0200</p>
+
+     <p>Moj drugi komit</p>
+
+     <p><span class="gityellow">commit d2f48781097e04ccc9d7785439a005e1cca63adc</span><br />
+     Author: Ime Autora &lt;email adreasa&gt;<br />
+     Date: Tue Aug 7 01:26:44 2018 +0200</p>
+
+     <p>Moj prvi komit</p>
+     <p>$_ </p>
+    </div>
+   </div>
+  </div>
+  <p>Slično, možete limitirati log po datumu:</p>
+  <div class="cmdborder">
+   <div class="cmd">
+    <div class="cmdtitlebar">MINGW32:~</div>
+    <div class="cmdwindow">
+     <p class="gitwhite">$ git log --since=2018-08-07<p>
+     <p class="gitwhite">$ git log --until=2018-08-07<p>
+    </div>
+   </div>
+  </div>
+  <p>U kom slučaju se datum piše po američki, u yyyy-mm-dd formatu. Ako koristite i --since i --until odjednom, možete precizirati period u kom vas zanimaju komitovi</p>
+  <p>Takođe je moguće izlistati komitove nekog autora, mada to više ima smisla koristiti kada niste jedini koji rade na projektu</p>
+  <div class="cmdborder">
+   <div class="cmd">
+    <div class="cmdtitlebar">MINGW32:~</div>
+    <div class="cmdwindow">
+     <p class="gitwhite">$ git log --author="ime"<p>
+    </div>
+   </div>
+  </div>
+  <p>U navodnicima ili bez njih, i ne morate precizirati celo ime, dovoljno je ukucati samo deo imena.</p>
+  <p>Možete pretragu vršiti i po komit porukama, opet korišćenjem samo ključne reči, umesto cele poruke:</p>
+  <div class="cmdborder">
+   <div class="cmd">
+    <div class="cmdtitlebar">MINGW32:~</div>
+    <div class="cmdwindow">
+     <p class="gitwhite">$ git log --grep="prvi"<p>
+    </div>
+   </div>
+  </div>
+  <p>Što bi izbacilo komitove čije poruke sadrže reč "prvi". Grep je skraćenica od "Global regular expression".</p>
+  <p>Ako uradite git log na folderu koji ste tek inicirali, ali niste još ništa komitovali, git će vam dati grešku:</p>
+  <div class="cmdborder">
+   <div class="cmd">
+    <div class="cmdtitlebar">MINGW32:~</div>
+    <div class="cmdwindow">
+     <p class="gitwhite">$ git log<p>
+     <p>fatal: bad default revision 'HEAD'</p>
+    </div>
+   </div>
+  </div>
+ </section>
+</article>

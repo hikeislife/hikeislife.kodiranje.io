@@ -1,0 +1,87 @@
+.superbox {
+  border: 2px solid black;
+  border-radius: 4px;
+  margin: 20px 0;
+  padding: 10px;
+  color: $darkF;
+
+  &p {
+    color: $darkF;
+  }
+}
+
+.why {
+  background-color: $dy;
+
+  &::before {
+    content: 'Zašto ovo radimo? ';
+    font-weight: bolder;
+  }
+}
+
+.sol {
+  background-image: url("dot.png");
+  font-weight: bold;
+  color: midnightblue;
+}
+
+.kviz {
+  background-color: $qy!important;
+
+  &::before {
+    font-family: "FontAwesome";
+    content: "\f059";
+    padding: 0 5px;
+    color: $darkF;
+    font-weight: 900;
+  }
+}
+
+.error {
+  background-color: $dy!important;
+
+  &::before {
+    font-family: "FontAwesome";
+    content: "\f188";
+    padding: 0 5px;
+    color: $darkF;
+    font-weight: 900;
+  }
+}
+
+.tip {
+  background-color: $dg!important;
+  font-weight: bold;
+
+  &::before {
+    font-family: "FontAwesome";
+    content: "\f005";
+    padding: 0 5px;
+    color: $darkF;
+    font-weight: 900;
+  }
+
+  & a {
+    background-color: $wr;
+  }
+
+  // &b {
+  //   color: var(--qy);
+  // }
+}
+
+.warning {
+  background-color: $wr!important;
+
+  &::before {
+    font-family: "FontAwesome";
+    content: "\f06a";
+    padding: 0 5px;
+    color: $darkF;
+    font-weight: 900;
+  }
+}
+
+.depr {
+   border-color: $wr;
+}

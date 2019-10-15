@@ -1,0 +1,82 @@
+<article>
+ <section>
+  <h1>Klase, Id-ijevi</h1>
+  <p>Klase i idijevi se dodaju HTML elementima, kao atributi. Više elemenata može imati istu klasu, dok je id jedinstven za dati element.</p>
+  <code>
+   <textarea readonly class="code_snippet html">
+    <p class="poslastica">Puslica</p>
+    <p class="poslastica" id="najomiljenija">Tobleron</p>
+   </textarea>
+  </code>
+  <p>Bilo koji element može da ima klasu ili id, a kad su klase u pitanju, više različitih tagova može da pripada istoj klasi.</p>
+  <code>
+   <textarea readonly class="code_snippet html">
+    <h1 class="poslastica">Puslica</h1>
+    <p class="poslastica">Tobleron</p>
+   </textarea>
+  </code>
+  <p>Pošto neki id, može da ima jedan i samo jedan element, to ne bi imalo smisla stavljati id na elemente kojih može biti samo po jedan na strani, kao što su recimo &lt;html&gt;, &lt;head&gt;, &lt;body&gt;. Poenta sa id-ijem je da kad se neki element ponavlja više puta, kao što je recimo slučaj sa &lt;p&gt; tagovima, da odaberete samo jedan od njih.</p>
+  <p>Imena klasa i id-ijeva su osetljiva na velika i mala slova. Beograd nije isto što i beograd. Takođe, moraju biti napisana kao jedna reč.</p>
+  <p>Jedan element može imati veći broj klasa, u kom slučaju se nazivi razdvajaju praznim mestom (iz tog razloga nazivi moraju biti jedna reč). Tehnički, element bi mogao da ima i više id-ijeva, ali kako je id karakterističan samo za taj jedan element, to ne bi imalo smisla davati mu veći broj id-ijeva.</p>
+  <code>
+   <textarea readonly class="code_snippet html">
+    <p class="poslastica">Puslica</p>
+    <p class="poslastica mmm">Tobleron</p>
+   </textarea>
+  </code>
+  <p>Jedan element, može da ima i klasu i id.</p>
+  <p>CSS i JS će koristiti i klase i id-ijeve da odaberu dati element po id-iju ili grupu elemenata po klasi. Kada je u pitanju CSS, klase se selektuju "." i imenom klase, a id-ijevi "#" i imenom id-ija, pa se tako razlikuju od selektora tagova, koji nemaju predznak:</p>
+  <code>
+   <textarea readonly class="code_snippet css">
+    <style>
+     p{
+      font-size: 16px;
+     }
+
+     .poslastica {
+      border: 1px solid red;
+     }
+
+     .mmm {
+      font-weight: bold;
+     }
+
+     #najomiljenija {
+      font-size: 36px;
+     }
+    </style>
+    <p>Ja mnogo volim slatkiše!</p>
+    <p class="poslastica">sladoled</p>
+    <p class="poslastica" id="najomiljenija">tobleron</p>
+    <p class="poslastica">urmašica</p>
+    <p>Pa onda još:</p>
+    <p class="poslastica mmm">bajadera</p>
+    <p class="mmm">Nugat</p>
+   </textarea>
+  </code>
+  <p>Ovaj CSS bi svim &lt;p&gt; elementima dao slova veličine 16px, ali onda bi specifičniji selektori, oni koji selektuju klase i idijeve, mogli da promene stil takvih elemenata.</p>
+  <div class="superbox sol">
+    <p style="font-weight: normal;">Ja mnogo volim slatkiše!</p>
+    <p style="border: 1px solid red; font-weight: normal;">sladoled</p>
+    <p style="border: 1px solid red; font-weight: normal; font-size: 36px;">tobleron</p>
+    <p style="border: 1px solid red; font-weight: normal;">urmašica</p>
+    <p style="font-weight: normal;">Pa onda još:</p>
+    <p style="border: 1px solid red; font-weight: bolder;">bajadera</p>
+    <p style="font-weight: bolder;">Nugat</p>
+  </div>
+  <p>Elementi koji imaju dve klase, dobiće stil definisan za obe klase. Oni koji imaju i klasu i id, dobiće i stilove za tu klasu i za taj id. Ako su stilovi za klase i id-ijeve u suprotnosti, stil definisan za id će pobediti, jer je specifičniji.</p>
+  <div class="superbox warning">Vredi napomenuti da je specifičnost id atributa toliko velika, da se obeshrabruje njegova prečesta upotreba u stilizaciji stranice. Ako vam bude trebalo da nekad izmenite stil tog elementa, moraćete da nađete taj css selektor, i uklonite ga, ili izmenite.</div>
+ </section>
+ <section>
+ </section>
+ <h2>Bookmark-ovi</h2>
+ <p>Pošto je id specifičan za samo jedan element, to se može koristiti i kao bukmark, ka kome se može linkovati, unutar mnogo duže strane. Više o ovome možete pročitati <a href="#linkovi" rel="chapter" aria-label="o linkovima">ovde</a>.</p>
+ <section>
+  <h2>Mikroformati ili μF</h2>
+  <p>Što se naziva klasa i id-ijeva tiče, kako stvari sada stoje, imate punu slobodu. Možete ih nazivati kako god vam volja. Preporuka je naravno da imaju smisla onima koji bi čitali kôd. Ideja je da onaj ko čita kôd, može na osnovu naziva atributa da zaključi šta tag sadrži. S tim u vezi, nije posebno informativno ako naziv opisuje izgled elementa. Dakle class="punoIme", ima smisla, ali class="zeleniElement" nema. Ovakvi nazivi atributa su semantički, i imali bi smisla i ako bi se sutra izgled sajta značajno promenio.</p>
+  <div class="superbox tip">Vrednost id-ija ne doprinosi semantičkom značenju stranice. Ovo ima smisla, jer kakvo semantičko značenje može da ima apsolutno jedinstveni element? Po HTML definicijama, uređaji poput čitača stranica, ili serveri koji čitaju HTTP hedere, ne izvlače nikakvo dodatno značenje iz naziva id atributa. Po definiciji, ovaj atribut treba samo da učini element jedinstvenim. Ništa drugo. Naravno, internet se neće urušiti ako elementu date id atribut tako da ga sutra možete prepoznati, ali ostatak web-a će ignorisati svaki smisao u nazivu. Što se weba tiče, id je samo neki besmisleni broj, kao jmbg, i neće ni pokušavati da rastumači šta tu piše.</div>
+  <div class="superbox warning">Vredi napomenuti da iako imena klasa i id-ijeva nisu standardizovana i tu imate "punu slobodu kretanja", da postoje oni koji smatraju da nazive klasa treba standardizovati. Štaviše, nakon što je google 2009-e počeo u svoje <dfn class="tt"><span class="ttt">en: SERPs, Search Engine Result Pages</span>rezultate pretrage</dfn> da uključuje tzv "bogate snipete" koji bi pored opisa sajta, mogli da sadrže slike, kritike i ocene posetialca, i slične formatirane informacije, klase su počele da služe kao prostor za definisanja "mikroformata". Google naime zna šta neke vrednosti klasa znače, i koristiće ih da formatira "bogati snipet". Bogati snipeti nisu zanemarljivi, jer bi preobratili dosadne rezultate pretrage u nešto šareno i upadljivo na šta bi surferi pre hteli da kliknu.</div>
+  <p>O mikroformatima će kasnije biti više reči.</p>
+  <p>Neki smatraju da je SEO danas nauka, i mislim da je jasno zašto.</p>
+ </section>
+</article>

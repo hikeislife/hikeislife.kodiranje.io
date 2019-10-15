@@ -1,0 +1,38 @@
+<article>
+<section>
+ <h1>CSS &lt;a&gt; taga</h1>
+ <p>&lt;a&gt; tag takođe ima podrazumevani stil, koji sav linkovan text čini plavim i podvučenim. Ako kliknete na link, i zadržite ga tako, linkovan text će postati crven. Ako ste već posetili neki link, on će nakon toga biti ljubičast. Sva ova stanja linkova se mogu izmeniti putem CSS-a.</p>
+ <p>Podrazumevana CSS podešavanja (dakle vrednosti s kojima će se sajt učitati ukoliko ih sami ne izmenimo):<p>
+ <code>
+  <textarea readonly class="code_snippet">
+   a:link, a:visited { 
+    color: (internal value);
+    text-decoration: underline;
+    cursor: auto;
+   }
+
+   a:link:active, a:visited:active { 
+    color: (internal value);
+   }
+  </textarea>
+ </code>
+</section>
+<section>
+ <h2>Pseudo klase a taga</h2>
+ <p>Već smo pomenuli jednu pseudo klasu, :focus. Rekli smo da pseudoklase definišu izgled elementa u nekom specijalnom stanju. &lt;a&gt; tag ima nekoliko specijalnih stanja, odnosno nekoliko pseudo klasa:</p>
+ <ul>
+  <li>:link</li>
+  <li>:visited</li>
+  <li>:active</li>
+  <li>:hover</li>
+ </ul>
+ <p>Ako ste pomislili da se sve pseudo klase pišu s : ispred imena klase, bez razmaka, u pravu ste. Po ovome se razlikuju od istalih deklaracija.</p>
+ <p>Zapazite i da se pseudo klase obavezno pišu uz element čije stanje opisuju, ne možete definisati stanje elementa ako ne naglasite o kom elementu je reč. Pseudo klase pišemo bez razmaka s elementom na koji se odnose.</p>
+ <p>Možete zapaziti i da ako želimo dati većem broju različitih elemenata isti stil, možemo sve te elemente popisati jedan za drugim, odvojene zarezom. Zarez je bitan, i bez njega bi deklaracija značila nešto drugo.</p>
+ <p>Takođe možete primetiti, i da je moguće definisati dve pseudo klase zajedno. Ovo znači da se taj css stil, primenjuje ako je element u oba stanja u isto vreme.</p>
+ <h3>pseudo klasa :link</h3>
+ <p>:link pseudo element definiše stil linka, pre nego što je posetilac posetio, kliknuo, ili dok mu kursor nije iznad ovog elementa. Samim tim, :link ne definiše ništa dodatno u odnosu na a {} selektor. A kako se pri učitavanju stranice svi linkovi otvaraju u ovom stanju, i onda se primenjuju drugi stilovi u zavisnosti od toga šta korisnik radi, to se ova pseudoklasa uvek definiše pre ostalih. Ako bi bila definisana nakon ostalih a:pseudoklasa, onda se ostale ne bi ni primenjivale. Sećate se, roze potkošulja, šaren džemper?</p>
+ <p>
+</section>
+google koristi reči koje su linkovane unutar sajta kao ključne reči
+</article>

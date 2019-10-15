@@ -1,0 +1,169 @@
+<article>
+ <h1>Git prvi koraci</h1>
+ <section>
+  <h2>Instalacija Git-a</h2>
+  <p>Da biste instalirali Git, skinite ga sa njihovog matičnog sajta, <a href="http://git-scm.com/" target="_blank" hreflang="en" rel="nofollow noreferrer noopener" aria-label="link za daunloud gita">ovde</a>. Kliknite na ilustraciju zelenkastog kompjuterskog monitora.</p>
+  <details><summary>U pitanju je .exe fajl, tako da nema nekog dovijanja kako ga instalirati. Možete slobodno da ispratite korake za instalaciju bez ikakvih izmena, Git će se instalirati sa podešavanjima za vaš operativni sistem.</summary>
+  <div class="superbox tip">Ako ste na windowsu, možda ćete primetiti jedan ekran gde vas instalator pita šta želite da radite sa <span class="tt"><span class="ttt">en: Line endings</span>krajevima redova</span>. Ovde je poenta u tome da kompjuteri insertuju neki simbol na kraj reda kada vi pritisnete enter, da bi znali kako to da interpretiraju. Windows insertuje jedan simbol, a UNIX drugi. Pošto je softver originalno razvijan za UNIX sisteme, a vi sad planirate da ga koristite na windozi, on vas pita šta da radi s tom razlikom. Prva i podrazumevana opcija je da pri download-u fajla, konvertuje UNIX u windows simbole, a pri uploudu, da konvertuje win simbole u UNIX. Ovo je odgovarajući izbor, i možete nastaviti instalaciju.</div></details>
+  <p>Pri instalaciji Git-a, instaliraće vam se i Git Bash, koga ćete moći da otvorite iz start menija, a koji je UNIX okruženje, znači nešto kao Git UNIX. To će reći da će ovaj softver da oponaša UNIX na vašem windows kompjuteru i u njemu će raditi i UNIX, i windows komande. Moći ćete da koristite koje god su vam draže :)</p>
+  <p>Npr, možete izlistati sadržaj foldera po windowsu korišćenjem komande "<b>dir</b>", ili po UNIX-u, korišćenjem "<b>ls -la</b>". Svakako isprobajte obe, a naravno koristićete šta god vam ima više smisla.</p>
+  <div style="border: thin solid black; border-radius:4px;">
+   <div class="cmd">
+    <div class="cmdtitlebar">MINGW32:~</div>
+    <div class="cmdwindow">
+     <p class="gitwhite">$ ls </p>
+     <p class="gitwhite">$ ls -la</p>
+     <p class="gitwhite">$ dir</p>
+    </div>
+   </div>
+  </div>
+  <p>Ako ih isprobate i u komandnoj liniji, videćete da ls komande neće raditi. Zar to nije cool, možete naučiti malo UNIX-a bez da morate da menjate celo svoje radno okruženje.</p>
+  <div class="superbox tip">Oznaka -la govori bash-u da nam pokaže i skrivene fajlove i foldere. Ovi fajlovi i folderi tipično imaju tačku ispred naziva, kao npr .git</div>
+  <p>Ako želite da vidite u kom folderu je Git Bash instaliran, ukucajte:</p>
+  <div style="border: thin solid black; border-radius:4px;">
+   <div class="cmd">
+    <div class="cmdtitlebar">MINGW32:~</div>
+    <div class="cmdwindow">
+     <p><span class="gitwhite">$ which git</span><br />/mingw32/bin/git</p>
+     <p><span class="gitwhite">$ git --version</span><br />git version 2.8.1.windows.1</p>
+    </div>
+   </div>
+  </div>
+  <p>$ git --version komanda će nam reći koju verziju Gita imamo instaliranu, ako nas recimo za godinu dana bude zanimalo da li treba da je upgrejdujemo.</p>
+ </section>
+ <section>
+  <h2>Podešavanja Git-a</h2>
+  <p>Git čuva svoja podešavanja na tri različita mesta, u zavisnosti od toga koliko široko želimo da primenimo ta podešavanja.</p>
+  <ul>
+   <li>Sistemska podešavanja su najšira i biće primenjena na svakog korisnika kompjutera. Svaki korisnik može da izmeni ova podešavanja za sebe, ali ovo će biti default, inicijalna podešavanja. Ova podešavanja se retko koriste, a mogu se naći u:
+    <ul>
+     <li>/etc/gitconfig folderu na UNIX-u</li>
+     <li>Program Files/Git/etc/gitconfig folderu na windowsu</li>
+    </ul>
+   </li>
+   <li>podešavanja na nivou korisnika ćete naći u
+    <ul>
+     <li>~/.gitconfig u vašem Home folderu na UNIX-u</li>
+     <li>Documents and Settings/korisničko ime/ folderu na windowsu</li>
+    </ul>
+   u fajlu pod nazivom .gitconfig, bez extenzije.</li>
+   <li>Treći način da git čuva podešavanja, je na nivou projekta. Ova podešavanja će biti unutar foldera u kome se projekat nalazi, u folderu .git. U ovom sl, fajl se naziva samo config, bez extenzije.</li>
+  </ul>
+  <p>U opštem slučaju, podešavanja na nivou korisnika imaju najviše smisla, osim ako nemate neka specifična podešavanja koja želite samo za neki projekat. Sistemska podešavanja, posebno za individualne korisnike, nemaju mnogo smisla. U svakom slučaju, ove fajlove možete otvoriti i pomoću tekstualnog editora, i tako ih izmeniti. Naravno, uvek možete menjati podešavanje iz Bash alata.</p>
+  <div style="border: thin solid black; border-radius:4px;">
+   <div class="cmd">
+    <div class="cmdtitlebar">MINGW32:~</div>
+    <div class="cmdwindow">
+     <p class="gitwhite">$ git config --system [željeno podešavanje na nivou sistema]</p>
+     <p class="gitwhite">$ git config --global [željeno podešavanje na nivou korisnika]</p>
+     <p class="gitwhite">$ git config --local [željeno podešavanje na nivou projekta]</p>
+    </div>
+   </div>
+  </div>
+ </section>
+ <section>
+  <details><summary><h3 style="display: inline">Podešavanje korisničkog imena</h3></summary>
+  <div style="border: thin solid black; border-radius:4px;">
+   <div class="cmd">
+    <div class="cmdtitlebar">MINGW32:~</div>
+    <div class="cmdwindow">
+     <p class="gitwhite">$ git config --global user.name "Ime i Prezime"</p>
+    </div>
+   </div>
+  </div>
+  </details>
+ </section>
+ <section>
+  <details><summary><h3 style="display: inline">Podešavanje email adrese</h3></summary>
+  <p>Za email adresu, ako koristimo github, umesto da koristimo svoju pravu adresu, koristimo generičku koju nam github daje, u suprotnom bi zlonameroboti mogli da je nađu, u roku od 2 minuta, i da nas zatrpaju spamovima.</p>
+  <div class="cmdborder">
+   <div class="cmd">
+    <div class="cmdtitlebar">MINGW32:~</div>
+    <div class="cmdwindow">
+     <p class="gitwhite">$ git config --global user.email "vaše-github-korisničko-ime@users.noreply.github.com"</p>
+    </div>
+   </div>
+  </div>
+  <p>Kasnije, kad budemo više pričali o samom github-u, videćete kako da podesite github da prima "komitove" samo sa ove adrese, kako ne biste slučajno obznanili svoju email adresu svetu.</p>
+ </details>
+ </section>
+ <section>
+  <details><summary><h3 style="display: inline">Kako proveriti svoja podešavanja</h3></summary>
+  <p>da biste videli svoja dosadašnja podešavanja, možete ukucati bilo koju od ove dve komande:
+  <div style="border: thin solid black; border-radius:4px;">
+   <div class="cmd">
+    <div class="cmdtitlebar">MINGW32:~</div>
+    <div class="cmdwindow">
+     <p class="gitwhite">$ git config -l</p>
+     <p class="gitwhite">$ git config --list</p>
+    </div>
+   </div>
+  </div></div>
+  <p>Ako želite da proverite specifično podešavanje, možete npr ukucati:</p>
+  <div style="border: thin solid black; border-radius:4px;">
+   <div class="cmd">
+    <div class="cmdtitlebar">MINGW32:~</div>
+    <div class="cmdwindow">
+     <p><span class="gitwhite">$ git config user.name</span><br />Vaše Ime</p>
+     <p><span class="gitwhite">$ git config user.email</span><br />vaša@email.adresa</p>
+    </div>
+   </div>
+  </div>
+  </p>
+  <p>Ako ste pratili dosadašnje korake, već ste u svom korisničkom folderu na windowsu, a ako ste malo švrljali, možete se u njega vratiti komandom <b>cd ~</b>. Sada u ovom folderu možete videti svoj .config fajl pomoću:</p>
+  <div class="cmdborder">
+   <div class="cmd">
+    <div class="cmdtitlebar">MINGW32:~</div>
+    <div class="cmdwindow">
+     <p class="gitwhite">$ cd ~</p>
+     <p class="gitwhite">$ cat .gitconfig</p>
+    </div>
+   </div>
+  </div>
+  <p>Koja će vam otvoriti vaš tekstualni fajl sa podešavanjima, direktno u git bash-u.</p>
+ </details>
+ </section>
+ <section>
+  <details><summary><h3 style="display: inline">Podešavanje podrazumevanog editora</h3></summary>
+  <p>nekada će vam git tražiti da nešto editujete u tekst editoru, pa je najbolje odmah podesiti podrazumevani editor na onaj koga najviše koristite:</p>
+  <div class="cmdborder">
+   <div class="cmd">
+    <div class="cmdtitlebar">MINGW32:~</div>
+    <div class="cmdwindow">
+     <p class="gitwhite">$ git config --global core.editor "ime vašeg editora -wl1"</p>
+     <p class="gitwhite">$ git config --global core.editor "'c:/Program Files/sublime text 3/subl.exe' -wl1"</p>
+    </div>
+   </div>
+  </div>
+  <p>Oznaka -w govori gitu da treba da sačeka da završite s editovanjem, a l1 mu govori da otvori fajl na liniji 1, dakle na početku fajla.</p>
+  </details>
+ </section>
+ <section>
+  <details><summary><h3 style="display: inline">Dodajte boje u Git bash</h3></summary>
+  <p>Ovo je čisto opciono, ako želite, git može da vam prikazuje sav tekst monohromatski. Ako pak želite da git oboji određene informacije kako bi bile lakše uočljive:</p>
+  <div class="cmdborder">
+   <div class="cmd">
+    <div class="cmdtitlebar">MINGW32:~</div>
+    <div class="cmdwindow">
+     <p class="gitwhite">$ git config --global color.ui true</p>
+    </div>
+   </div>
+  </div>
+
+ </details>
+ </section>
+ <section>
+  <details><summary><h3 style="display: inline">Konačno počistite za sobom</h3></summary>
+  <p>Probajte ove dve komande, jedna će počistiti ekran, a druga će samo skrolovati sav dosadašnji tekst izvan vidnog polja, pa šta vam se više sviđa:</p>
+  <div class="cmdborder">
+   <div class="cmd">
+    <div class="cmdtitlebar">MINGW32:~</div>
+    <div class="cmdwindow">
+     <p class="gitwhite">$ clear</p>
+     <p class="gitwhite">$ reset</p>
+    </div>
+   </div>
+  </div>
+  </details>
+ </section>
+</article>

@@ -1,0 +1,66 @@
+<article>
+ <section>
+  <h1>Hašovanje SHA-1</h1>
+  <p>Kada mi komitujemo naše izmene, git sve ove podatke proturi kroz <dfn class="tt"><span class="ttt">Secure Hash Alghrithm 1</span>SHA-1</dfn> algoritam, i kreira checksum. Checksum deluje zastrašujuće jer se sastoji od 40 slovnih mesta brojeva i slova nabacanih bez ikakvog uočljivog reda. Međutim, ovde ne treba da se fokusirate na matematiku koja ih proizvodi. Sve što je ovde bitno razumeti jeste da zbog relativno malog checksum ispisa, i činjenice da bi bilo kakva izmena u podacima, koji uopštem sl. mogu biti gigantski, rezultirala sasvim drugačijim checksumom, on predstavlja izuzetno jednostavan metod da se verifikuje autentičnost podataka. Ako se checksum vašeg fajla, ili podataka, razlikuje od onog na serveru, znaćete da nešto nije u redu. Štaviše, samo jedan dodati zarez, samo jedna ispravka greške u kucanju, ili možda fajl zaražen nekim groznim trojancem, svi će proizvesti checksum koji ni najmanje ne nalikuje originalnom. Tako da nećete morati ni da se dovijate kako da ih uporedite, letimičan pogled će odmah potvrditi ako se oni razlikuju.</p>
+  <p>U nekim situacijama, ne biste nikako ni mogli da proverite da li su fajlovi isti. Šta ako imate bazu podataka, ili kompjuterski program u .exe formatu? Na oko, oni će izgledati isto kao ispravne verzije. Nije teško namestiti ih da im i veličina bude ista. Ali namestiti ih da im checksum bude isti, bi zahtevalo decenije kalkulisanja, i ogroman račun za struju.</p>
+  <p>Bezbedno bi bilo reći da bi cheksum takvog računa za struju, bio kraći od samog računa.</p>
+  <p>U nekim aplikacijama, hašovanje podataka se koristi u cilju bezbednosti. Ovo nije slučaj kod Git-a. Git hašuje vaše podatke naprosto da biste znali da su vaši podaci ispravni. Bilo da je u pitanju zlonamerna manipulacija, amaterska greška, ili korupcija fajlova usled prelaska s jednog hardvera na drugi, svi bi vam odmah stavili do znanja da vaši podaci nisu u obliku u kom treba da budu, tako da možete preduzeti odgovarajuće korake da podatke ispravite.</p>
+  <p>Algoritam koji Git koristi da hašuje vaše podatke, je SHA-1. Pre izvesnog vremena, neki entuzijasti su uspeli da generišu dva različita fajla, koji daju isti checksum korišćenjem SHA-1 algoritma. Ceo web je podivljao oko ovoga, i prešao na još kompleksniji, SHA-2 algoritam, sa SHA-3 algoritmom već spremnim za trenutak kad se opet neki entuzijasta pojavi. Git je nastavio da koristi SHA-1.</p>
+  <p>Razlog zašto se Git i Linus Torvalds ne uzbuđuju previše oko SHA-1 algoritma, jeste taj da je i dalje jako teško, skupo, i vremenski zahtevno da se generiše drugi fajl sa istim checksumom, i taj što Git ne koristi checksum za zaštitu podataka, već samo za verifikaciju njihove autentičnosti. Ako je neko voljan da zameni svoj repozitorijum s fajlom ili skupom fajlova koji daju isti checksum a nisu isti kao original, slobodno može da dangubi.</p>
+  <p>SHA-1 uvek proizvodi 40-o cifreni heksadecimalni broj. Iz tog razloga on pored brojeva od 1 - 9, još sadrži i abecedna slova od a - f.</p>
+  <p>Ovaj algoritam je razvila <dfn class="tt"><span class="ttt">National Security Agency</span>NSA</dfn>, američka agencija poznata po tome što su opsednuti špijuniranjem sopstvenog naroda, pod izgovorm da time sprečavaju terorističke napade. Edvard Snouden je radio za NSA, i onda postao državni neprijatelj broj jedan kad je obznanio da ova agencija, između ostalog, loguje sve telefonske pozive, sve tekstualne poruke, pa čak i sve slike, koje je bilo ko, ko se smatra potencijalnim teroristom, ili je ikada komunicirao sa nekim ko se smatra potencijalnim teroristom poslao. Definicija potencijalnog teroriste, nije jasna, i prema Snoudenu, ovo se svodi na masovnu prismotru celog američkog društva, a i šire.</p>
+  <p>Ovaj broj, jeste upravo onaj broj koji možete videti u <a href="#pregled_loga" rel="chaper" aria-label="git log">git log</a>-u, ispisan žućkastim slovima. Prvih 7 cifara ovog broja se javlja u git bash ispisu, i kada komitujete izmene. Prvih 7 cifara je zapravo sasvim dovoljno da potvrdi jedinstvenost fajla. Kada bi u pitanju bio dekadni sistem, to bi bilo milion mogućih kombinacija pre nego što se neka dva komita podudare. Ne znam kako se milion kaže u hexadecimalnom, ali broj varijacija je još veći.</p>
+  <p>U neku ruku, ovaj haš jeste id broj komita. Ali git ne koristiid brojeve, jer oni ne bi mogli da verifikuju ispravnost podataka.</p>
+  <p>Kada Git priča o komitovima, on priča o ovim haš brojevima. On takođe uz svaki checksum, kači i neki meta data, koji sadrži checksum roditelja, dakle prethodnog komita, ime autora, i poruku s kojom je taj set izmena komitovan.</p>
+  <div id="gitblock">
+    <table>
+     <thead>
+     <tr>
+      <th colspan="2"><div class="thouter">5f95a29d95</div></th>
+      <th colspan="2"><div class="thouter">15e415bbc1</div></th>
+      <th colspan="2"><div class="thouter">651ace54d1</div></th>
+     </tr>
+     </thead>
+    <colgroup>
+     <col span="2"><col span="2"><col span="2">
+    </colgroup>
+    <tbody>
+     <tr>
+      <td nowrap><div>roditelj</div></td>
+      <td nowrap><div>nil</div></td>
+      <td nowrap><div>roditelj</div></td>
+      <td nowrap><div>5f95a29d95</div></td>
+      <td nowrap><div>roditelj</div></td>
+      <td nowrap><div>15e415bbc1</div></td>
+     </tr>
+     <tr>
+      <td nowrap><div>autor</div></td>
+      <td nowrap><div>Pera Mitić</div></td>
+      <td nowrap><div>autor</div></td>
+      <td nowrap><div>Pera Mitić</div></td>
+      <td nowrap><div>autor</div></td>
+      <td nowrap><div>Pera Mitić</div></td>
+     </tr>
+     <tr>
+      <td nowrap><div>poruka</div></td>
+      <td><div>prvi komit</div></td>
+      <td nowrap><div>poruka</div></td>
+      <td><div>dodaje zaglavlje</div></td>
+      <td nowrap><div>poruka</div></td>
+      <td><div>dodaje navigaciju</div></td>
+     </tr>
+    </tbody>
+    <tfoot>
+     <tr>
+      <th colspan="2"><div class="thouter">1. snapšot</div></th>
+      <th colspan="2"><div class="thouter">2. snapšot</div></th>
+      <th colspan="2"><div class="thouter">3. snapšot</div></th>
+     </tr>
+     </tfoot>
+    </table>
+    
+   </div>
+  </div>
+  <p>Ovaj opis u velikoj meri zvuči kao blokčejn zar ne? Oba koriste blokove nečega, oba hašuju svoje podatke, oba ukazuju na svog prethodnika, oba su distribuirana. Oba imaju "genesis block" taj čudni prvi blok čiji je roditelj, 0. Naravno ako blokčejn doživljavate isključivo kao nešto što prati finansijske transakcije na ilegalnom tržištu mračnog weba, onda Git nema nikakve veze s tim. Suštinske razlike između gita i blokčejna jesu to što blokčejn ne dozvoljava ni jednom pojedincu da po sopstvenom nahođenju dodaje nove blokove kako mu volja, nego se koristi "proof of work" ili "proof of stake" algoritam iliti potreban je koncenzus. Na Git-u je dovoljna jedna osoba da merdžuje različite verzije u jednu. Koncenzus algoritmi to rade bez centralnog autoriteta, dakle decentralizovani su za jedan korak dalje.</p>
+ </section>
+</article>

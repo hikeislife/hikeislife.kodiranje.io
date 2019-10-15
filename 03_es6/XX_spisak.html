@@ -1,0 +1,385 @@
+alert("nešto nešto");
+window.alert("nešto nešto");
+if () {
+ // == === != !== < > <= >=
+ // 5 == "5" will be true
+ // && ampersand, || pipe, not
+ // 5 ==="5" will be false
+ // doesn't care about white spaces
+} else {
+ // nested if js can handle it, but beyond two levels is humanly unreadable
+}
+parentheses ()
+brackets []
+"curly" braces {}
+score = score + 1;
+score += 10;
+-= *= /=
+score++; unary operator
+++score
+--score prefix and postfix
+var a = 5; alett(++a) alerts 6
+alert(a++) alerts 5
+ternary operator
+condition ? true : false
+loops
+while () {
+ //infinite loop
+ //increment
+}
+//
+do {
+ //always runs at least once
+} while ();
+//
+for (let i = 1; i < 10; i++) {
+ //
+}
+break jumps out of the loop
+contiue skips and goes back to the top
+modules, subrootines, procedures functions
+function funcName (parametri) {
+ //
+ //return myVar;
+}
+funcName(parametri);
+primeri alert() i console.log()
+ignores extra parameters
+missing pars are passed as undefined
+predefined parameters
+variable scope local variable
+global variable
+
+types
+array single var with multiply values
+var mavar = [];
+do arrays after loops
+0 based index
+može da drži različite tipove
+var myArray = new Array(); cause array is obj
+var myArray = Array();
+var myArray = Array(5); // will have 5 slots
+.length property 
+also have methods
+.reverse();
+.join(); will spit out a single string out of all the contents of array
+.sort();
+
+all numbers are 64bit floating point numbers
+Number();
+NaN
+isNaN() true or false
+!isNaN() is it a number?
+Math object
+Math.round();
+Math.max();
+Math.min();
+Math.PI
+Math.random();
+Math.sqrt();
+Math.log();
+
+strings "" ''
+\
+.length
+also methods;
+.toUpperCase()
+.toLowerCase()
+.split(" "); creates an array from a string and splits it at all the spaces
+.indexOf() returns the postition of the query string
+-1 for not found
+first occurance
+.lastIndexOf()
+.slice(startingPosition, length);
+.substring() .substr()
+uppercase < lower case letters
+
+Date(); object
+var today = new Date();
+date and time down to milisecond
+month is 0 based
+var y2k = new Date(2000, 0, 1)
+.getMonth(); 0-11
+.getFullYear();
+.getDate(); 1-31
+.getDay() 0-6 0 sunday
+.getHours(); 0-23
+.getTime(); miliseconds since 1/1/1970
+
+.setMonth(5);
+.setFullYear(2018);
+.setDay(2);
+date1 == date2 is false cause js is asking are these two, the same object, and they are not, they are two different objects, even if their contents are the same
+date1.getTime() == date2.getTime() will return true if their contents are the same
+
+var player = new Object();
+player.name = "";
+player.score = 10000;
+
+properties are variable inside of an obj
+var player { name: "value", score: 10000};
+methods
+player.logDetails = playerDetails;
+
+now it has a method logDetails that runs the func playerDetails
+use this.name inside of func 
+
+window
+document 
+
+DOM
+document is the page, not the site but the page
+browser view or the source code, are same document, different representations
+
+model is a set of terms that we can all agree on
+
+object a thing
+
+agreed upon set of terms that describe exactly how to interact with a piece of the web page = DOM
+
+nodes
+tags, blocks of text, atributes, comments all are different kinds of nodes
+
+12 node types DOM documentation
+Node.ELEMENT_NODE == 1
+Node.ATTRIBUTE_NODE == 2
+Node.TEXT_NODE == 3
+Node.CDATA_SECTION_NODE == 4
+Node.ENTITY_REFERENCE_NODE == 5
+Node.ENTITY_NODE == 6
+Node.PROCESSING_INSTRUCTION_NODE = 7
+Node.COMMENT_NODE == 8
+Node.DOCUMENT_NODE == 9
+Node.DOCUMENT_TYPE_NODE == 10
+Node.DOCUMENT_FRAGMENT_NODE == 11
+Node.NOTATION_NODE == 12
+
+document.getElementById("someId");
+var myId = ...
+document.getElementsByTagName("a");
+
+myVar.nodeType
+myVar.childNodes (is array)
+
+myVar.getAttribute("align");
+myVar.setAttribute("align", "left");
+
+inerHTML of complex div
+
+document.createElement("li") creates it out there in space
+myElement.appendChild(myNewElement); always at the end
+use innerHTML (briše sce ostale sadržaje) or:
+document.createTextNode("my text")
+myNewElement.appendChild(myText); dodaje sadržaje
+
+parent.insertBefore(myNewElement, existingElement)
+
+events
+onload
+onclick
+onmouseover
+onblur
+onfocus
+they are part of the js, and are happening all the time
+1) inline code
+we write event handlers 2)
+myElement.onclick = function() {
+ //anon func - ends with semi colon cause it deosn't run as soon as but rather later and we're only telling js about it now
+ //it is a statement
+};
+3)
+document.addEventListener('click' myFunc, false);
+event w/o on , name of the func we want ot run, false is for some super advanced event handling very unusual to need
+drawbacks maybe difference between browsers 
+benefits you can add one event and multiple listeners
+1 of each
+
+check if IE 8 and prev supports now addEventListeners or still uses 
+document.attachEvent('onclick', myFunc)
+
+function addCrossBrowserEventListener(elementName, eventName, funcName) {
+ //does addEventListener exist
+ if(myElement.addEventListener) {
+  //yes - use it
+  elementName.addEventListener(eventName, funcName, false);
+  return true;
+ } else {
+  //otherwise use attachEvent
+  elementName.attachEvent('on' + eventName, funcName);
+  return true;
+ }
+}
+
+window.onload 
+window is full browser window top level obj
+
+function prepareEventHandlers () {
+ // put all event handlers in here
+}
+
+window.onload = function () {
+ //only once per page cause only the last one wil win
+ prepareEventHandlers();
+}
+
+onfocus and onblur
+form fields
+
+timers
+setTimeout(function, intervalInMs);
+5000ms = 5sec
+setInterval(function, intervalInMs);
+will repeat it at every interval
+clearTimeout()
+clearInterval()
+
+sets both return a value and that value goes int clears
+var myInterval = setInterval(function, 5000);
+myElement.onclick = () => clearInterval(myInterval);
+
+many problems fail silently, there will be no error messages
+missing : after property id
+- syntax errors
+unterminated string literal 
+funcName is not defined 
+typo 
+is not a function
+typo
+order of commads!
+= =/= ==
+
+contents loaded from js do not alter the view page source content!
+
+select forms
+document.forms.nameOfTheForm
+if our forms have name atributes
+document.forms.nameOfTheForm.nameOfTheElement
+
+myTextField.value gets the contents of the element.
+onfocus
+onblur
+onchange
+onkeypress
+onkeydown
+onkeyup
+
+radio and checks
+not the value but rather checked property which is a boolean 
+onclick
+onchange
+
+he initially hides the element trough js rather than css so that the field will open even if js is disabled
+
+
+
+list
+mySelect.type will tell us if it allows one selection or multiple
+select-one or select-multiple
+for single, on selection a onchange event is fired 
+to find out which one, use 
+mySelect.selectedIndex property 
+for multiple that's not enough
+
+mySelect.options[i].selected true or false
+
+form
+onsubmit is firing when a user clicks on submit button
+
+don't rely only on js for form validation, if you're submiting data to server, you should also do a server side validation
+
+onsubmit
+return false would not submit form to the server.
+
+.style.display = "block"
+
+myEl.style.color = ""
+.style.fontWeight
+.style.backgroundColor
+cause - is substraction
+
+myEl.className = "someClass"
+
+class is a spec name, and is a reserved word
+
+objects capital first letter
+don't use _
+
+minify
+speeds up load time 
+10_02_sc11
+
+"use strict";
+
+document is not defined - this comes from the fact that js is not always used in a browser, so debuggers can complain about it 
+
+html5 support for:
+geolocation 
+drag and drop
+local storage
+
+video obj
+.play()
+.pause()
+.currentTime()
+.addEventListener('ended' funName)
+'play' 'pause' events
+
+localStorage["username"] = "name"; //set
+var name = localStorage["username"]; //get
+ofline storage
+web sql
+IndexDB
+
+web workers (multy threading)
+
+var worker = new Worker("anotherjsfile.js");
+worker.onmessage = function(e) {
+ console.log("worker called me");
+}
+cause it can't affect the dom we have to allow worker to generate events.
+
+worker.postMessage("firstFunc");
+
+shims and polyfills
+
+sniffing for features not browsers
+
+eval - could inject foreign code into your js dangerous
+
+<a href="javascript:somefunction()">this</a>
+pseudo code
+<a href="nojs.html" onclick="somefunc(); return false;">this</a>
+
+regexp
+var myVar = new RegExp("tESt");
+ili
+var myVar = /tESt/;
+myVar.test("some long string") will check to see if myVar is in the string
+
+var myvar = /^hello/;        // at the start of the string 
+            /hello$/;        // at the end of the string
+            /hel+o/;         // means that l appears at least ones so it would match helo, hello or hellllllllllo
+            /hel*o/;         // means 0 or more times
+            /hel?o/;         // means 0 or 1, but no more
+            /helo|goodbye/;  // means either or
+            /he..o/;         // means any character
+            /\wello/;        // \w alphanumeric or _
+            /\bhello/;       // \b stands for wor boundry, so it means hello appears after a space or a new line as a word by it self and not a part of another word
+            /[crnld]ope/;    // [...] range of characters
+
+            /^[0-9]{5}(?:-[0-9]{4})?$/ 
+            // checks for a valid us zip code with optional 4 digit extension
+
+            /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2-4}$/ 
+            // mail address simple and not entirely accurate
+
+objects
+this - ovaj objekat
+Obj.prototype.imePttipa = function() {
+ //do something
+}        
+
+ideje za konkretne primere:
+canvas manip
+kako banke računaju kredite
+blockchain u js-u

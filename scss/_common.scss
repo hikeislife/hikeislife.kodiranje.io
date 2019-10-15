@@ -1,0 +1,66 @@
+em {
+  border: 1px solid black;
+  border-radius: 3px;
+  font-style: normal;
+  background-color: #ddd;
+  padding: 0 5px;
+}
+
+@media only screen and (min-width: 640px) {
+  em {
+    white-space: nowrap;
+  }
+}
+
+.highlight {
+ background-color: $lg;
+}
+
+.inl {
+  display: inline;
+}
+
+h2.inl{
+  text-align: center;
+}
+
+.ind {
+  padding-left: 20px;
+}
+
+.listless {
+  list-style-type: none;
+}
+
+details {
+  position: relative;
+}
+
+summary {
+  outline: none;
+  padding: 20px 0;
+
+  &::-webkit-details-marker, 
+  &::-moz-details-marker {
+    float: left;
+    position: relative;
+    color: $dg;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  summary {
+    padding: 10px 0;
+  }
+}
+
+hr {
+  border-style: solid;
+  border-color: #ffc600;
+  margin: 20px 0;
+}
+
+/* tooltips mobile */
+dfn {
+  font-style: normal;
+}
