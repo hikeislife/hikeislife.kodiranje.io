@@ -1,6 +1,6 @@
 if ("serviceWorker" in navigator) {
   if (navigator.serviceWorker.controller) {
-    console.log("Pronađen servisni worker, nema potrebe za registracijom");
+    console.log(`Dobro došli na sajt za učenje kodiranja i programiranja. Ovo je naša konzola :)`);
   } else {
     // Register the service worker
     navigator.serviceWorker
@@ -9,12 +9,12 @@ if ("serviceWorker" in navigator) {
       scope: "./"
     })
     .then(function (reg) {
-        //console.log("Servisni worker je registrovan za zadati opseg: " + reg.scope);
+        console.log(`Dobro došli na sajt za učenje kodiranja i programiranja. Ovo je naša konzola :)`);
     });
   }
 }
 
-console.log(`Dobro došli na sajt za učenje kodiranja i programiranja. Ovo je naša konzola :)`);
+
 
 
 // Side nav handler for mobile
