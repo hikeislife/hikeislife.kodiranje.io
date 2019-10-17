@@ -1,42 +1,48 @@
 if ("serviceWorker" in navigator) {
-    if (navigator.serviceWorker.controller) {
-      //console.log("Pronađen servisni worker, nema potrebe za registracijom");
-    } else {
-      // Register the service worker
-      navigator.serviceWorker
-      .register("service-worker.js", {
+  if (navigator.serviceWorker.controller) {
+    console.log("Pronađen servisni worker, nema potrebe za registracijom");
+  } else {
+    // Register the service worker
+    navigator.serviceWorker
+    .register("service-worker.js", {
         //scope: "./kodiranje/"
-        scope: "./"
+      scope: "./"
     })
-      .then(function (reg) {
-        console.log("Servisni worker je registrovan za zadati opseg: " + reg.scope);
-      });
+    .then(function (reg) {
+        //console.log("Servisni worker je registrovan za zadati opseg: " + reg.scope);
+    });
   }
 }
 
-console.log(`Dobro došli na sajt za učenje kodiranja i programiranja. Ovo je naša konzola :)`)
+console.log(`Dobro došli na sajt za učenje kodiranja i programiranja. Ovo je naša konzola :)`);
 
 
-// adding mobile menu to the cog click
-const mobMenu = document.querySelector("#mobile-cog").addEventListener("click", loadMenu);
-
-// hides menu on outside click:
-window.onmouseup = function() {
-  const hide = document.querySelector("#side-nav");
-  hide.style.display = "none";
-}
-
-// shows / hides mobile menu on cog click
-function loadMenu() {
- let menuStatus = document.getElementById("side-nav");
+// Side nav handler for mobile
+(() => {
+  // hides menu on outside click:
+  window.onmouseup = () => document.querySelector("#side-nav").style.display = "none";
   
- if (menuStatus.style.display.match("block")) {
-  menuStatus.style.display = "none";
- }
- else {
-  menuStatus.style.display = "block";
- }
-}
+  // adding mobile menu to the cog click
+  document.querySelector("#mobile-cog").addEventListener("click", loadMenu);
+
+  // toggles mobile menu on cog click
+  function loadMenu() {
+    let menuStatus = document.getElementById("side-nav");
+  
+    if (menuStatus.style.display.match("block")) {
+      menuStatus.style.display = "none";
+    }
+    else {
+      menuStatus.style.display = "block";
+    }
+  }
+})()
+
+
+
+
+
+
 
 // content loader...
 let xhr = new XMLHttpRequest();
@@ -63,7 +69,6 @@ if (!location.hash) {
 function pageInit() {
  const frag = location.hash.substr(1); // address bar 
  initContent(frag, contents);
- //getXMP(contents);
 }
 
 /*
@@ -106,10 +111,12 @@ function initContent(frag, contents) {
 
 // resizes text area containing code to fit the contents
 function textAreaSizer() {
- var test = document.getElementsByClassName("code_snippet");
- for (let i = 0; i < test.length; i ++) {
-  let scroll = test[i].scrollHeight;
-  test[i].style.height = test[i].scrollHeight + 'px';
+ const snippets = document.getElementsByClassName("code_snippet");
+ 
+ for (let i = 0; i < snippets.length; i ++) {
+  let scroll = snippets[i].scrollHeight;
+  snippets[i].style.height = snippets[i].scrollHeight + 4 + 'px';
+  snippets[i].style.width = '100%';
  }
 }
 
@@ -415,7 +422,6 @@ function bindMenu() {
   else {
    topMenu.className = "";
    home.style.visibility = "hidden";
-   // home.style.top = "0px";
   }
 }
 
@@ -426,6 +432,8 @@ window.onscroll = ()=> bindMenu();
  let d = new Date().getFullYear();
  document.querySelector('#copydate').innerHTML = "&copy; ČĎŠ " + d;
 })();
+
+
 
 // JSON escape tool button 1
 function escapeBad() {
@@ -470,7 +478,7 @@ function escapeBad() {
   insertion = insertion.replace(RegExp(bad[i], 'g'), good[i]);
  }
   
- var res = document.getElementById("result");
+ const res = document.getElementById("result");
  res.value = `${insertion}`;
 }
 
