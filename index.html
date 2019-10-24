@@ -181,24 +181,24 @@
  <!--/ul-->
  </nav>
 
-<div id="content">
+<!-- <div id="content"> -->
  <main>
   <!-- AddToAny BEGIN -->
-<div class="a2a_kit a2a_kit_size_32 a2a_vertical_style" data-a2a-title="kodiranje" data-a2a-icon-color="#6dc205">
-<a class="a2a_button_facebook nocolor"></a>
-<a class="a2a_button_twitter nocolor"></a>
-<a class="a2a_button_email nocolor"></a>
-<a class="a2a_button_linkedin nocolor"></a>
-<a class="a2a_button_telegram nocolor"></a>
-<a class="a2a_button_whatsapp nocolor"></a>
-<a class="a2a_button_viber nocolor"></a>
-</div>
-<script>
-var a2a_config = a2a_config || {};
-a2a_config.onclick = 1;
-a2a_config.locale = "sr";
-</script>
-<script defer async rel="preconnect" src="https://static.addtoany.com/menu/page.js"></script>
+  <div class="a2a_kit a2a_kit_size_32 a2a_vertical_style" data-a2a-title="kodiranje" data-a2a-icon-color="#6dc205">
+  <a class="a2a_button_facebook nocolor"></a>
+  <a class="a2a_button_twitter nocolor"></a>
+  <a class="a2a_button_email nocolor"></a>
+  <a class="a2a_button_linkedin nocolor"></a>
+  <a class="a2a_button_telegram nocolor"></a>
+  <a class="a2a_button_whatsapp nocolor"></a>
+  <a class="a2a_button_viber nocolor"></a>
+  </div>
+  <script>
+    var a2a_config = a2a_config || {};
+    a2a_config.onclick = 1;
+    a2a_config.locale = "sr";
+  </script>
+  <script defer async rel="preconnect" src="https://static.addtoany.com/menu/page.js"></script>
 <!-- AddToAny END -->
   <div id="placeholder">
 
@@ -209,13 +209,14 @@ a2a_config.locale = "sr";
 
 
 
-    
+<div class="main-page">
   <!-- htmbox-->
    <div class="main-page-box" id="htmlcssbox">
     <div class="main-page-boxes">
-     <a href="#uvod_u_HTML_i_css" rel="chapter" aria-label="html i css tutorial">
+     <a href="#uvod_u_HTML_i_css" class="nocolor" rel="chapter" aria-label="html i css tutorial">
       <h1>Nauči da praviš sajtove<br />Nauči HTML i CSS</h1>
-      <svg version="1.1" id="htmlcss" viewBox="-220 220 1000 350" style="text-align: center;" preserveAspectRatio="xMidYMid">
+
+      <svg version="1.1" id="htmlcss" viewBox="-15 220 600 300" style="text-align: center;" preserveAspectRatio="xMidYMid">
       <desc>html i css logo</desc>
     <!--css-->
       
@@ -236,10 +237,10 @@ a2a_config.locale = "sr";
      <text transform="translate(90, 570)" style="font-size:40px;"></text>
      </svg></a>
     </div>
-    <div class="main-page-boxes" style="display: inline-block;">
+    <div class="main-page-boxes mob_hide">
      <div>
       <div class="front-page">
-        <div class="superbox sol" style="text-align: left; margin: 50px 20px 0">
+        <div class="superbox sol">
           &lt;<span style="color: deeppink">blockquote</span>&gt;<br />
             <span class="ind"></span>Ko ne voli karanfile, ne treba ni da živi!<br />
             <span class="ind"></span>&lt;<span style="color: deeppink">cite</span>&gt;<br />
@@ -253,23 +254,10 @@ a2a_config.locale = "sr";
    </div>
   <!-- gitbox -->
    <div class="main-page-box" id="gitbox">
-    <div class="main-page-boxes" style="display: inline-block;">
-     <div class="front-page" style="margin: 50px 0;">
-      <div class="cmdWrapper" style="border: thin solid black; border-radius:4px;">
-      <div class="cmd">
-       <div class="cmdtitlebar">MINGW32 ~</div>
-       <div class="cmdwindow">
-        <p><span class="gitgreen">username</span> <span style="color: #FF1155;">MINGW32</span> <span style="color:#808000;">~</span> </p>
-        <p style="color:#bbbbbbc7;">$_</p>
-       </div>
-      </div>
-      </div>
-     </div>
-    </div>
-    <div class="main-page-boxes" style="position: relative;">
-     <a href="#uvod_u_git" rel="chapter" aria-label="git i cmd tutorijal">
+    <div class="main-page-boxes">
+     <a href="#uvod_u_git" class="nocolor" rel="chapter" aria-label="git i cmd tutorijal">
       <h1>Nauči Git<br />Verzionisanje softvera</h1>
-      <svg xmlns="https://www.w3.org/2000/svg" width="200px" height="208px" viewBox="0 0 570 450" id="gitsvg" style="position:relative;">
+      <svg xmlns="https://www.w3.org/2000/svg" id="gitsvg" viewBox="0 -20 570 490">
        <g id="gitcont" transform="translate(-150,-700)">
         <g transform="matrix(1.3504475,0,0,1.2531051,-39.273794,683.85723)">
          <path
@@ -283,34 +271,48 @@ a2a_config.locale = "sr";
       </svg>
      </a>
     </div>
+    <div class="main-page-boxes mob_hide" >
+     <div class="front-page">
+      <div class="cmdWrapper" style="border: thin solid black; border-radius:4px;">
+      <div class="cmd">
+       <div class="cmdtitlebar">MINGW32 ~</div>
+       <div class="cmdwindow">
+        <p><span class="gitgreen">username</span> <span style="color: #FF1155;">MINGW32</span> <span style="color:#808000;">~</span> </p>
+        <p style="color:#bbbbbbc7;">$_</p>
+       </div>
+      </div>
+      </div>
+     </div>
+    </div>
    </div>
   <!-- js box -->
    <div class="main-page-box" id="jsbox">
     <div class="main-page-boxes">
-     <a href="#uvod_u_js" rel="chapter" aria-label="javascript tutorijal">
+     <a href="#uvod_u_js" class="nocolor" rel="chapter" aria-label="javascript tutorijal">
       <h1>Nauči JavaScript<br />Programski jezik weba</h1>
       <?xml version="1.0" encoding="utf-8"?>
-      <svg version="1.1" id="Layer_1"
-           xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" x="0px" y="0px" width="160px"
-           height="160px" viewBox="0 0 566.93 566.93" enable-background="new 0 0 566.93 566.93" xml:space="preserve">
+      <svg version="1.1" viewBox="-70 -70 700 700">
           <rect y="-1.153" fill="#F7E018" stroke="#F7E018" width="566.93" height="569.235"/>
           <text transform="matrix(1 0 0 1 70 525)" font-family="MyriadPro-Regular" font-size="430">JS</text>
           <text transform="translate(90, 570)" style="font-size:40px;"></text>
       </svg>
      </a>
     </div>
-    <div class="main-page-boxes" style="display: inline-block; padding-top: 20%;">
-     <div>
-      <div class="front-page">
-        <div class="superbox sol" style="text-align: left; margin: 50px 20px 0">
-          <span style="color: deeppink">if</span> (<span style="color: darkviolet">a</span>+<span style="color: darkviolet">b</span> == <span style="color: darkviolet">c</span>+<span style="color: darkviolet">d</span>) {<br />
-           <span class="ind"><span style="color: darkviolet">alert</span>("singularnost dosegnuta");</span><br />
+
+    <div class="main-page-boxes  mob_hide">
+      
+        <div class="superbox sol">
+          <span class="deeppink">if</span> (<span style="color: darkviolet">true</span>) {<br />
+           <span class="ind"><span class="darkviolet">console</span><wbr>.<span class="seagreen">log</span>("Hej!");</span><br />
+          }<br />
+          <span class="deeppink">else</span> {<br />
+             <span class="ind"><span class="darkviolet">console</span><wbr>.<span class="seagreen">log</span>("poz :)");</span><br />
           }
         </div>
-      </div></div>
+      
     </div>
+  </div>
 </div>
-
 
 
 
