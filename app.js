@@ -108,7 +108,7 @@ function closeDetails (detailsOpen) {
 }
 
 function loadMain(page) {
- const mainContent = document.getElementById("placeholder");
+ const mainContent = document.querySelector(".placeholder");
  mainContent.innerHTML = page;
  textAreaSizer();
  detailsFixer();
