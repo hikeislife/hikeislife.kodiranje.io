@@ -1,1 +1,425 @@
-"serviceWorker"in navigator&&(navigator.serviceWorker.controller?console.log(`Dobro došli na sajt za učenje kodiranja i programiranja. Ovo je naša konzola :)`):navigator.serviceWorker.register("service-worker.js",{scope:"./"}).then(function(){console.log(`Dobro došli na sajt za učenje kodiranja i programiranja. Ovo je naša konzola :)`)}));let xhr=new XMLHttpRequest;xhr.open("GET","js/content.json"),xhr.send(null),(xhr.onreadystatechange=function(){let a=xhr.responseText;200===xhr.status&&4===xhr.readyState&&conParser(a)})();var contents;function conParser(a){contents=JSON.parse(a),pageInit()}location.hash||(location.hash="#home");function pageInit(){const a=location.hash.substr(1);initContent(a,contents)}function backToTop(){const a=Array.from(document.querySelectorAll("a[rel$='chapter']"));for(topSide in a)a[topSide].onclick=()=>window.scrollTo(0,0)}function setActive(a){var b=document.querySelectorAll("#side-nav a");for(let c=0;c<b.length;c++)b[c].getAttribute("href").substr(1)===a?b[c].firstChild.setAttribute("class","active"):b[c].firstChild.removeAttribute("class");backToTop()}function initContent(a,b){for(e in b)if(b[e].tag==a){loadMain(b[e].content),document.title=` Kodiranje | ${b[e].pagetitle} `,document.querySelector("#metadesc").content=b[e].pagedesc,loadSideNav(b[e].id);break}setActive(a)}function textAreaSizer(){const a=document.getElementsByClassName("code_snippet");for(let b,c=0;c<a.length;c++)b=a[c].scrollHeight,a[c].style.height=a[c].scrollHeight+4+"px",a[c].style.width="100%"}function detailsFixer(){const a=Array.from(document.getElementsByTagName("details"));for(em in a)a[em].addEventListener("toggle",()=>{textAreaSizer(),closeDetails(a)})}function closeDetails(){}function loadMain(a){const b=document.getElementById("placeholder");b.innerHTML=a,textAreaSizer(),detailsFixer()}window.addEventListener("hashchange",pageInit);function leftRightNav(a){let b=document.getElementById("left"),c=document.getElementById("right"),d=location.hash,f=a.indexOf(d);if("#home"==d&&(b.style.display="none",c.style.display="none"),0==f)b.style.display="none";else{b.innerHTML="";let c=document.createElement("a");b.appendChild(c),c.setAttribute("href",a[f-1]),c.setAttribute("rel","prev chapter"),c.setAttribute("rev","next"),c.innerHTML="pr."}if(f==a.length-1)c.style.display="none";else{c.innerHTML="";let b=document.createElement("a");c.appendChild(b),b.setAttribute("href",a[f+1]),b.setAttribute("rev","prev"),b.setAttribute("rel","next chapter"),b.innerHTML="sl."}}function loadSideNav(a){const b=[["mp",["#recnik","#brauzeri_i_editori","#HTML_u_JSON_izbegavanje_karaktera","#bitcoin-white","#ada","#turing","#aleksandar_totic","#brendan_eich","#vitalik_buterin","#grace_hopper","#lajnus_torvalds","#maja_pantic","#mika_alas","#ryan_dahl","#rajko_tomovic","#timbl","#hedy_lamarr"],["Re\u010Dnik","Softver","HTML u JSON","Beli dokument bitkojna","Ada Lovlejs","Alan Turing","Aleksandar Toti\u0107","Brendan Ajk","Vitalik Buterin","Grejs Hoper","Lajnus Torvalds","Maja Panti\u0107","Mihailo Petrovi\u0107 Alas","Rajan Dal","Rajko Tomovi\u0107","TimBL","Hedi Lamar"]],["hc",["#uvod_u_HTML_i_CSS","#struktura_HTML_stranice","#prvi_sajt","#linkovi","#css_border","#osnovni_css","#predah","#klase_i_id-ijevi","#divovi_i_spanovi","#css_slova","#uvod_u_slike","#boje","#html_liste","#css_liste","#meta","#css_flexbox"],["Uvod","HTML struktura","Prvi Sajt","Linkovi","Uvod u CSS - Border","Osnovni CSS","Predah","Klase i Id-ijevi","Divovi i Spanovi","Slova","Uvod u slike","Boje","Liste","Stilizacija Lista","Meta tagovi","Flexbox"]],["gc",["#uvod_u_cmd","#cd_md_rd","#uvod_u_git","#git_instalacija","#git_inicijacija","#dodavanje_i_komit","#pregled_loga","#git_hash","#git_status","#git_diff","#git_brisanje","#git_preimenovanje"],["Uvod u cmd","CD, MD, RD","Uvod u Git","Instalacija, Pode\u0161avanja","Inicijacija Repo-a","Dodavanje i Komit","Pregledanje loga","Ha\u0161ovanje","Status","Pregled izmena","Brisanje Fajlova","Promena Naziva"]],["js",["#uvod_u_js","#js_konzola","#js_tipovi","#js_typeof","#js_varijable_i_konstante","#js_brojevi","#js_math","#js_if","#js_switch","#js_stringovi","#js_arrayi_uvod","#es1_array","#es5_array","#es6_array","#js_petlje","#js_funkcije","#js_objekti","#js_objekti_metode","#js_prototipovi","#js_proto_nasledjivanje","#prototipovi_i_klase","#js_closure","#js_simboli","#json","#uvod_u_node","#node_modularnost","#node_konzola","#node_fs_modul_uvod","#pwa_uvod_manifest","#js_kako_brauzer_radi"],["Uvod u JS","Konzola","Primitivni tipovi","Spec. tipovi i typeof","Varijable","Brojevi","Math","Bulijani i If blokovi","Switchevi","Stringovi","Array-i uvod","Array metode ES1","Array metode ES3 i ES5","Array metode ES6 i ES7","Petlje","Funkcije","Objekti","Metode Objekata","Prototipovi","Prototipsko nasle\u0111ivanje","Prototipovi i klase","Closure","Simboli na\u0161iroko","JSON","Node uvod","Node modularnost","Konzolna aplikacija","Uvod u rad sa fajlovima","PWA Manifest","JS Motor"]],["ar",["#arduino_uvod_i_instalacija","#arduino_pregled_arduina","#arduino_diode","#arduino_otpornici","#arduino_ide","#arduino_varijable","#arduino_rgb_led","#arduino_if_blokovi","#arduino_predah"],["Uvod i instalacija","Pregled arduina","LED","Otpornici","IDE","Varijable","RGB LED","If blokovi","Jo\u0161 jedan if"]]];for(let c=1;c<b.length;c++)document.getElementById(b[c][0]).removeAttribute("class");for(e in b)if(b[e][0]==a){getSideNavList(b[e]);var c=b[e][1]}let d=document.getElementsByClassName("leftright");if("mp"!=a){document.getElementById(a).setAttribute("class","selected");for(var f=0;2>f;f++)d[f].style.display="inline"}else if("mp"==a)for(var f=0;2>f;f++)d[f].style.display="none";leftRightNav(c)}function getSideNavList(a){let b="<ul id=\"side-menu\">";var[c,d,f]=a;for(el in d)b=b+"<a href=\""+d[el]+"\" rel=\"chapter\"><li>"+f[el]+"</li></a>";document.getElementById("side-nav").innerHTML=b+"</ul>"}bindMenu=()=>{let a=document.querySelector("#header-bottom"),b=document.querySelector("#backhome"),c=window.innerWidth;console.log(document.body.scrollTop),70<=document.body.scrollTop||70<=document.documentElement.scrollTop?(a.className="fixed-top",b.style.visibility="visible"):(a.className="",b.style.visibility="hidden")},window.onscroll=()=>bindMenu(),(()=>{window.onmouseup=()=>document.querySelector("#side-nav").style.display="none",document.querySelector("#mobile-cog").addEventListener("click",function(){let a=document.getElementById("side-nav");a.style.display=a.style.display.match("block")?"none":"block"})})(),(copid=function(){let a=new Date().getFullYear();document.querySelector("#copydate").innerHTML="&copy; \u010C\u010E\u0160 "+a})();
+if ("serviceWorker" in navigator) {
+  if (navigator.serviceWorker.controller) {
+    console.log(`Dobro došli na sajt za učenje kodiranja i programiranja. Ovo je naša konzola :)`);
+  } else {
+    // Register the service worker
+    navigator.serviceWorker
+    .register("service-worker.js", {
+        //scope: "./kodiranje/"
+      scope: "./"
+    })
+    .then(function (reg) {
+        console.log(`Dobro došli na sajt za učenje kodiranja i programiranja. Ovo je naša konzola :)`);
+    });
+  }
+}
+
+
+// content loader...
+let xhr = new XMLHttpRequest();
+xhr.open("GET", "js/content.json");
+xhr.send(null);
+(xhr.onreadystatechange = function () {
+ let xhrt = xhr.responseText;
+ if ((xhr.status === 200) && (xhr.readyState === 4)) {
+  conParser(xhrt);
+ }
+})();
+
+var contents;
+
+function conParser(xhrt){
+  contents = JSON.parse(xhrt); // list
+  pageInit();
+}
+
+if (!location.hash) {
+ location.hash = "#home";
+}
+
+function pageInit() {
+ const frag = location.hash.substr(1); // address bar 
+ initContent(frag, contents);
+}
+
+/*
+ scrolls the page back to top on link click as it otherwise loads
+ the content staying at the same scroll pos it was at before the click
+*/
+function backToTop() {
+ const toTop = Array.from(document.querySelectorAll("a[rel$='chapter']"));
+ for (topSide in toTop) {
+  toTop[topSide].onclick = () => window.scrollTo(0, 0);
+ }
+}
+
+// highlights active side nav item
+function setActive(frag) {
+ var links = document.querySelectorAll("#side-nav a");
+ for (let i = 0; i < links.length; i++) {
+  if (links[i].getAttribute("href").substr(1) === frag) {
+   links[i].firstChild.setAttribute("class", "active");
+  } else {
+   links[i].firstChild.removeAttribute("class");
+  }
+ }
+ backToTop();
+}
+
+function initContent(frag, contents) {
+ for (e in contents) {
+  if (contents[e].tag == frag) {
+   loadMain(contents[e].content);
+   document.title = ` Kodiranje | ${ contents[e].pagetitle } ` // sets page title
+   document.querySelector('#metadesc').content = contents[e].pagedesc; // dinamički updejtuje sadržaj meta taga za svaku stranicu
+   loadSideNav(contents[e].id);
+   break;
+  }
+ }
+
+ setActive(frag);
+}
+
+// resizes text area containing code to fit the contents
+function textAreaSizer() {
+ const snippets = document.getElementsByClassName("code_snippet");
+ 
+ for (let i = 0; i < snippets.length; i ++) {
+  let scroll = snippets[i].scrollHeight;
+  snippets[i].style.height = snippets[i].scrollHeight + 4 + 'px';
+  snippets[i].style.width = '100%';
+ }
+}
+
+function detailsFixer() {
+  const detailsOpen = Array.from(document.getElementsByTagName("details"));
+  for (em in detailsOpen) {
+    detailsOpen[em].addEventListener("toggle", ()=> {
+      textAreaSizer();
+      closeDetails(detailsOpen);
+      // add func that will close all open details 
+      // it should have open attribute, with statuses open and false
+    });
+  }
+}
+
+function closeDetails (detailsOpen) {
+  //
+}
+
+function loadMain(page) {
+ const mainContent = document.getElementById("placeholder");
+ mainContent.innerHTML = page;
+ textAreaSizer();
+ detailsFixer();
+}
+
+window.addEventListener("hashchange", pageInit);
+
+// functionality of sideway nav
+function leftRightNav(links) {
+  let levo = document.getElementById("left");
+  let desno = document.getElementById("right");
+  let current = location.hash;
+  let ind = links.indexOf(current)
+  if (current == "#home") {
+    levo.style.display = "none";
+    desno.style.display = "none";
+  }
+  if (ind == 0) {
+    levo.style.display = "none";
+  }
+  else {
+    levo.innerHTML = ""; // important otherwise the pr.'s add up
+    let backlink = document.createElement("a");
+    levo.appendChild(backlink);
+    backlink.setAttribute("href", links[ind-1]);
+    backlink.setAttribute("rel", "prev chapter");
+    backlink.setAttribute("rev", "next");
+    backlink.innerHTML = "pr.";
+  }
+  if (ind == (links.length -1)) {
+    desno.style.display = "none";
+  }
+  else {
+    desno.innerHTML = "";
+    let forlink = document.createElement("a");
+    desno.appendChild(forlink);
+    forlink.setAttribute("href", links[ind+1]);
+    forlink.setAttribute("rev", "prev");
+    forlink.setAttribute("rel", "next chapter");
+    forlink.innerHTML = "sl.";
+  }
+}
+
+
+
+function loadSideNav(sideNavId) {
+ const sideNav = [["mp", [         // links
+                         "#recnik",
+                         "#brauzeri_i_editori",
+                         "#HTML_u_JSON_izbegavanje_karaktera",
+                         "#bitcoin-white",
+                         "#ada",
+                         "#turing",
+                         "#aleksandar_totic",
+                         "#brendan_eich",
+                         "#vitalik_buterin",
+                         "#grace_hopper",
+                         "#lajnus_torvalds",
+                         "#maja_pantic",
+                         "#mika_alas",
+                         "#ryan_dahl",
+                         "#rajko_tomovic",
+                         "#timbl",
+                         "#hedy_lamarr",
+                         ], [      //items
+                                 "Rečnik",
+                                 "Softver",
+                                 "HTML u JSON",
+                                 "Beli dokument bitkojna",
+                                 "Ada Lovlejs",
+                                 "Alan Turing",
+                                 "Aleksandar Totić",
+                                 "Brendan Ajk",
+                                 "Vitalik Buterin",
+                                 "Grejs Hoper",
+                                 "Lajnus Torvalds",
+                                 "Maja Pantić",
+                                 "Mihailo Petrović Alas",
+                                 "Rajan Dal",
+                                 "Rajko Tomović",
+                                 "TimBL",
+                                 "Hedi Lamar",
+                                 ]],
+                  ["hc", [         // links
+                          "#uvod_u_HTML_i_CSS",
+                          "#struktura_HTML_stranice",
+                          "#prvi_sajt",
+                          "#linkovi",
+                          "#css_border",
+                          "#osnovni_css",
+                          "#predah",
+                          "#klase_i_id-ijevi",
+                          "#divovi_i_spanovi",
+                          "#css_slova",
+                          "#uvod_u_slike",
+                          "#boje",
+                          "#html_liste",
+                          "#css_liste",
+                          "#meta",
+                          "#css_flexbox",
+                          ], [      //items
+                                 "Uvod",
+                                 "HTML struktura",
+                                 "Prvi Sajt",
+                                 "Linkovi",
+                                 "Uvod u CSS - Border",
+                                 "Osnovni CSS",
+                                 "Predah",
+                                 "Klase i Id-ijevi",
+                                 "Divovi i Spanovi",
+                                 "Slova",
+                                 "Uvod u slike",
+                                 "Boje",
+                                 "Liste",
+                                 "Stilizacija Lista",
+                                 "Meta tagovi",
+                                 "Flexbox",
+                                 ]],
+                  ["gc", [         // links
+                          "#uvod_u_cmd",
+                          "#cd_md_rd",
+                          "#uvod_u_git",
+                          "#git_instalacija",
+                          "#git_inicijacija",
+                          "#dodavanje_i_komit",
+                          "#pregled_loga",
+                          "#git_hash",
+                          "#git_status",
+                          "#git_diff",
+                          "#git_brisanje",
+                          "#git_preimenovanje",
+                          ], [      //items
+                                 "Uvod u cmd",
+                                 "CD, MD, RD",
+                                 "Uvod u Git",
+                                 "Instalacija, Podešavanja",
+                                 "Inicijacija Repo-a",
+                                 "Dodavanje i Komit",
+                                 "Pregledanje loga",
+                                 "Hašovanje",
+                                 "Status",
+                                 "Pregled izmena",
+                                 "Brisanje Fajlova",
+                                 "Promena Naziva",
+                                 ]],
+                  ["js", [         // links
+                         "#uvod_u_js",
+                         "#js_konzola",
+                         "#js_tipovi",
+                         "#js_typeof",
+                         "#js_varijable_i_konstante",
+                         "#js_brojevi",
+                         "#js_math",
+                         "#js_if",
+                         "#js_switch",
+                         "#js_stringovi",
+                         "#js_arrayi_uvod",
+                         "#es1_array",
+                         "#es5_array",
+                         "#es6_array",
+                         "#js_petlje",
+                         "#js_funkcije",
+                         "#js_objekti",
+                         "#js_objekti_metode",
+                         "#js_prototipovi",
+                         "#js_proto_nasledjivanje",
+                         "#prototipovi_i_klase",
+                         "#js_closure",
+                         "#js_simboli",
+                         "#json",
+                         "#uvod_u_node",
+                         "#node_modularnost",
+                         "#node_konzola",
+                         "#node_fs_modul_uvod",
+                         "#pwa_uvod_manifest",
+                         "#js_kako_brauzer_radi",
+                         ], [      //items
+                                 "Uvod u JS",
+                                 "Konzola",
+                                 "Primitivni tipovi",
+                                 "Spec. tipovi i typeof",
+                                 "Varijable",
+                                 "Brojevi",
+                                 "Math",
+                                 "Bulijani i If blokovi",
+                                 "Switchevi",
+                                 "Stringovi",
+                                 "Array-i uvod",
+                                 "Array metode ES1",
+                                 "Array metode ES3 i ES5",
+                                 "Array metode ES6 i ES7",
+                                 "Petlje",
+                                 "Funkcije",
+                                 "Objekti",
+                                 "Metode Objekata",
+                                 "Prototipovi",
+                                 "Prototipsko nasleđivanje",
+                                 "Prototipovi i klase",
+                                 "Closure",
+                                 "Simboli naširoko",
+                                 "JSON",
+                                 "Node uvod",
+                                 "Node modularnost",
+                                 "Konzolna aplikacija",
+                                 "Uvod u rad sa fajlovima",
+                                 "PWA Manifest",
+                                 "JS Motor",
+                                 ]],
+                    ["ar", [         // links
+                         "#arduino_uvod_i_instalacija",
+                         "#arduino_pregled_arduina",
+                         "#arduino_diode",
+                         "#arduino_otpornici",
+                         "#arduino_ide",
+                         "#arduino_varijable",
+                         "#arduino_rgb_led",
+                         "#arduino_if_blokovi",
+                         "#arduino_predah",
+                         ], [      //items
+                                 "Uvod i instalacija",
+                                 "Pregled arduina",
+                                 "LED",
+                                 "Otpornici",
+                                 "IDE",
+                                 "Varijable",
+                                 "RGB LED",
+                                 "If blokovi",
+                                 "Još jedan if",
+                                 ]]
+                  ];
+
+// clears up previously selected top nav item
+ for (let i = 1; i < sideNav.length; i ++) {
+  document.getElementById(sideNav[i][0]).removeAttribute("class");
+ }
+
+ for (e in sideNav) {
+  if (sideNav[e][0] == sideNavId) {
+   getSideNavList(sideNav[e])
+   var links = sideNav[e][1]
+  }
+ }
+
+ let leftright = document.getElementsByClassName("leftright");
+ if(sideNavId != "mp") {
+  document.getElementById(sideNavId).setAttribute("class", "selected");
+  for(var i = 0; i < 2; i++) {
+   leftright[i].style.display = "inline"
+  }
+ }
+ else if (sideNavId == "mp") {
+  for(var i = 0; i < 2; i++) {
+    leftright[i].style.display = "none";
+  }
+ }
+ leftRightNav(links);
+}
+
+// populates side-nav 
+function getSideNavList(list) {
+ let sideMenu = '<ul id="side-menu">';
+ var [ id, links, items ] = list;
+ for (el in links) {
+  sideMenu = sideMenu + '<a href="' + links[el] + '" rel="chapter"><li>' + items[el] + '</li></a>';
+ }
+ document.getElementById("side-nav").innerHTML = sideMenu + '</ul>';
+ //leftRightNav(links);
+}
+
+// fixes top bar to the top of the page once scrolled pass logo
+bindMenu = () => {
+  
+ let topMenu = document.querySelector("#header-bottom"),
+     home = document.querySelector("#backhome"),
+     smallDevice = window.innerWidth;
+console.log(document.body.scrollTop)
+  if (document.body.scrollTop >= 70 || document.documentElement.scrollTop >= 70) {
+   topMenu.className = "fixed-top";
+   home.style.visibility = "visible";
+  }
+  else {
+   topMenu.className = "";
+   home.style.visibility = "hidden";
+  }
+}
+
+window.onscroll = ()=> bindMenu();
+
+// Side nav handler for mobile
+(() => {
+  // hides menu on outside click:
+  window.onmouseup = () => document.querySelector("#side-nav").style.display = "none";
+  
+  // adding mobile menu to the cog click
+  document.querySelector("#mobile-cog").addEventListener("click", loadMenu);
+
+  // toggles mobile menu on cog click
+  function loadMenu() {
+    let menuStatus = document.getElementById("side-nav");
+  
+    if (menuStatus.style.display.match("block")) {
+      menuStatus.style.display = "none";
+    }
+    else {
+      menuStatus.style.display = "block";
+    }
+  }
+})();
+
+// adds copy/date to the footer
+(copid = function() {
+ let d = new Date().getFullYear();
+ document.querySelector('#copydate').innerHTML = "&copy; ČĎŠ " + d;
+})();
