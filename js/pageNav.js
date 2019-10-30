@@ -1,5 +1,5 @@
 var createPageNav = (() => {
-  const page = document.querySelector('#placeholder')
+  const page = document.querySelector('.placeholder')
   const bookmarks = [...page.querySelectorAll('a[name]')]
   
   let navContent = ''
@@ -11,4 +11,5 @@ var createPageNav = (() => {
       <li>${x.attributes.title.nodeValue}</li></a>\n`
   })
   page.querySelector('.page-nav > .listless').innerHTML = navContent
+  console.log(navContent)
 })()
